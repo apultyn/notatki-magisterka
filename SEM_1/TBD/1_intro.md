@@ -6,4 +6,4 @@ Reguła 4V - było w betonie
 - volume
 - variety
 - velocity
-- verasity - nierówna jakość
+- veracity - nierówna jakość
