@@ -67,9 +67,23 @@
 - na maszynie fizycznej działa OS, w którym działa zarządca
 - mamy opcję stosunkowo łatwej migracji z jednego gospodarza na innego
 - należy dbać o bezpieczeństwo obu elementów
-- mniej wydajny ale łatwiejszy do doisntalowania
+- mniej wydajny ale łatwiejszy do doinstalowania
 - np. VirtualBox
 ### Czemu nie ma KVM
 - instaluje się i uruchamia jako program, więc jest jakby typem 2
 - ale ma elementy jądra i działa na maszynie fizycznej, więc twórcy się upierają że jest typu 1
-- 
+## Podstawowe pojęcia
+
+- maszyna wirtualna
+- obraz - to co jest na dysku, co można skopiować i uruchomić w innym miejscu
+- instancja - uruchomiona maszyna ze wszystkimi zasobami
+- definicja - parametry maszyny wirtualnej bez przydzielonych zasobów (konfiguracja)
+- klonowanie maszyny wirtualnej
+	- kopia maszyny
+	- działa niezależnie od bazowej
+	- **nie używać jako kopia zapasowa**, bo zwykle przechowywana w tym samym miejscu co obraz
+- szablon maszyny wirtualnej
+- migawka
+	- zapis stanu w danym momencie - checkpoint
+	- nie jest samodzielna - wymaga działającej maszyny wirtualnej
+	- generuje narzut czasowy

@@ -26,7 +26,7 @@
 
 ## Wyjazdy z z magisterką
 
-- Finlandia - nie ma mag
+- Finlandia - out nie ma mag
 - Norwegia - 10 miesięcy, inf (raczej odpada, więcej przedmiotów niż z jednego semu nie wycisnę, ale mogę z tego spróbować zrobić wyjazd na 5 miechów)
 - Austria jest 10 miesięczna i raczej dla elektroników
 - Belgia - 5 miesięcy ale elektronika
@@ -42,3 +42,38 @@
 	- Darmstadt - 10 miechów elektroniki
 	- Dresden - 12 miechów elektroniki
 	- Duisburg-Essen - 5 miechów infy
+- Szwecja - sztuczna inteligencja - 5 miechów (!!!)
+- Luksemburg - 5 miechów infy
+
+Chciałbym wyjechać na wyjazd Erasmus+, ponieważ jest to najlepsza okazja do dokładnego poznania innej kultury. To nie jest wyjazd na tydzień do innego kraju, z mieszkaniem w hotelu i zwiedzaniem najciekawszych turystycznie atrakcji miasta. To jest okazja żeby faktycznie poczuć się jak mieszkaniec danego miejsca. Chciałbym poznać ludzi z innego kraju, ich podejście do życia, do studiowania i do pracy. 
+Oprócz tego spodobały mi się przedmioty dotyczące cyberbezpieczeństwa na wybranych uczelniach. Chciałbym porównać, jak w innym kraju uczą rzeczy, które mnie interesują, w porównaniu do Polski.
+
+## Szwecja
+
+- https://www.chalmers.se/en/education/programmes-and-courses/exchange-studies/
+- najpierw musi mnie nominować polibuda, potem dostanę bardziej dokładne informacje
+- do 1 maja trzeba złożyć aplikację
+- przedmioty mają po 7,5 ectsów
+- https://www.chalmers.se/en/education/your-studies/find-course-and-programme-syllabi/course-syllabus/
+	 - Computer Security - https://www.chalmers.se/en/education/your-studies/find-course-and-programme-syllabi/course-syllabus/EDA264/?acYear=2026%2F2027
+	 - Network Security - https://www.chalmers.se/en/education/your-studies/find-course-and-programme-syllabi/course-syllabus/EDA491/?acYear=2026%2F2027
+	 - Language-based Security - https://www.chalmers.se/en/education/your-studies/find-course-and-programme-syllabi/course-syllabus/TDA602/?acYear=2026%2F2027
+- mieszkanie: https://www.chalmers.se/en/education/study-at-chalmers/living-in-sweden/housing/
+	- chyba gwarantują mieszkanie
+	- pewnie to będzie kawalerka
+	- wysyłają oferty jakoś w połowie czerwca
+- ogólnie nieźle wszystko jest opisane
+## Luksemburg
+
+- https://www.uni.lu/en/mobility/incoming-exchange-students/
+- nie gwarantują mieszkania ale coś powinni zaproponować
+- też jest dużo cyber, coś się znajdzie
+- mniejsze przedmioty i wydające się trochę bardziej basic niż szwedzi
+## Norwegia
+
+- https://www.ntnu.edu/studies/faq-exchange
+- termin aplikacji - 1 maja
+- tak jak w szwecji te cyberkowe rzeczy wydają się bardziej zaawansowane, ale są bardziej telekomunikacyjne niż informatyczne
+- można robić też czyste IT
+- mogą być kłopoty z mieszkaniem
+- 
