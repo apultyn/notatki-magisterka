@@ -77,6 +77,13 @@ W danej chwili czasu możemy zachować co najwyżej dwie z trzech cech systemu:
 
 Agenty AI to moduły programowe zasilane komponentami AI zdolne do autonomicznej realizacji zadań, podejmowania decyzji, uczenia i interakcji ze środowiskiem w celu osiągnięcia założonych celów. Rozwój technologii AI, w szczególności GenAI, pozwala na aktywne wspieranie ludzi w realizacji złożonych procesów biznesowych jako wirtualni współpracownicy.
 
+=== Zastosowania
+
+- asystenci programowania (_co-pilot_)
+- edukacja
+- robotyka
+- gry wideo
+
 == Rodzaje baz danych NoSQL
 
 - klucz-wartość
@@ -84,6 +91,9 @@ Agenty AI to moduły programowe zasilane komponentami AI zdolne do autonomicznej
 - dokumenty
 - grafy
 - XML
+- RDF
+- silniki wyszukiwania
+- content stores
 
 == Chmura
 
@@ -113,6 +123,7 @@ Chmura dostarcza zasoby obliczeniowe i możliwośc składowania danych w modelu 
 
 - systemy, w których dane nie dają się przetworzyć tradycyjnymi metodami
 - przetwarzane zarówno w czasie rzeczywistym (np. transakcje), jak i w szerszym oknie (próba odnalezienia trendów, typy klientów itp.)
+- nazwa popularyzowana od końca lat 90. (np. John Mashey, 1998)
 - przyczyny rozwoju:
   - potrzeby nauki i biznesu
   - rozwój chmury obliczeniowej
@@ -129,3 +140,24 @@ Chmura dostarcza zasoby obliczeniowe i możliwośc składowania danych w modelu 
 - Variety - różnorodność danych
 - Velocity - prędkość napływu danych
 - Veracity - nierówna jakość danych
+
+== Źródła danych Big Data
+
+=== Internet
+
+- Internet jest jednym z największych zbiorów danych tworzonych przez ludzkość
+- dane mają różny poziom ustrukturyzowania, jakości i spójności
+- zastosowania:
+  - web analytics
+  - web mining
+  - opinion mining
+
+=== Dane naukowe
+
+- biomedyczne
+  - obrazowanie medyczne generuje bardzo duże wolumeny danych
+  - sekwencjonowanie genomu to kolejne źródło dużych zbiorów danych
+- astronomiczne
+  - teleskopy i symulacje naukowe generują dziennie dziesiątki lub setki TB
+- fizyczne
+  - eksperymenty takie jak LHC generują setki milionów zdarzeń na sekundę

@@ -48,6 +48,13 @@
   - konieczność utrzymywania dwóch strumieni (droga infrastruktura)
   - potencjalna duplikacja kodu
 
+=== Przykład zastosowania
+
+- system rekomendacji:
+  - warstwa batch analizuje historię zachowań użytkowników
+  - warstwa speed reaguje na bieżącą sesję
+  - wynik końcowy łączy oba widoki
+
 == Architektura Delta
 
 - odwrócona Lambda
@@ -98,6 +105,21 @@
     - bezpieczeństwo
     - transformacje
 
+== Spójne przetwarzanie zdarzeń
+
+- celem może być uzyskanie semantyki _exactly-once_
+- często wyniki publikowane są w stałych interwałach, np. co godzinę
+- ważne pojęcia:
+  - _offset_ - pozycja w strumieniu
+  - czas zdarzenia i czas przetwarzania
+
+== SQL na danych rozproszonych
+
+- Hive / Tez
+  - wykonywanie zapytań SQL w środowisku Hadoop
+- SparkSQL
+  - SQL nad danymi przetwarzanymi wsadowo i strumieniowo
+
 == Data mining w Twitter
 
 #image("assets/image-6.png")
@@ -105,6 +127,23 @@
 - zastosowanie języka przepływu danych wysokiego poziomu Pig
 - podział transformacji na re-używalne biblioteki
 - wykorzystanie orkiestracji danych
+
+== Inne przykłady architektur analitycznych
+
+=== Starfish
+
+- optymalizacje dla środowiska Hadoop
+- strojenie parametrów zadań i planu wykonania
+- optymalizacja serializacji i współdzielenia danych
+
+=== Kylin
+
+- interfejs SQL i analityka OLAP nad Hadoop
+- prekalkulacja agregatów dla szybkich zapytań analitycznych
+
+=== MLBase
+
+- przykład architektury do zastosowań uczenia maszynowego
 
 == Bazy danych NoSQL
 
@@ -155,6 +194,15 @@
 - zapis typów i wartości bezpośrednio jako bajty
   - np. liczba `30` jest zapisana bezpośrednio jako `0x1E`
 - ekstremalnie szybkie parsowanie
+
+=== Porównania praktyczne
+
+- formaty tekstowe vs binarne:
+  - tekstowe są bardziej czytelne dla człowieka
+  - binarne są zwykle szybsze i bardziej kompaktowe
+- popularne formaty w ekosystemie Hadoop:
+  - Avro - format wierszowy, dobry do wymiany danych
+  - Parquet - format kolumnowy, dobry do analityki
 
 == Orkiestracja danych
 

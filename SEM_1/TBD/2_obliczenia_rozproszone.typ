@@ -56,6 +56,15 @@
 - proces obliczeniowy jako DAG
 - struktura grafu może ewoluować w trakcie obliczeń (zmieniać się w trakcie liczenia)
 
+=== GraphLab
+
+- model obliczeń dedykowany problemom MLDM (_Machine Learning, Data Mining_)
+- obliczenia składają się z grafu oraz tablicy klucz-wartość
+- wyniki częściowe nie muszą być zapisywane na dysk
+- dwa główne kroki:
+  - _update_ - obliczenia lokalne dla węzła i jego otoczenia
+  - _sync_ - agregacja wyników częściowych
+
 == Model Aktorowy
 
 - cechy aktora
@@ -67,6 +76,11 @@
   - wysłać skończoną liczbę wiadomości do innych aktorów
   - stworzyć skończoną liczbę innych aktorów
   - wybrać wywoływaną procedurę po otrzymaniu kolejnej wiadomości
+- po awarii nadzorca może:
+  - wznowić aktora zachowując stan
+  - zrestartować go czyszcząc stan
+  - zatrzymać jego działanie
+  - eskalować błąd wyżej
 - cechy jako model Big Data
   - zalety
     - niskopoziomowe zrównoleglenie - systemy z tysiącami aktorów
@@ -84,6 +98,11 @@
 === DSMS
 
 - _Data Stream Management Systems_
+- porównanie z DBMS:
+  - operują na strumieniach zamiast trwałych relacji
+  - używają zapytań ciągłych zamiast jednorazowych
+  - zakładają sekwencyjny dostęp i wysoką dynamikę napływu danych
+  - często mają wymagania _real-time_
 
 #image("assets/image-15.png")
 
@@ -109,10 +128,69 @@
 - oddziela operację generowania informacji (wiadomości, zdarzenia, porcji danych itp.) od jej konsumpcji
 - pozwala na przesyłanie danych w modelu wiele do wielu
 - asynchroniczne działanie
+- może stanowić bufor zwiększający odporność systemu na awarie komponentów
 - *offset* - punkt ostatniego odczytu dla grupy konsumentów
   - przydatny do cofania się po awarii
   - przechowywany jest zwykle przez zarządcę modelu publish-subscribe
+- przykład implementacji: Kafka
 - rodzaje strumieni
   - _at-most once_ - każda wiadomość zostanie dostarczona *co najwyżej raz* (jeżeli nie zostanie przetworzona, zostaje utracona)
   - _at-least once_ - każda wiadomość zostanie dostarczona *co najmniej raz* (mogą pojawić się duplikaty gdy np. odbiorca nie potwierdzi odbioru)
   - _exactly once_ - wiadomość zostanie dostarczona *dokładnie raz* (trudne do osiągnięcia w praktyce)
+
+== Inne modele i techniki
+
+=== All-Pairs
+
+- wzorzec obliczeń polegający na porównywaniu wszystkich elementów ze wszystkimi
+- naiwnie ma bardzo wysoką złożoność i słabą skalowalność na dużych danych
+
+=== Roaring Bitmaps
+
+- skompresowana reprezentacja zbiorów liczb całkowitych
+- pozwala wydajnie wykonywać operacje takie jak przecięcie, suma i filtrowanie
+- przydatna przy indeksowaniu i analityce na dużych zbiorach
+
+=== GPGPU
+
+- wykorzystanie kart graficznych do obliczeń ogólnego przeznaczenia
+- dobre dla operacji wykonywanych równolegle na dużych zbiorach danych
+- typowe zastosowania:
+  - przetwarzanie macierzy
+  - uczenie maszynowe
+  - symulacje
+
+=== Graph Computing Systems
+
+- systemy przetwarzania grafowego wykonują iteracyjne obliczenia na całym grafie
+- bazy grafowe wspierają analizę online całego grafu lub jego fragmentów
+- przykłady:
+  - Apache Giraph
+  - Neo4j
+
+== Przetwarzanie strumieni danych
+
+- rekordy są przetwarzane pojedynczo lub w małych porcjach
+- obliczenia definiuje się zwykle jako topologie DAG
+- dla operacji stanowych trzeba śledzić stan obliczeń
+
+=== Operacje
+
+- bezstanowe
+  - filtrowanie
+  - mapowanie
+- stanowe
+  - agregacje
+  - okna czasowe
+- terminalne
+  - zapis do bazy, pliku lub systemu zewnętrznego
+
+=== Mikrobatch
+
+- rekordy są przetwarzane małymi porcjami
+- poprawia wydajność przy zachowaniu opóźnień zbliżonych do _real-time_
+
+=== Unbounded table
+
+- strumień można traktować jak nieograniczoną tabelę
+- kolejne rekordy pojawiają się w niej na bieżąco

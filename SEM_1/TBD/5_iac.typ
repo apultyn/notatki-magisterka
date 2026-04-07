@@ -11,6 +11,16 @@
   - spójność - wiele instancji tego samego schematu są bardzo podobne do siebie
   - modułowość
 
+== Style IaC
+
+- _what_ - podejście deklaratywne, opisujemy stan docelowy
+- _how_ - podejście imperatywne, opisujemy kroki wykonania
+- provisioning:
+  - tworzenie i modyfikacja zasobów przez API dostawców
+- immutable infrastructure:
+  - zamiast ręcznie zmieniać serwer, budujemy nowy obraz lub kontener
+  - ogranicza problem _configuration drift_
+
 == Kategorie narzędzi IaC
 
 - skrypty ad-hoc: #image("assets/image-8.png")
@@ -54,6 +64,15 @@
 - wejściowe i wyjściowe
 - przesyłane jako zmienne źrodowiskowe lub w pliku `.tfvars`
 - mogą być lokalne, tylko dla konkretnych modułów
+- mogą mieć walidację
+- można definiować `locals` do wielokrotnego użycia wyrażeń
+
+=== Zależności
+
+- niejawne:
+  - wynikają z odwołań do atrybutów innych zasobów
+- jawne:
+  - `depends_on` wymusza kolejność tworzenia lub usuwania
 
 === Zarządzanie stanami
 
@@ -79,6 +98,17 @@
   - szybsze niż zarządzanie stanami wszystkich zasobów w jednym pliku
   - rozdzielenie odpowiedzialności
 
+=== Pętle i wyrażenia
+
+- `count`
+  - przydatny gdy chcemy utworzyć wiele podobnych zasobów
+- `for_each`
+  - wygodny gdy każdy zasób identyfikujemy kluczem lub nazwą
+- wyrażenia warunkowe
+  - przydatne do opcjonalnych modułów i parametrów
+
 === Terragrunt
 
 - orkiestrator
+- upraszcza reużywalność kodu IaC i definicję środowisk
+- każda jednostka może mieć własny stan i własny plik `terragrunt.hcl`

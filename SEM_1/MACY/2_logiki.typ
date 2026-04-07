@@ -65,6 +65,11 @@ Wszystkie wyrażenia logiczne da się zapisać jako alternatywy koniunkcji zmien
 - generalnie idea jest taka że dodajemy 2 nowe spójniki
 - stałe logiczne, zdania, spójniki są te same z klasycznej logiki
 - logiki na grafach - mamy graf różnych stanów, w których zdania mogą być prawdziwe lub fałszywe
+- akurat całkiem fajna analogia:
+  - mamy scenariusz w którym jesteśmy na wyjeździe w górach
+  - następnego dnia może padać albo nie padać (mamy 2 różne światy)
+  - niektóre zdania są prawdziwe w obu światach, np. że zjemy obiad
+  - ale np. zdanie "pójdę w góry" będzie prawdziwe tylko dla jednego z nich
 
 === Modalności - operatory unarne
 
@@ -112,3 +117,21 @@ Podobne:
     - $frak(M), v models Phi$
 
 == Logika temporalna
+
+- rozszerzenie logiki klasycznej o czas który modyfikuje wartość logiczną wydarzenia
+- specyficzny rodzaj logiki modalnej:
+  - zbiorem $W$ jest zbiór liczb naturalnych $bb(N)$
+  - relacje są relacjami mniejszości $<=$
+  - nie możemy się cofać w czasie
+
+=== Symbole
+
+- stałe - 0, 1, $"start"$
+- skończony zbiór zdań $"Prop"$
+- spójniki z logiki klasycznej
+- spójniki temporalne: $circle, diamond, square, bold(U)$
+  - $circle$ - następnik (operator unarny)
+
+=== Spełnialność formuł
+
+- $frak(M), i models "start" arrow.r.l.double i = 0$

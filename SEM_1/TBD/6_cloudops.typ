@@ -27,6 +27,10 @@
 - DevOps dla chmury obliczeniowej
 - IaC i automatyzacja
 - monitorowanie i logowanie
+- częste wyzwania:
+  - środowiska multi-cloud
+  - większa złożoność usług zarządzanych
+  - potrzeba kontroli kosztów
 - powody powstania
   - brak dostępnych umiejętności operacji chmurowych
   - rosnąca złożoność systemów
@@ -47,18 +51,28 @@
 
 #image("assets/image-17.png")
 
+- etykietowanie zasobów dla rozliczania kosztów między zespołami i środowiskami
+- budżety i alerty kosztowe
+- dobór właściwych rozmiarów instancji (_rightsizing_)
+- harmonogramy wyłączania nieużywanych zasobów
+- autoscaling
+- wybór tańszych klas storage lub modeli zakupu
+
 == XOps
 
 === GitOps
 
 - proces DevOps, gdzie Git jest jedynym źródłem prawdy dla deklaratywnego kodu infrastruktury i aplikacji
 - zmiany w kodzie automatycznie wyzwalają potoki CI/CD, aby środowisko produkcyjne odzwierciedlało kod
+- obejmuje nie tylko kod aplikacji, ale też konfigurację i monitoring
 
 === DataOps
 
 - zastosowanie najlepszych praktyk zwinnych metodyk i DevOps do przetwarzania danych
 - automatyczne testowanie jakości danych
 - automatyczne generowanie metadanych
+- lineage danych
+- tagowanie i polityki oparte o tagi
 
 === MLOps
 
@@ -82,3 +96,8 @@
 - Git Hooks - np. pre-commit - framework do automatycznego sprawdzania błędów przed i po commitach
 - GitHub Actions - automatyzacja workflows bezpośrednio w repo (np. bezpieczne uwierzytelnienie bezkluczowe)
 - SecOps - integracja narzędzi automatycznie sprawdzających bezpieczeństwo (np. weryfikacja konfiguracji IaC)
+- keyless authentication
+  - brak długowiecznych kluczy JSON
+  - krótkotrwałe tokeny rotowane przy wdrożeniach
+- FinOps automation
+  - np. Infracost do estymacji kosztów zmian Terraform w pull requestach
