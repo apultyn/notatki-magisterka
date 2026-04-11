@@ -1,0 +1,196 @@
+= Obliczenia rozproszone
+
+== Map-reduce
+
+- map reduce - narzędzie kojarzone z Big Data, do przetwarzania danych na dużych klastrach obliczeniowych
+- algorytm:
+  - map - generujemy pary klucz-wartość
+  - shuffle - przesyła pary o tym samym kluczu do jednego węzła
+  - reduce - przetwarza otrzymane pary
+- często przepisujemy zapytania SQL na map-reduce
+- dzięki takiemu modelowi łatwo zaimplementować:
+  - algorytmy zliczania słów/znaków w wielkich zbiorach tekstowych
+  - język SQL
+  - raporty podsumowujące transakcje w sklepie internetowym
+- wady:
+  - konieczność zapisu wyników pośrednich na dysk
+  - sztywny format obliczeń w formie sekwencji par map-reduce
+
+== Bulk Synchronous Parallel
+
+- abstrakcyjna idea, niepowiązana z konkretnym narzędziem
+- cel - stworzenie systemu obliczeń:
+  - równoległego
+  - odpornego na awarie
+  - wolnego od deadlocków
+  - łatwego do prowadzenia wielkoskalowych obliczeń
+- *supersteps*
+  - w ramach jednego superkroku wykonywane jest mnóstwo równoległych obliczeń/procesów
+  - gdy się wymienią wynikami to dopiero inicjowany jest kolejny superkrok
+  - wcześniej bariera zatrzymuje procesy
+- koszt kroku superstep:
+  - $t_("step") = max(w_i) + m g max{h_i} + I$
+  - $w_i$ - czas pracy dla procesora $i$
+  - $h_i$ - liczba przychodzących i wychodzących wiadomości dla procesora $i$
+  - $m$ - rozmiar wiadomości
+    - $g$ - przepustowość danych do procesora
+    - $I$ - opóźnienie sieci
+
+=== Pregel
+
+- implementacja BSP od Googla
+- wersja BSP dostosowana do przetewarzania w grafach
+- obliczenia modelowane jako DAG (*Directed Acyclic Graph*)
+- funkcje obliczane w węzłach
+- cykle obliczeniowe - “supersteps”
+- możliwa zmiana topologii grafu w trakcie obliczeń
+- w każdej iteracji węzeł może:
+  - odebrać wiadomość wysłaną w poprzedniej iteracji
+  - wysłać wiadomości do innych węzłów
+  - zmienić swój stan
+  - zmodyfikować topologię grafu
+
+=== DRYAD
+
+- BSP od Microsofta
+- proces obliczeniowy jako DAG
+- struktura grafu może ewoluować w trakcie obliczeń (zmieniać się w trakcie liczenia)
+
+=== GraphLab
+
+- model obliczeń dedykowany problemom MLDM (_Machine Learning, Data Mining_)
+- obliczenia składają się z grafu oraz tablicy klucz-wartość
+- wyniki częściowe nie muszą być zapisywane na dysk
+- dwa główne kroki:
+  - _update_ - obliczenia lokalne dla węzła i jego otoczenia
+  - _sync_ - agregacja wyników częściowych
+
+== Model Aktorowy
+
+- cechy aktora
+  - trwały
+  - ma stan wewnętrzny
+  - asynchroniczny
+- ważna cecha układu - deterministyczny - aktor jest pasywny do czasu nadejścia wiadomości
+- gdy przyjdzie wiadomość aktor może
+  - wysłać skończoną liczbę wiadomości do innych aktorów
+  - stworzyć skończoną liczbę innych aktorów
+  - wybrać wywoływaną procedurę po otrzymaniu kolejnej wiadomości
+- po awarii nadzorca może:
+  - wznowić aktora zachowując stan
+  - zrestartować go czyszcząc stan
+  - zatrzymać jego działanie
+  - eskalować błąd wyżej
+- cechy jako model Big Data
+  - zalety
+    - niskopoziomowe zrównoleglenie - systemy z tysiącami aktorów
+    - odporność na awarię - pojedynczy aktor nie blokuje całego systemu
+    - dobrze nadaje się do modelowania przepływów i transformacji danych
+    - elastyczne skalowanie
+  - wady
+    - szybko rośnie ilość komunikatów
+    - trudne debugowanie
+    - nieograniczone kolejki wiadomości mogą przeciążyć system
+- przykłady - Akka, Erlang, Pulsar
+
+== Information Flow Processing (IFP)
+
+=== DSMS
+
+- _Data Stream Management Systems_
+- porównanie z DBMS:
+  - operują na strumieniach zamiast trwałych relacji
+  - używają zapytań ciągłych zamiast jednorazowych
+  - zakładają sekwencyjny dostęp i wysoką dynamikę napływu danych
+  - często mają wymagania _real-time_
+
+#image("assets/image-15.png")
+
+=== Active Databases
+
+- posiada funkcjonalności typowej bazy danych
+- identyfikuje nadejście nowego zdarzenia
+- sprawdza warunki i uruchamia akcję
+- posiada silnik uruchamiania reguł
+
+=== CEP
+
+- _Complex Event Processing_
+- pozwala na przetwarzanie zdarzeń i reagowanie na nie
+- odnajduje wzorce w sekwencjach zdarzeń
+- możliwości filtrowania, agregacji
+- śledzenie zależności między zdarzeniami (przyczynowe, czasowe itp.)
+
+== Model publish-subscribe
+
+- model wymiany informacji między *luźno* powiązanymi usługami
+- *brokerzy* pośredniczą w przekazywaniu wiadomości
+- oddziela operację generowania informacji (wiadomości, zdarzenia, porcji danych itp.) od jej konsumpcji
+- pozwala na przesyłanie danych w modelu wiele do wielu
+- asynchroniczne działanie
+- może stanowić bufor zwiększający odporność systemu na awarie komponentów
+- *offset* - punkt ostatniego odczytu dla grupy konsumentów
+  - przydatny do cofania się po awarii
+  - przechowywany jest zwykle przez zarządcę modelu publish-subscribe
+- przykład implementacji: Kafka
+- rodzaje strumieni
+  - _at-most once_ - każda wiadomość zostanie dostarczona *co najwyżej raz* (jeżeli nie zostanie przetworzona, zostaje utracona)
+  - _at-least once_ - każda wiadomość zostanie dostarczona *co najmniej raz* (mogą pojawić się duplikaty gdy np. odbiorca nie potwierdzi odbioru)
+  - _exactly once_ - wiadomość zostanie dostarczona *dokładnie raz* (trudne do osiągnięcia w praktyce)
+
+== Inne modele i techniki
+
+=== All-Pairs
+
+- wzorzec obliczeń polegający na porównywaniu wszystkich elementów ze wszystkimi
+- naiwnie ma bardzo wysoką złożoność i słabą skalowalność na dużych danych
+
+=== Roaring Bitmaps
+
+- skompresowana reprezentacja zbiorów liczb całkowitych
+- pozwala wydajnie wykonywać operacje takie jak przecięcie, suma i filtrowanie
+- przydatna przy indeksowaniu i analityce na dużych zbiorach
+
+=== GPGPU
+
+- wykorzystanie kart graficznych do obliczeń ogólnego przeznaczenia
+- dobre dla operacji wykonywanych równolegle na dużych zbiorach danych
+- typowe zastosowania:
+  - przetwarzanie macierzy
+  - uczenie maszynowe
+  - symulacje
+
+=== Graph Computing Systems
+
+- systemy przetwarzania grafowego wykonują iteracyjne obliczenia na całym grafie
+- bazy grafowe wspierają analizę online całego grafu lub jego fragmentów
+- przykłady:
+  - Apache Giraph
+  - Neo4j
+
+== Przetwarzanie strumieni danych
+
+- rekordy są przetwarzane pojedynczo lub w małych porcjach
+- obliczenia definiuje się zwykle jako topologie DAG
+- dla operacji stanowych trzeba śledzić stan obliczeń
+
+=== Operacje
+
+- bezstanowe
+  - filtrowanie
+  - mapowanie
+- stanowe
+  - agregacje
+  - okna czasowe
+- terminalne
+  - zapis do bazy, pliku lub systemu zewnętrznego
+
+=== Mikrobatch
+
+- rekordy są przetwarzane małymi porcjami
+- poprawia wydajność przy zachowaniu opóźnień zbliżonych do _real-time_
+
+=== Unbounded table
+
+- strumień można traktować jak nieograniczoną tabelę
+- kolejne rekordy pojawiają się w niej na bieżąco
