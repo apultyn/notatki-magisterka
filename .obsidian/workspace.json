@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SEM_1/STUPA/startup_pomysl.md",
+                "file": "Inne/erasmus-steps.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "startup_pomysl"
+              "title": "erasmus-steps"
             }
           }
         ]
@@ -185,12 +185,14 @@
   },
   "active": "b26babed2d8ed0e7",
   "lastOpenFiles": [
+    "Inne/erasmus.md",
+    "Inne/erasmus-steps.md",
+    "SEM_1/kolosy-1.md",
+    "SEM_1/STUPA/startup_pomysl.md",
     "SEM_1/TBD/2_obliczenia_rozproszone.md",
     "SEM_1/TBD/1_intro.md",
-    "SEM_1/STUPA/startup_pomysl.md",
     "SEM_1/STUPA/1_intro.md",
     "SEM_1/TBD/1_intro.typ",
-    "SEM_1/kolosy-1.md",
     "SEM_1/WSO/wyklad_5.md",
     "SEM_1/WSO/wyklad_3.md",
     "SEM_1/typst-another.typ",
@@ -208,7 +210,6 @@
     "SEM_1/BSC/5_puf_konstrukcje.md",
     "SEM_1/BSC/4_puf.md",
     "SEM_1/WSO/wyklad_2.md",
-    "Inne/erasmus.md",
     "MAG/opis-tematu.md",
     "MAG/temat-wstepny-1.md",
     "SEM_1/WSO/wyklad_1.md",

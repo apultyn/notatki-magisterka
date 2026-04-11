@@ -1,7 +1,7 @@
 # Pierwsza tura kolosów
 
 ### MACY
-- 8 kwietnia
+- 15 kwietnia
 	- kombinują jakiś drugi termin, najprawdopodobniej 16
 - nie ma betonu 
 - bez notatek
