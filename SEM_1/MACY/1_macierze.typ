@@ -39,6 +39,8 @@
   - jeżeli dla każdego niezerowego wektora $v in bb(K)^n$ zachodzi $ v^(star) A v > 0 $ to jest dodatnio określona
   - $v^\* = overline(v)^T$
   - daszek oznacza liczbę zespoloną
+- *macierze schodkowe*
+  - każda niezerowa macierz może zostać zredukowana za pomocą operacji elementarnych na wierszach do macierzy schodkowo zredukowanej
 
 == Rozkłady macierzy
 
@@ -60,6 +62,7 @@
 - $P$ - permutacyjna (diagonalna z jedynkami, ale poprzestawiana)
 - $P$ powstaje po zamianie wierszy w macierzy
 - $L$ ma wtedy zawsze 1 na diagonali
+- liczymy tak samo jak LU, tylko przy przestawianiu wierszy analogicznie przestawiamy wiersze macierzy P, a na koniec ją transponujemy
 
 === Rozkład spektralny
 

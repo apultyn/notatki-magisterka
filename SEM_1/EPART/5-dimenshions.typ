@@ -7,3 +7,6 @@
 - also features are usually not independent
 - but large dimenshionality urges us to have more training data
 - computational complexity also radically grows with high amount of dimenshions
+
+== PCA
+
