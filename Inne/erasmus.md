@@ -58,6 +58,16 @@ Oprócz tego spodobały mi się przedmioty dotyczące cyberbezpieczeństwa na wy
 	 - Computer Security - https://www.chalmers.se/en/education/your-studies/find-course-and-programme-syllabi/course-syllabus/EDA264/?acYear=2026%2F2027
 	 - Network Security - https://www.chalmers.se/en/education/your-studies/find-course-and-programme-syllabi/course-syllabus/EDA491/?acYear=2026%2F2027
 	 - Language-based Security - https://www.chalmers.se/en/education/your-studies/find-course-and-programme-syllabi/course-syllabus/TDA602/?acYear=2026%2F2027
+- przedmioty główne:
+	- [Ethical hacking and pentesting | Chalmers](https://www.chalmers.se/en/education/your-studies/find-course-and-programme-syllabi/course-syllabus/DAT370/?acYear=2026%2F2027)
+	- [Data-driven support for cyber-physical systems | Chalmers](https://www.chalmers.se/en/education/your-studies/find-course-and-programme-syllabi/course-syllabus/DAT300/?acYear=2026%2F2027)
+	- [Distributed systems | Chalmers](https://www.chalmers.se/en/education/your-studies/find-course-and-programme-syllabi/course-syllabus/TDA596/?acYear=2026%2F2027)
+	- [Cryptography | Chalmers](https://www.chalmers.se/en/education/your-studies/find-course-and-programme-syllabi/course-syllabus/TDA352/?acYear=2026%2F2027)
+- przedmioty zapasowe:
+	- [Computer networks | Chalmers](https://www.chalmers.se/en/education/your-studies/find-course-and-programme-syllabi/course-syllabus/EDA387/?acYear=2026%2F2027)
+	- [Operating systems | Chalmers](https://www.chalmers.se/en/education/your-studies/find-course-and-programme-syllabi/course-syllabus/EDA093/?acYear=2026%2F2027)
+	- [Programming language technology](https://www.chalmers.se/en/education/your-studies/find-course-and-programme-syllabi/course-syllabus/DAT151/?acYear=2026%2F2027)
+	- [Autonomous and cooperative vehicular systems | Chalmers](https://www.chalmers.se/en/education/your-studies/find-course-and-programme-syllabi/course-syllabus/DAT295/?acYear=2026%2F2027)
 - mieszkanie: https://www.chalmers.se/en/education/study-at-chalmers/living-in-sweden/housing/
 	- chyba gwarantują mieszkanie
 	- pewnie to będzie kawalerka

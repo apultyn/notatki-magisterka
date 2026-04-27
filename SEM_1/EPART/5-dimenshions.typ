@@ -10,3 +10,12 @@
 
 == PCA
 
+- finding new coordinate axes in which data has the biggest variance
+- ignores class labels
+- usefull for data compression and retaining maxiumum information
+
+== FLD
+
+- _Fisher's Linear Discriminant_
+- finding projection that best seperates the classes
+- discrimination is the priority

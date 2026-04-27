@@ -56,6 +56,3 @@ Mamy podane ilości sampli $N$, ilość klas $C$ i liczba wymiarów $D$ (lub lic
 == Obliczenia klasyfikatorów
 
 Tak samo mamy podane ilości sampli $N$, ilość klas $C$ i liczba wymiarów $D$ (lub liczba features $F$, to jest to samo).
-
-=== k-NN
-

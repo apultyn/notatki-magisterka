@@ -1,5 +1,7 @@
 = Macierze
 
+
+
 == Rodzaje macierzy
 
 - *macierz transponowana* - kolumny starej macierzy stają się rzędami nowej
