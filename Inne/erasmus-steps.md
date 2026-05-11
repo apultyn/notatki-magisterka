@@ -22,16 +22,12 @@
 
 ## Dokumenty
 
-- Zgłoszenie kandydata na wyjazd i wniosek o przekazanie grantu
-	- na maila erasmus@pw.edu.pl od 4.05 do 30.06 
-- Learning Agreement
-	- najpierw zapisać się na przedmioty u szwedów, potem wygenerować LA na EiTI\
-	- wymiana studencka ->wyjazdy -> LA -> outgoing students mobilty -> mobilities
-- Course Credit Transwer
-	- propozycja transferu zaliczeń
-	- https://www.elka.pw.edu.pl/Studenci/Wymiana-miedzynarodowa/Erasmus/Przyklady-i-wzory-dokumentow-oraz-formularze-do-pobrania
-	- podpisany **odręcznie*
-- Wniosek wyjazdowy WWS
-	- gdzieś na początku czerwca, dokument na później
-	- https://erasmus.pw.edu.pl/Strefa-studenta/Wyjazdy-na-studia/Formalnosci-przed-mobilnoscia
-	- podpisany **odręcznie*
+- dokumenty aplikacyjne (od 4.05 do 30.06)
+	- zgłoszenie kandydata na wyjazd (USOS)
+	- wniosek o przekazanie grantu
+- dokumenty wyjazdowe (maksymalnie miesiąc przed wyjazdem)
+	- wniosek WWS
+	- Learning Agreement
+	- Ubezpieczenie EKUZ, OC i NNW
+	- list akceptacyjny od szwedów
+	- oświadczenie o podróży
