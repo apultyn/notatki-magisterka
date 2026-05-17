@@ -99,3 +99,109 @@
   - too small - slow learning, trapping in local minimas
   - too large - oscilations
   - solution - variable learning rate, increasing by constant value if error systematically decreases, decreasing geometrically when error increases
+
+== Problems with classic neural networks
+
+- classic neural network - *fully-connected (FC) architecture*
+- *vanishing gradients* - error signal vanishes geometrically while backpropagating, resulting in little to none training for the first layer
+- *spatial structure* - when for example computing images, connecting all neurons to every pixel value is unnatural and wasteful (pixels in the top-right rarely are correlated with those in the botton-left)
+- idea - first layers should work as feature extractors looking at small areas
+
+== Convolution
+
+- in convolutional neural networks (*CNN*) filter has smaller size than input
+- 3 key characteristics:
+  - locality of connections - each output neuron is connected only to a samll patch of input (*receptive field*)
+  - parameter sharing - same filter (same set of weights) is slid across whole picture
+  - translation equivariance - same filter works the same in the whole output (cat detector in the top-right corner works also as a cat detector in the bottom-left)
+- mathematical definition:
+  - you have kernel $K$ (for example $2 times 2$ weights $w, x, y, z$) on top of the image at position $(i, j)$
+  - you multiply input values by coresponding kernel values, then sum them
+  - then you slide the kernel and repeat
+  - $ S(i, j) = (I * K)(i, j) = sum_m sum_n I(i+m, j+n) K(m,n) $
+- parameters:
+  - $f$ - _filter size_ (e.g $2 times 2$, $4 times 2 times 3$)
+  - $s$ - _stride_ - step length, how big of a step filter does
+  - $p$ - _padding_ - extra border around the input (usually $p = f/2$)
+
+=== Padding
+- output size is: $ "size" = (n - f + 2 p) / s + 1 $
+- two regimes:
+  - _valid padding_ ($p=0$) - output of the convolution is smaller than input
+  - _same padding_ ($p = f/2$) - output is the same size as input
+- strategies:
+  - _zero padding_ - surrounding image with zeroes - simplest but adds artificial black border feature (but still most popular in image networks)
+  - _replicated padding_ - copy the neares value outward - avoids artificial zeroes
+  - _symmetric padding_ - mirrors the image at the boundry - best preserving local features
+  - _circulated padding_ - copy-and-paste image next to the input - usefull when data is periodic
+
+=== Linearity
+
+- convolution is a linear operation
+- stacking linear operations gives another linear operation - we need to introduce non-linearity, or network collapses to single linear classifier
+- CNN's use simpler functions than sigmoid:
+  - *ReLU* $ f(x) = max(0, 1) $
+    - for $x>0$ gradient is exactly $1$, so backpropagated signal does not vanishes
+    - trivial to compute
+    - *dying ReLU problem* - if neuron consistently outputs negative value, it's gradient is zero forever and it stops learning
+  - *Leaky ReLU* $ f(x) = max(alpha x, x) $
+    - even if neuron is off, small gradient flows through it
+
+=== Building layers
+
+- each filter that processed whole image gives *activation map*: #image("/assets/image-1.png", width: 60%)
+  - $32 times 32 times 3$ image
+  - $5 times 5 times 3$ filter
+  - $28 times 28 times 1$ activation map
+- when we add another, independent filters, it gives another $28 times 28 times 1$ activation map, that stacks behind first one
+- for example for six filters we get $28 times 28 times 6$ convolutional layer: #image("/assets/image-2.png", width: 60%)
+- then we can stack convolutional layers, by applying filters on convolutional layers, receiving another convolutional filter; #image("/assets/image-3.png", width: 60%)
+  - without padding, dimenshions shrink
+  - filter depth grows (it must span full depth of previous layer's output)
+- filter of size $1 times 1 times "depth"$ calculates dot product at each position - usefull to decrease depth without changing spatial size
+
+=== Pooling
+
+- *pooling* - reducing width and height while keeping depth unchanged
+  - it does *not* mix channels - it operates on each depth slice independently
+- *max pooling* - keeping only the maximum value in each pooling window: #image("/assets/image-4.png", width: 60%)
+- why pool at all:
+  - improve computational efficiency (less to compute)
+  - small shifts in input does not change the pooled output much
+
+=== Normalization
+
+- two main approaches:
+  - *local response normalization (LRN)* - inhibiting neighbours of the neuron with high output value (abandoned approach)
+  - *batch normalization (BN)* - for every mini-batch, batch mean is subtracted and divided by batch standard deviation, channel by channel, then it's scaled and shifted
+    - stabilizes the distribution of activations during training
+    - allows much higher learning rate
+    - often makes training 5-10 times faster
+    - practically every modern CNN uses it
+
+=== Regularization
+
+- *L1 regularization* - defining penalty as $lambda |w|$ - encourages sparse weights, effectively selects a subset of inputs and ignores noisy operations
+- *L2 regularization* - defining penalty as $lambda / 2 w^2$ - penalizes large weights
+- *Elastic net* - combination between L1 and L2 - $lambda |w| + lambda w^2$
+- *Dropout*
+  - different type of regularization
+  - randomly sets outputs of fraction (typically 50%) of neurons to zero
+  - each mini-batch of data trains a different, thinned sub-network
+  - neurons are less relying on each other, so each must learn an independently usefull feature
+  - adding noise
+
+== Transfer learning
+
+- reusing what one network learned to help with a smaller one
+- recipe:
+  + Take a pre-trained network
+  + Remove last classification layer (or last few layers)
+  + Add a new classifier for your task
+  + Either:
+    - freeze the pre-trained weights, train only the new head
+    - continue training the whole network at a low learning rate
+- three questions:
+  - *what* to transfer - low level features transfer easily, task specific does not
+  - *how* to transfer - feature extraction, fine-tuning, domain adaptation
+  - *when* to transfer - only when source and target tasks are related (*negative transfer* - missmatch between source and task, resulting in worse network than without transfer learning)

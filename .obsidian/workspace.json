@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "MAG/ppmgr-wstep.md",
+                "file": "Inne/erasmus-steps.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "ppmgr-wstep"
+              "title": "erasmus-steps"
             }
           },
           {
@@ -214,10 +214,14 @@
   },
   "active": "1263336dbd443cab",
   "lastOpenFiles": [
+    "assets/image-4.png",
+    "assets/image-3.png",
+    "assets/image-2.png",
+    "assets/image-1.png",
+    "MAG/ppmgr-wstep.md",
     "SEM_1/MACY/pdf/2_logiki.pdf",
     "SEM_1/MACY/2_logiki.pdf",
     "MAG/Bez nazwy.md",
-    "MAG/ppmgr-wstep.md",
     "Inne/erasmus-steps.md",
     "MAG/temat-wstepny-1.md",
     "MAG/opis-tematu.md",
