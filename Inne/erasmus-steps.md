@@ -25,7 +25,7 @@
 - Zgłoszenie kandydata na wyjazd i wniosek o przekazanie grantu
 	- na maila erasmus@pw.edu.pl od 4.05 do 30.06 
 - Learning Agreement
-	- najpierw zapisać się na przedmioty u szwedów, potem wygenerować LA na EiTI\
+	- najpierw zapisać się na przedmioty u szwedów, potem wygenerować LA na EiTI
 	- wymiana studencka ->wyjazdy -> LA -> outgoing students mobilty -> mobilities
 - Course Credit Transwer
 	- propozycja transferu zaliczeń

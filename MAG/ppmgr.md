@@ -42,4 +42,8 @@
 ### Artykuły
 - [A Comprehensive Survey on Model Context Protocol: Architecture, Tool Integration, and the Future of AI Interoperability](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5957238) - bardziej opis samego konceptu MCP
 - [MCPTox: A Benchmark for Tool Poisoning Attack on Real-World MCP Servers](https://arxiv.org/pdf/2508.14925) - zbadali 353 realnych narzędzi, skuteczność ataków wyniosła 72,8% !!!
-	- trochę inne rodzaje opisów, same prompt injection
+	- trochę inne rodzaje opisów, skupienie tylko na atakach typu prompt injection
+- [TrustDesc](https://arxiv.org/html/2604.07536v1)
+	- narzędzie do automatycznego generowania opisów narzędzi MCP na podstawie ich implementacji
+- [MCP-Scan](https://invariantlabs.ai/blog/introducing-mcp-scan)
+	- narzędzie do wykrywania szkodliwych opisów
