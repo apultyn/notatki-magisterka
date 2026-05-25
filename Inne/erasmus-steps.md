@@ -6,12 +6,6 @@
 	- baba ma wolne 16.04 - 30.04, kurwa rychło w czas
 - koordynatorem u nas jest dr Dariusz Turlej
 - dokumenty podpisywać **odręcznie** i **na niebiesko**
-
-## Rzeczy do ogarnięcia na miejscu
-
-- mieszkanie (<https://www.chalmers.se/en/education/study-at-chalmers/living-in-sweden/housing/>)
-- ubezpieczenie (<https://www.chalmers.se/en/education/your-studies/rights-and-obligations/insurance-for-students/>)
-
 ## Daty
 
 - 1 maja - termin złożenia aplikacji **do szwedów
@@ -22,16 +16,45 @@
 
 ## Dokumenty
 
-- Zgłoszenie kandydata na wyjazd i wniosek o przekazanie grantu
-	- na maila erasmus@pw.edu.pl od 4.05 do 30.06 
-- Learning Agreement
-	- najpierw zapisać się na przedmioty u szwedów, potem wygenerować LA na EiTI
-	- wymiana studencka ->wyjazdy -> LA -> outgoing students mobilty -> mobilities
-- Course Credit Transwer
-	- propozycja transferu zaliczeń
-	- https://www.elka.pw.edu.pl/Studenci/Wymiana-miedzynarodowa/Erasmus/Przyklady-i-wzory-dokumentow-oraz-formularze-do-pobrania
-	- podpisany **odręcznie*
-- Wniosek wyjazdowy WWS
-	- gdzieś na początku czerwca, dokument na później
-	- https://erasmus.pw.edu.pl/Strefa-studenta/Wyjazdy-na-studia/Formalnosci-przed-mobilnoscia
-	- podpisany **odręcznie*
+- dokumenty aplikacyjne (od 4.05 do 30.06)
+	- zgłoszenie kandydata na wyjazd (USOS)
+	- wniosek o przekazanie grantu
+- dokumenty wyjazdowe (maksymalnie miesiąc przed wyjazdem)
+	- wniosek WWS (wydrukowany)
+		- ja wypełniam A, B i C
+		- koordynator i dziekan wypełniają E
+	- Learning Agreement (wypełniony w usosie)
+		- tu trzeba poczekać do połowy czerwca na ruch szwedów
+	- Ubezpieczenie EKUZ, OC i NNW
+		- OC i NWW dostałem od szwedów (działa na 2 tygodnie przed i po mobilności)
+	- list akceptacyjny od szwedów (wydrukowany)
+	- oświadczenie o podróży + bilety
+- jeszcze do ogarnięcia:
+	- WWS
+		- podpisanie sekcji C
+		- ogarnięcie podpisów w E
+	- Learning Agreement
+		- czekanie do połowy czerwca na szwedów
+	- oświadczenie o podróży + bilety
+		- najpierw trzeba ogarnąć loty
+
+## Loty
+
+- tam
+	- bezpośredni 2 LOTu
+	- 21 sierpnia 20:40 - 22:20
+	- 592 PLN bez bagażu 23 kg
+		- 718 PLN z bagażem 23 kg
+- z powrotem
+	- też lot
+	- 19 stycznia 8:00 - 9:35
+	- 293 PLN bez bagażu, 419 z bagażem
+## Mieszkanie
+
+### Chalmers Studentbostader
+- https://www.chalmersstudentbostader.se/en/
+- potencjalnie przydzielone mieszkanie
+	- maksymalnie (6500 SEK - 594 EUR - 2500 PLN)
+	- zgłoszenia do 2 sierpnia
+### SGS SB
+- https://sgs.se/en/

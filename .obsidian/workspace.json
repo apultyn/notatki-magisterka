@@ -13,12 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "MAG/ppmgr.md",
+                "file": "MAG/ppmgr-wstep.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "ppmgr"
+              "title": "ppmgr-wstep"
+            }
+          },
+          {
+            "id": "1263336dbd443cab",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Inne/erasmus-steps.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "erasmus-steps"
             }
           },
           {
@@ -35,7 +49,8 @@
               "title": "opis-tematu"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -197,13 +212,20 @@
       "bases:Stwórz nową bazę danych": false
     }
   },
-  "active": "9098b61b1b85969f",
+  "active": "1263336dbd443cab",
   "lastOpenFiles": [
+    "assets/image-4.png",
+    "assets/image-3.png",
+    "assets/image-2.png",
+    "assets/image-1.png",
+    "MAG/ppmgr-wstep.md",
+    "SEM_1/MACY/pdf/2_logiki.pdf",
+    "SEM_1/MACY/2_logiki.pdf",
+    "MAG/Bez nazwy.md",
+    "Inne/erasmus-steps.md",
     "MAG/temat-wstepny-1.md",
-    "MAG/ppmgr.md",
     "MAG/opis-tematu.md",
     "Inne/erasmus.md",
-    "Inne/erasmus-steps.md",
     "SEM_1/STUPA/startup_pomysl.md",
     "SEM_1/STUPA/sdp-brakujace.md",
     "SEM_1/STUPA/aula-polska-notatki.md",
