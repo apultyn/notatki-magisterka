@@ -29,6 +29,8 @@
 		- OC i NWW dostałem od szwedów (działa na 2 tygodnie przed i po mobilności)
 	- list akceptacyjny od szwedów (wydrukowany)
 	- oświadczenie o podróży + bilety
+- dokumenty dla EiTI
+	- Course Credit Transfer
 - jeszcze do ogarnięcia:
 	- WWS
 		- podpisanie sekcji C
@@ -37,6 +39,8 @@
 		- czekanie do połowy czerwca na szwedów
 	- oświadczenie o podróży + bilety
 		- najpierw trzeba ogarnąć loty
+	- Course Credit Transfer
+		- też trzeba czekać na szwedów żeby wiedzieć jakie przedmioty będę studiować
 
 ## Loty
 
