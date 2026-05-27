@@ -37,7 +37,7 @@
   + zachować kontrolę nad fizycznymi zasobami
 - *narzut wirtualizacji* - zużycie zasobów przez hypervisora
 
-= Wykład 2 - sposoby wirtualizacji
+= Wykład 2 - Sposoby wirtualizacji
 
 == Rodzaje wirtualizacji
 
@@ -101,7 +101,7 @@
   - mniej wydajny ale łatwiejszy do doinstalowania
   - np. VirtualBox
 
-= Wykład 3 - podstawowe pojęcia, sprzęt
+= Wykład 3 - Podstawowe pojęcia, sprzęt
 
 == Podstawowe pojęcia
 
@@ -137,11 +137,11 @@
 - *Bridge* - most (warstwa 2 - łącza danych)
   - łączy dwa segmenty sieci i rozpoznaje adresy MAC
   - kluczowa cecha - separuje domeny kolizyjne
-  - obie strony mostu należą do jednej *domeny rozgłoszeniowej*
+  - obie strony mostu należą do jednej *domeny rozgłoszeniowej* - obszaru sieci, w którym urządzenia mogą komunikować się wyłącznie na podstawie adresów MAC
 - *Switch* - przełącznik (warstwa 2 - łącza danych)
   - *multiport bridge* - most z wieloma portami
   - uczy się adresów MAC i wysyła ruch tylko na właściwy port
-  - jedna domena rozgłoszeniowa
+  - cały switch - jedna domena rozgłoszeniowa
 - *Router* - ruter (warstwa 3 - sieciowa)
   - działa na podstawie adresów IP, nie MAC
   - przekazywanie pakietów pomiędzy sieciami
@@ -186,26 +186,41 @@
 - popularny *wirtualizator typu 2*
 - darmowy do użytku osobistego
 - tryby zapisu a migawki: #table(
-    columns: (auto, auto, auto, auto),
-    align: (horizon, horizon, horizon, horizon),
-    [*Tryb*], [*Migawki*], [*Współdzielenie*], [*Opis*],
+    columns: (auto, auto, auto, auto, auto),
+    align: (horizon, horizon, horizon, horizon, horizon),
+    [*Tryb*], [*Migawki*], [*Współdzielenie*], [*Opis*], [*Zastosowanie*],
 
-    [_Normal_], [Tak], [Nie], [Domyślny, tworzy plik różnicowy, możliwe cofnięcie zmian],
-    [_Write-through_], [Nie], [Nie], [Migawki niedostępne],
-    [_Shareable_], [Nie], [Tak (r/w)], [Wspólne dla wielu maszyn, fixed-size, własna synchronizacja],
+    [_Normal_], [Tak], [Nie], [Domyślny, tworzy plik różnicowy, możliwe cofnięcie zmian], [Zwykłe użycie],
+    [_Write-through_],
+    [Nie],
+    [Nie],
+    [Dane zapisywane bezpośrednio do obrazu bazowego, migawki niedostępne],
+    [Dla dysków w których dane mają przetrwać _revert_ VM],
+
+    [_Shareable_],
+    [Nie],
+    [Tak (r/w)],
+    [Wspólne dla wielu maszyn, fixed-size, własna synchronizacja],
+    [Wspólne dane do zapisu],
+
     [_Immutable_],
-    [Wyjątkowo],
+    [Wyjątkowo, w tym trybie tworznie migawek jest bez sensu, bo i tak chcemy startować od stanu bazowego],
     [Tak (r/o)],
     [Dane tracone po wyłączeniu VM - maszyny startują zawsze od tego samego stanu],
+    [Np. dla środowisk testowych które mają być za każdym razem przywracane do stanu początkowego],
 
-    [_Multiattach_], [Tak], [Tak], [Dane zachowane, każda VM widzi własne zmiany],
-    [_Read-Only_], [Nie], [Tak], [CD/DVD],
+    [_Multiattach_],
+    [Tak],
+    [Tak],
+    [Każda VM otrzymuje własny plik różnicowy od obrazu bazowego, każda VM widzi tylko własne zmiany],
+    [Grupy maszyn z takim samym systemem bazowym, ale pracujące niezależnie od siebie],
+
+    [_Read-Only_],
+    [Nie],
+    [Tak],
+    [Dysk tylko do odczytu, tak jak płyty CD/DVD],
+    [Instalatory, bazy danych tylko do odczytu, zabezpieczenie przed modyfikacją ważnych danych],
   )
-- zastosowania trybów zapisu:
-  - maszyny testowe startujące od zera - _immutable_
-  - wspólne dane tylko do odczytu - _immutable_,
-  - wspólne dane do zapisu - _shareable_, ale trzeba zapewnić synchronizację dostępu
-  - grupy maszyn z własnym stanem - _multiattach_
 - działanie migawek:
   - każda migawka jest plikiem różnicowym względem poprzedniego
   - przy odczycie VirtualBox czyta od najnowszego pliku do obrazu bazowego
@@ -257,7 +272,7 @@
   - `tcpdump` - umożliwia podsłuchiwanie ruchu sieciowego na interfejsach
   - `iptables` - umożliwia filtrację ruchu
 
-== Formaty obrazów dysków
+== Formaty obrazów dysków KVM
 
 - *raw*
   - prosty, szybki
@@ -273,7 +288,7 @@
     - _falloc_ - rezerwuje miejsce przez syscall
     - _full_ - alokuje od razu całą przestrzeń (tak jak _raw_)
 
-== Migawki
+== Migawki KVM
 
 - przechowują:
   - stan obrazu dysku
@@ -281,7 +296,7 @@
 - maszyna *musi być wstrzymana* do tworzenia migawki
 - _revert_ przywraca dysk i pamięć do stanu z czasu migawki
 
-== Pamięć masowa
+== Pamięć masowa KVM
 
 - zasoby dyskowe zarządzane przez *pule* (ang. _pools_)
 - typy pul:
@@ -292,7 +307,7 @@
   - *iscsi/scsi* - wolumeny muszą być utworzone wcześniej
   - *lvm* - wolumenty zakładane automatycznie w grupie logicznej
 
-== Tworzenie i klonowanie maszyny
+== Tworzenie i klonowanie maszyny KVM
 
 - tworzenie obrazu dysku: polecenie `qemu-img create`
 - instalacja maszyny: `virt-install`
@@ -311,12 +326,12 @@
   - izolację VM od hosta
   - izolację VM od internetu - np. serwery baz danych nie powinny mieć dostępu na zewnątrz
 
-= Wykład 6 - bezpieczeństwo sieci
+= Wykład 6 - Bezpieczeństwo sieci
 
 == Gdzie zabezpieczać VM - trzy warstwy
 
-- *Firewall VM* - ochrona wewnętrzna maszyny wirtualnej i tylko ją chroni
-- *Firewall hosta* - działanie na hypervisorze, wymaga dobrej konfiguracji żeby nie przepuszczać niezauważenie ruchu pomiędzy VM
+- *Firewall VM* - np. `iptables` wewnątrz VM - ochrona wewnętrzna maszyny wirtualnej i tylko ją chroni
+- *Firewall hosta* - np. `iptables` na hoście - działanie na hypervisorze, może filtrować ruch wchodzący i wychodzący ze wszystkich VM, ale wymaga dobrej konfiguracji żeby nie przepuszczać niezauważenie ruchu pomiędzy VM
 - *Firewall zewnętrzny* - fizyczne urządzenie przed całą infrastrukturą, chroni przed internetem, ale nie widzi ruchu pomiędzy VM na tym samym hoście
 
 == Przykład 1 - wspólna sieć
@@ -390,7 +405,7 @@
   + stwórz Cloudlety i przypisz do brokera
   + Uruchom symulację i przeanalizuj wyniki
 
-= Wykład 7 - zarządzanie energią w centrach danych
+= Wykład 7 - Zarządzanie energią w centrach danych
 
 == Przybliżenie problemu
 
@@ -416,6 +431,7 @@
 - *odzysk ciepła* - pompy ciepła, ogrzewanie budynków ciepłem z serwerowni
 - *free-cooling* - np. chłodzenie powietrzem z zewnątrz gdy temperatura na to pozwala
 - *korzystna lokalizacja* - np. Skandynawia, gdzie jest zimno i tańsza energia odnawialna
+- *separacja traktów ciepłych i zimnych* - zapewnienie efektywnego przepływu zimnego i ciepłego powietrza w pomieszczeniu, zwiększając efektywność chłodzenia
 
 == Analiza zużycia energii
 
@@ -439,7 +455,7 @@
   - bardzo częste odczyty - nawet 10-100 Hz
   - *estymacja, nie prawdziwy pomiar*
 
-= Wykład 8 - kontynuacja o energii
+= Wykład 8 - Kontynuacja o energii
 
 == ACPI
 
@@ -449,6 +465,20 @@
     - *stany S\** - poziom uśpienia komputera
   - *stany procesora C\** - poziomy aktywności procesora
     - *stany P\** - stany wydajności procesora
+
+== DVFS
+
+- _Dynamic Voltage and Frequency Scaling_
+- model energetyczny bramki CMOS: $ P = P_"leak" + P_"short" + P_"dyn" $
+  - $P$ - moc pobierana przez procesor
+  - $P_"leak"$ - moc tracona w wyniku upływu w stanie ustalonym - gdy tranzystor jest wyłączony, mimo to przepływa przez niego mały prąd, proporcjonalny do napięcia $U$
+  - $P_"short"$ - moc tracona w wyniku upływu przez tranzystory w chwili przełączania - przy przełączaniu przez chwilę występuje zwarcie pomiędzy oboma tranzystorami - moc proporcjonalna do częstotliwości $f$
+  - $P_"dyn"$ - moc potrzebna do przełączania tranzystorów (*dominujące w działającym procesorze*)
+- $ P_"dyn" = alpha C U^2 f $
+  - $alpha$ - intensywność przełączeń na takt
+  - $C$ - pojemność elektryczna
+  - $U$ - napięcie
+  - $f$ - częstotliwość
 
 == Sterowanie stanami procesora w Linuxie
 
@@ -623,3 +653,73 @@
   - *Tier 1 Gateway* - brama dla segmentów wirtualnych, łączy logiczne przełączniki
 - *segmenty* - logiczne przełączniki L2 dla VM
 - rozproszony firewall - reguły filtracji działają bezpośrednio na każdym hoście ESXi, możliwa filtracja wschód-zachód
+
+= Beton
+
+=== Otwarte
+
++ Co to jest thin-provisioning
+  - Format zapisu wirtualnego dysku na dysku gospodarza. Format ten zajmuje tylko tyle miejsca, ile faktycznie potrzebują i używają VM. Oszczędza to miejsce na maszynie gospodarza, ale dodaje narzut przy alokacji większej ilości miejsca.
++ Dlaczego umieszczenie wszystkich maszyn wirtualnych w jednej sieci (wirtualnym przełączniku, vlanie) jest niebezpieczne? Co należy zrobić, żeby zwiększyć bezpieczeństwo?
+  - Wprowadza to _single-point-of-failure_ dla całej infrastruktury. Przejęcie jednej maszyny wirtualnej może dać dostęp atakującemu do innych VM, a nawet do maszyny hosta. Aby zwiększyć bezpieczeństwo architektury należałoby ograniczyć możliwość komunikacji pomiędzy VM a hostem, czy innymi VMkami do niezbędnego minimum
++ Jakie są składniki poboru energii przez centrum obliczeniowe? Co można zrobić na etapie projektowania centrum, aby zmniejszyć zużycie energii? Uwaga! Nie chodzi o wykorzystanie mechanizmów programowych.
+  - Centrum obliczeniowe pobiera energię do zasilania serwerów, chłodzenia, urządzeń sieciowych, czy systemów monitorowania. Aby zmniejszyć zużycie energii można:
+    - ograniczyć zużycie prądu na chłodzenie poprzez wykorzystanie _free-cooling_ - zimnego powietrza z zewnątrz gdy temperatura na to pozwala
+    - odzyskiwanie ciepła - np. ogrzewanie budynków ciepłem z serwerowni przy wykorzystaniu pompy ciepła
+    - zwiększenie efektywności chłodzenia poprzez odpowiednie rozplanowanie przepływu ciepłego i zimnego powietrza
++ Co jest głównym składnikiem poboru mocy procesora (dowolnego układu cyfrowego synchronicznego)
+  - Głównym składnikiem poboru mocy jest moc potrzebna do przełączania tranzystorów. Wynosi ona $P_"dyn" = alpha C U^2 f$
++ Czy migawka może zostać wykonana w czasie, gdy maszyna jest uruchomiona? Jeśli tak to co można w ten sposób osiągnąć?
+  - Migawka może zostać wykonana, gdy maszyna jest uruchomiona, natomiast musi zostać do tego wstrzymana. Umożliwia to zapisanie stanu pamięci RAM i późniejszego jej odtworzenia.
++ Jakie są składniki poboru mocy przez procesor (ogólniej synchroniczny układ cyfrowy)? Dlaczego i jak zużycie energii zależy od napięcia zasilacza i częstotliwości taktowania?
+  - $P_"dyn" = alpha C U^2 f$ - moc potrzebna do przełączania tranzystorów (we wzorze jest i napięcie i częstotliwość)
+  - $P_"leak"$ - mały prąd przepływający przez tranzystor, nawet gdy jest teoretycznie wyłączony, proporcjonalny do napięcia $U$
+  - $P_"short"$ - mały prąd zwracia w chwili przełączania tranzystora, proporcjonalny do częstotliwości $f$
++ Dlaczego wykorzystanie zewnętrznego firewalla do filtracji ruchu między maszynami wirtualnymi używającymi różnych podsieci (przełączników wirtualnych, vlanów) jest zazwyczaj uważane za bezpieczniejsze niż filtracja na maszynie gospodarza?
+  - Filtracja na maszynie gospodarza działa na tym samym OS co hypervisor, co w przypadku przejęcia VM i ucieczki z hypervisora może umożliwić atakującemu modyfikację tych zabezpieczeń. Zewnętrzny firewall jest oddzielną maszyną fizyczną lub VM na innym hoście, posiada własny system operacyjny, przez co przejęcie VM nie daje od razu dostępu do firewalla.
++ #image("beton/beton-2.jpg", width: 50%)
+  + Wiele przewag:
+    - efektywniejsze zarządzanie zasobami (jedna usługa na serwerze marnuje jego dostepne zasoby obliczeniowe)
+    - niższy koszt wirtualizacji niż kupno jednego sprzętu na usługę
+    - łatwiejsze zarządzanie i monitorowanie
+  + Intel VT-x - rozszerzenie procesora rozwiązujące problem ring-aliasingu, umożliwia systemom operacyjnym VMek jakby pracować na ringu 0 (z najwyższymi uprawnieniami), gdy VM chce wykonać uprzywilejowaną operację, zgłasza VM Exit, a procesor przekazuje sterowanie do VMM, po obsłużeniu sytuacji VMM zgłasza VM Entry
+  + Bez schematu ciężko odpowiedzieć xD
+  + _Power Usage Effectiveness_ - wskaźnik, ile prądu idzie faktycznie na obliczenia, a ile na obsłużenie infrastruktury: $ "PUE" = P_"total" / P_"IT" $
+    - $P_"total"$ - całkowite zużycie energii serwerowni
+    - $P_"IT"$ - zużycie energii tylko i wyłącznie na część IT (serwery + sprzęt sieciowy)
+  + Wirtualizator 1 stopnia jest szybszy, ponieważ działa bezpośrednio na sprzęcie, a nie na OS gospodarza. Bezpieczniejszy jest w sumie z tego samego powodu, dochodzi kwestia konieczności dbania o bezpieczeństwo i aktualizację OS hosta.
+  + Przy pełnej emulacji wirtualizator przechwytuje wszystkie wywołania. Symulacja sprzętu realizowana jest w pełni programowo. Umożliwia to symulowanie zupełnie innych fizycznych maszyn niż maszyna hosta, ogólnie daje największe możliwości. Wadą jest to że jest to ekstremalnie powolny tryb wirtualizacji.
+  + Co jest co:
+    - HA - _High Availability_ - zapewnienie prawidłowego działania systemu poprzez monitorowanie stanów (_heartbeat_) VMek, a następnie ich restartowanie w przypadku awarii
+    - DRS - _Distributed Resource Scheduler_ - jeden z celów klastrowania, zapewnienie zrównoważonego obciążenia fizycznych zasobów poprzez rozmieszczanie VM na dostępnych zasobach, a następnie ich odpowiednie migracje, umożliwia również migracje z powodu chwilowego wyłączenia maszyny fizycznej, czy pisanie reguł migracji
+  + Ta, to zajebiście
+
+=== Zamknięte
+
++ Zarządca wirtualny typu 1
+  - wymaga do działania systemu operacyjnego na maszynie gospodarza. (Nie)
+  - działa bezpośrednio na maszynie gospodarza, więc nie wymaga systemu operacyjnego. (Tak)
+  - Wymaga modyfikacji systemu operacyjnego maszyny wirtualnej. (Nie)
++ Zarządca wirtualny pracujący w trybie emulsji (xD, emulacji)
+  - może udostępniać inny sprzęt niż obecny na maszynie fizycznej. (Tak)
+  - nie może udostępniać innego sprzętu niż obecny na maszynie fizycznej. (Nie)
+  - zazwyczaj odznacza się większą wydajnością niż zarządca pracujący w trybie parawirtualizacji. (Nie)
++ Ruter
+  - zapewnia globalną łączność dzięki wykorzystaniu adresu IP i protokołów pozwalających na wymianę tras między ruterami. (Tak)
+  - nie zapewnia separacji domen kolizyjnych. (Nie)
+  - nie zapewnia separacji domen rozgłoszeniowych. (Nie)
++ Migawki o przechowywanie, że wymagają zapisu na maszynie (Chyba chodzi o te tryby zapisu w VirtualBox)
+  - Normal - ma migawki
+  - Write-through - nie ma
+  - Shareable - nie
+  - Immutable - koncepcyjnie bez sensu
+  - Multiattach - tak
+  - read-only - nie
++ O wirtualizację z wsparciem sprzętowym, że wymaga rozszerzenia procesowa Intel VT-x
++ Switch, że zapobiega kolizjom
+  - urządzenie w warstwie 2, bridge z wieloma portami, służy do separowania domen kolizyjnych, ale wszystko należy do jednej domeny rozgłoszeniowej
++ Klonowanie vs migawka
+  - klonowanie pozwala utworzyć niezależną kopię maszyny, migawka jest uzależniona od swojej VM
+  - klonowanie wykonuje pełną kopię informacji, migawka zapisuje tylko różnice
++ Router
+  - to urządzenie działające w warstwie sieciowej, przesyła pakiety pomiędzy sieciami przy użyciu protokołu IP, rozdziela domeny rozgłoszeniowe
