@@ -80,11 +80,15 @@
 - jeżeli VMM działa w ringu 0, to system gościa musi być przesunięty na ring 1 lub 3 (model 0/1/3 lub 0/3/3), co powoduje problemy:
   - *ring aliasing* - system myśli że jest w ring 0, a tak naprawdę jest niżej uprzywilejowany
   - każda uprzywilejowana instrukcja generuje błąd, który musi być obsłużony przez VMM - bardzo wolne i potencjalnie niebezpieczne
-- rozwiązanie problemu - Intel VT-x
+- rozwiązanie problemu - *Intel VT-x*
   - dwa tryby pracy procesora - *VMX (Non-)Root* tryby odpowiednio dla systemów gości/VMM
   - zarówno VMM jak i system gościa działają w ringu 0
   - gdy gość chce wykonać uprzywilejowaną operację, procesor przekazuje sterowanie automatycznie do VMM - *VM Exit*
   - po obsłużeniu sytuacji przez VMM - *VM Entry*
+  - *VMCS* - _Virtual Machine Control Structure_ - struktura danych zawierająca między innymi powód _VM Exit_
+- *Intel VT-d*
+  - obsługuje wejście-wyjście
+  - umożliwia *PCIe passthrough* - przypisanie fizycznej karty graficznej/sieciowej bezpośrednio do VM
 
 == Dwa typy hypervisora
 
@@ -249,7 +253,7 @@
     columns: (auto, auto, auto, auto, auto, auto),
     align: (horizon, horizon, horizon, horizon, horizon, horizon),
 
-    [*Tryb*], [*VM do hosta*], [*Host do VM*], [*VM i VM*], [*VM do LAN*], [*LAN do VM*],
+    [*Tryb*], [*VM -> hosta*], [*Host -> VM*], [*VM \<-\> VM*], [*VM -> LAN*], [*LAN -> VM*],
 
     [_NAT_], [Tak], [_port-forwarding_], [Nie], [Tak], [_port-forwarding_],
     [_NAT Network_], [Tak], [_port-forwarding_], [Tak], [Tak], [_port-forwarding_],
