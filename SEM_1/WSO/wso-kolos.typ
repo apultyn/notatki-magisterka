@@ -670,7 +670,7 @@
 + Co jest głównym składnikiem poboru mocy procesora (dowolnego układu cyfrowego synchronicznego)
   - Głównym składnikiem poboru mocy jest moc potrzebna do przełączania tranzystorów. Wynosi ona $P_"dyn" = alpha C U^2 f$
 + Czy migawka może zostać wykonana w czasie, gdy maszyna jest uruchomiona? Jeśli tak to co można w ten sposób osiągnąć?
-  - Migawka może zostać wykonana, gdy maszyna jest uruchomiona, natomiast musi zostać do tego wstrzymana. Umożliwia to zapisanie stanu pamięci RAM i późniejszego jej odtworzenia.
+  - Migawka może zostać wykonana, gdy maszyna jest uruchomiona, natomiast musi zostać do tego wstrzymana. Umożliwia to zapisanie stanu pamięci RAM i późniejszego jej odtworzenia. Migawki umożliwiają:
 + Jakie są składniki poboru mocy przez procesor (ogólniej synchroniczny układ cyfrowy)? Dlaczego i jak zużycie energii zależy od napięcia zasilacza i częstotliwości taktowania?
   - $P_"dyn" = alpha C U^2 f$ - moc potrzebna do przełączania tranzystorów (we wzorze jest i napięcie i częstotliwość)
   - $P_"leak"$ - mały prąd przepływający przez tranzystor, nawet gdy jest teoretycznie wyłączony, proporcjonalny do napięcia $U$

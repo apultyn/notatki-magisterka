@@ -27,6 +27,34 @@
             "state": {
               "type": "markdown",
               "state": {
+                "file": "Inne/erasmus-steps.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "erasmus-steps"
+            }
+          },
+          {
+            "id": "2b87c74506f8f421",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "SEM_1/PPMGR/ppmgr-prezentacja.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "ppmgr-prezentacja"
+            }
+          },
+          {
+            "id": "71c6f12fefa3d4c6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
                 "file": "Inne/erasmus.md",
                 "mode": "source",
                 "source": false
@@ -36,7 +64,7 @@
             }
           },
           {
-            "id": "71c6f12fefa3d4c6",
+            "id": "3e3281b8f1625c05",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -47,20 +75,6 @@
               },
               "icon": "lucide-file",
               "title": "erasmus-steps"
-            }
-          },
-          {
-            "id": "3e3281b8f1625c05",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Inne/erasmus-na-miejscu.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "erasmus-na-miejscu"
             }
           }
         ],
@@ -226,12 +240,28 @@
       "bases:Stwórz nową bazę danych": false
     }
   },
-  "active": "71c6f12fefa3d4c6",
+  "active": "2b87c74506f8f421",
   "lastOpenFiles": [
-    "Inne/erasmus-na-miejscu.md",
-    "Inne/erasmus.md",
+    "SEM_1/PPMGR/ppmgr-prezentacja.pdf",
+    "SEM_1/PPMGR/ppmgr-wstep.md",
+    "Inne/erasmus-mieszkania.md",
     "Inne/erasmus-steps.md",
-    "MAG/ppmgr-wstep.md",
+    "Inne/erasmus.md",
+    "SEM_1/PPMGR/ppmgr-prezentacja.md",
+    "SEM_1/do-zrobienia.md",
+    "SEM_1/PPMGR",
+    "Inne/erasmus-na-miejscu.md",
+    "Inne/erasmus-application/erasmus-home-application.md",
+    "Inne/erasmus-application/latex/main.pdf",
+    "Inne/erasmus-application/latex/main.out",
+    "Inne/erasmus-application/latex/main.aux",
+    "Inne/erasmus-application/latex/main.log",
+    "Inne/erasmus-application/latex/build.log",
+    "Inne/erasmus-application/latex/photos",
+    "Inne/erasmus-application/latex/README.md",
+    "Inne/erasmus-application/latex/README.md.tmp.16964.79caf95ddd6b",
+    "Inne/erasmus-application/latex/main.tex.tmp.16964.2de4f8736b88",
+    "Inne/erasmus-application/latex/main.tex.tmp.16964.62608fbdeaa3",
     "Inne/rekruterka.md",
     "Inne/kolosy-1.md",
     "Inne/stupa-kurs.md",
@@ -239,22 +269,14 @@
     "assets/image-3.png",
     "assets/image-2.png",
     "assets/image-1.png",
-    "SEM_1/MACY/pdf/2_logiki.pdf",
-    "SEM_1/MACY/2_logiki.pdf",
     "MAG/Bez nazwy.md",
     "MAG/temat-wstepny-1.md",
     "MAG/opis-tematu.md",
     "SEM_1/STUPA/startup_pomysl.md",
     "SEM_1/STUPA/sdp-brakujace.md",
     "SEM_1/STUPA/aula-polska-notatki.md",
-    "SEM_1/do-zrobienia.md",
-    "SEM_1/do-zrobienia.pdf",
-    "Inne/dokumenty erasmus/Wniosek o przekazanie grantu.docx",
-    "Inne/dokumenty erasmus",
-    "Inne/Nowy folder",
     "SEM_1/TBD/1_intro.md",
     "SEM_1/EPART/epart_summary.md",
-    "SEM_1/EPART/epart_summary.pdf",
     "SEM_1/TBD/2_obliczenia_rozproszone.md"
   ]
 }

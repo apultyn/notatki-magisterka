@@ -67,13 +67,10 @@
 === Backward procedure
 
 - algorithm:
-  + *Initialization*
-    - $ forall i beta_T (i) = 1 $
-  + *Induction* - time $t = T - 1$ down to $1$:
-    - $ beta_t (i) = sum_(j=1)^N a_(i j) b_j (O_(t+1)) beta_(t+1) (j) $
+  + *Initialization* $ forall i beta_T (i) = 1 $
+  + *Induction* - time $t = T - 1$ down to $1$: $ beta_t (i) = sum_(j=1)^N a_(i j) b_j (O_(t+1)) beta_(t+1) (j) $
     - to be in state $i$ at time $t$ and explain the rest: pick any next state $j$, transition there $a_(i j)$, emit $O_(t+1)$ with prob $b_j (O_(t+1))$, then explain the rest from $j$ using recursion: $beta_(t+1) (j)$, then sum over $j$
-  + *Termination*
-    - $ P(O | lambda) = sum_(i=1)^N pi_i b_i (O_1) beta_1(i) $
+  + *Termination* $ P(O | lambda) = sum_(i=1)^N pi_i b_i (O_1) beta_1(i) $
 
 == Viterbi algorithm
 
@@ -84,6 +81,15 @@
 - algorithm:
   + *Initialization* $ delta_1 (i) = pi_i b_i (O_1) $ $ psi_1 (i) = 0 $
   + *Recursion* (for $t = 2, ..., T$): $ delta_t (j) = max_(i in [1, N]) [delta_(t-1) (i) a_(i j)] b_j (O_t) $ $ psi_t (j) = arg max_(i in [1, N]) [delta_(t-1) (i) a_(i j)] $
+  + *Termination* $ P^* = max_i delta_T (i), q_T^* = arg max_i delta_T (i) $
+  + *Backtracking* $ q_t^* = psi_(t+1) q_(t+1)^*, t = T - 1, T - 2, ..., 1 $
+
+== Baum-Welch algorithm
+
+- problem 3 - learning model parameters from data
+- you need to decide, how many states $N$ should be there?
+- once you decide on $N$, you alternate between *E-step* and *M-step*
+- 
 
 = String Recognition
 

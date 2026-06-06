@@ -1,0 +1,135 @@
+\documentclass[11pt]{article}
+
+% ----- Page geometry -----
+\usepackage[a4paper, margin=2.2cm]{geometry}
+
+% ----- Encoding & fonts -----
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[english]{babel}
+
+% ----- Graphics, color, links, layout helpers -----
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{fontawesome5}   % phone / envelope / map icons
+\usepackage{tcolorbox}
+\usepackage{parskip}        % blank line between paragraphs, no indent
+\usepackage{ragged2e}
+
+% ----- Colors -----
+\definecolor{accent}{HTML}{2E5A87}
+\definecolor{lightgray}{HTML}{F2F4F7}
+
+\hypersetup{
+    colorlinks=true,
+    urlcolor=accent,
+    linkcolor=accent
+}
+
+\pagestyle{empty}
+
+% Show the photo if it exists, otherwise a labelled placeholder box.
+% Keeps the document compiling before you add real images.
+\newcommand{\photo}[1]{%
+    \IfFileExists{photos/#1}{%
+        \includegraphics[width=\linewidth,height=5.5cm,keepaspectratio]{photos/#1}%
+    }{%
+        \fbox{\parbox[c][5.3cm][c]{\linewidth}{\centering\color{gray}\footnotesize
+            add\\ photos/#1}}%
+    }%
+}
+
+% =====================================================================
+%  EDIT YOUR CONTACT DATA HERE
+% =====================================================================
+\newcommand{\myname}{Andrzej Pultyn}
+\newcommand{\myemail}{jedrek.pultyn@gmail.com}
+\newcommand{\myphone}{+48 697 760 520}        % <-- fill in
+\newcommand{\mylocation}{Warsaw, Poland}
+% \newcommand{\mylink}{linkedin.com/in/your-handle} % <-- fill in / remove
+
+\begin{document}
+
+% =====================================================================
+%  HEADER  -  name + contact block
+% =====================================================================
+\begin{tcolorbox}[
+    colback=lightgray,
+    colframe=lightgray,
+    boxrule=0pt,
+    arc=4pt,
+    left=14pt, right=14pt, top=12pt, bottom=12pt
+]
+{\Huge\bfseries\color{accent}\myname}\\[6pt]
+{\small
+    \faEnvelope[regular]~\href{mailto:\myemail}{\myemail} \quad
+    \faPhone*~\myphone \quad
+    \faMapMarker*~\mylocation \quad
+%    \faLinkedin~\href{https://\mylink}{\mylink}
+}
+\end{tcolorbox}
+
+\vspace{0.8em}
+
+% =====================================================================
+%  LETTER BODY
+% =====================================================================
+\noindent Hi Micke!
+\vspace{0.6em}
+
+My name is Andrzej (Andrew), I'm 23 years old and from Warsaw, Poland. I have
+an engineering degree in Computer Science, and currently I'm doing my Master's
+in Cybersecurity at Warsaw University of Technology.
+
+I was accepted at Chalmers University of Technology for an Erasmus+ exchange.
+I'm going to study Computer Systems and Cybersecurity at the Department of
+Computer Science and Engineering. For now I've been accepted for the autumn
+semester (August 2026~--- January 2027), but I'm seriously considering staying
+for the full academic year, especially since the summer courses in my program
+seem really interesting (much more than the courses at my home university :)).
+
+My whole life I've lived in a medium-sized flat with my parents and two younger
+brothers, so I'm used to sharing my living space with other people and caring
+for both private and shared areas. For the same reason I'm not the type of
+person who would throw a party at my place~--- at home I always go out to have
+fun. For me, home is a safe space where I can both work and rest without any
+trouble and where everyone feels respected and comfortable, and that's what
+I'm looking for in my place in Göteborg.
+
+I love having everything organised, I usually make myself a schedule and then
+follow it. I'm a non-smoker and a sports person~--- I love running, swimming,
+playing basketball and going to the gym. I follow the NBA and Formula 1.
+
+\vspace{0.6em}
+Feel free to contact me with any questions.
+
+\vspace{0.4em}
+Best regards,\\
+\myname
+
+% =====================================================================
+%  PHOTOS  -  drop your images in the  photos/  folder
+% =====================================================================
+\vfill
+
+{\small\color{accent}\bfseries A little bit of me}\\[4pt]
+\noindent
+\begin{minipage}[t]{0.32\textwidth}
+    \centering
+    \photo{photo1.jpg}\\[2pt]
+    {\footnotesize\itshape Sightseeing Paris}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.32\textwidth}
+    \centering
+    \photo{photo2.jpg}\\[2pt]
+    {\footnotesize\itshape At 2025 Austrian Grand Prix}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.32\textwidth}
+    \centering
+    \photo{photo3.jpg}\\[2pt]
+    {\footnotesize\itshape At my Uni with Bachelor's Thesis}
+\end{minipage}
+
+\end{document}
