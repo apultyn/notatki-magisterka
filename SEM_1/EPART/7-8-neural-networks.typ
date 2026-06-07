@@ -20,7 +20,7 @@
 
 == Perceptron rule
 
-- for supervised learning of *discrete* neurons: $ r = d_i - y_i = d_i - "sgn"(w_i^t x) $ $ Delta w_i = c[d_i - "sgn"(w_i^T x)] x $
+- for supervised learning of *discrete* neurons: $ r = d_i - y_i = d_i - "sgn"(w_i^T x) $ $ Delta w_i = c[d_i - "sgn"(w_i^T x)] x $
   - if output is correct ($y_i = d_i$) then $r = 0 arrow.r$ no change to weight
   - else ($r = plus.minus 2$) then weight is changed to correct error by $plus.minus 2 c x_j$
 

@@ -1,6 +1,6 @@
 # Erasmus mieszkania
 
-## Mieszkanie
+## Mieszkanie na dłużej
 
 ### Ogólne info
 - https://www.chalmers.se/en/education/study-at-chalmers/living-in-sweden/housing/
@@ -64,6 +64,7 @@
 	- z gościem się można dobrze od razu dogadywać
 	- ze zmianą pokoju od września - w sierpniu jeden, potem inny
 	- już nie ma opcji w sierpniu
+	- trzeba zobaczyć ile 
 - [qasa oferta Claudio](https://qasa.com/se/en/home/1370985)
 	- 5600 SEK / 2200 PLN
 	- 22 minuty dojazdu / 10 minut spaceru
@@ -164,3 +165,6 @@ Na razie najlepszą opcją jest 7, potem 4. Trzeba poczekać aż Claudio odpisze
 	- dojazd ok
 	- wszystko jest ale droższe
 	- odpisał, niby wszystko git ale jednak drożej
+
+## Mieszkanie w sierpniu 21-31 sierpnia
+

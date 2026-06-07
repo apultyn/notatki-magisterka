@@ -31,12 +31,17 @@
 
 + *Evaluation*
   - given $lambda$ and observation sequence $O = O_1, O_2, ..., O_T$, compute $P(O|lambda)$
-  - how well does this model expand this sequence
+  - how well does this model explain this sequence (how likely is this sequence)
+  - classification - for every models (one per word $w$), compute $P(O | lambda_w)$ for each and pick the winner
+  - forward-backward procedure
 + *Decoding*
   - given $lambda$ and $O$, find the state sequence $Q = q_1, q_2, ..., q_T$, that best explains the observations
-  - what was system doing
+  - explain what was system doing
+  - Viterbi algorithm
 + *Learning*
-  - given a set of observation sequences, adjust $lambda$ to maximize $P({O}|lambda)$
+  - given a set of observation sequences, adjust the model $lambda$ to maximize $P({O}|lambda)$ (so that model explains data better)
+  - training the model from data
+  - Baum-Welch procedure
 
 == Why brute forcing does not work
 
@@ -44,7 +49,9 @@
 - we have $N^T$ state sequences and each contributes about $2T$ multiplications - total complexity is $O(2T dot.c N^T)$
   - for 5 states and 100 observations it's about $10^72$ operations
 
-== Caching intermediate results:
+== Forward-backward procedure
+
+=== Caching intermediate results:
 
 - *Forward Variable* - joint probability of seing the partial sequence $O_1, ..., O_t$ and being in state $S_i$ at time $t$: $ alpha_t(i) = P(O_1 O_2 ... O_t, q_t = S_i | lambda) $
 - *Backward Variable* - probability of seing the remaining sequence $O_(t+1) ... O_(T)$ given that we are in state $S_i$ at time $t$: $ beta_t(i) = P(O_(t+1) O_(t+2) ... O_(T) | q_t = S_i, lambda) $
@@ -87,9 +94,15 @@
 == Baum-Welch algorithm
 
 - problem 3 - learning model parameters from data
+- idea:
+  + start with guessed model parameters
+  + estimate how often transiitons and emissions occured
+  + update the parameters
+  + repeat untill model stops improving
+- Baum-Welch helper: $ gamma_(i j) (t) = (alpha_i (t-1) a_(i j) b_(j k) beta_j (t))/(P(O|lambda)) $
+  - probability of transitioning from state $i$ to $j$ at time $t$
 - you need to decide, how many states $N$ should be there?
-- once you decide on $N$, you alternate between *E-step* and *M-step*
-- 
+
 
 = String Recognition
 
@@ -150,7 +163,18 @@ for (int j = 0; j <= n - m;) {
   - case 1 - $u$ occurses somewhere in the text, but it's preceeded by character not being the missmatched $a$ - shift the window to match that $u$
   - case 2 - $u$ occurs in text only at the end - we take the longest prefix of $x$ that is a suffix of $u$
   - both cases are precomputed and stored in good-suffix array $"Gs"$
+  - creating table:
+    - indexes in table show at which position the missmatch occured
+    - if missmatch happens at the last character, shift by 1
+    - if you match pattern, search for rightmost occurence of that pattern, not preceeded by the same letter
+    - if no occurence exist, use prefix-suffix matchting (find the longest suffix of matched pattern that is also a prefix of the whole pattern)
+    - if not found, enter the length of the pattern
 - *bad-character heuristic*
   - when missmatch occurs, look at the *text* letter $b$ that didn't match
   - case 1 - $b$ occurs somewhere in pattern - shift the window to allign rightmost occurrence of $b$ with that $b$ in the text
   - case 2 - $b$ doesn't appear in pattern - shift the entire window past that letter
+  - creating table:
+    - iterate through every letter in alphabet
+    - find the last index of pattern $m$
+    - find the rightmost position of every letter $k$, excluding last letter in pattern
+    - the value is $m - k$
