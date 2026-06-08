@@ -29,18 +29,46 @@ After adjusting to given weights we pass the $a, b, c$ coefficients:
   - $"w3y" = -3/2$ - adjusted
   - $"w3b" = -11$ - adjusted
 
-Since we need an answer and we have a majority vote with -1 or 1 values, $"w0b" = 0$ (in other case there could be a tie).
-
 Now weights to output:
 - when having straight line ($b = 0$), if you need the samples to be on the right, then $w = 1$ (left - $w = -1$)
 - when having function where $b eq.not 0$:
   - if $b > 0$, if you need samples above, then $w = 1$ (below - $w = -1$)
   - if $b < 0$, you flip the previous rule (above - $w = -1$, below - $w = 1$)
 
-That gives us:
-- $"w01" = -1$ - we need the samples on the left of straight line
-- $"w02" = 1$ - we need the samples below the line with $b < 0$
-- $"w03" = 1$ - same as previous
+Now we create logical expression, where samples should be located: $ z_2 > 0 and (z_1 < 0 or z_3 > 0) $
+
+Tips for calculating logical expressions:
+- `or` operation - $sigma = (a + b + 1)$
+- `and` operation - $sigma = (a + b - 1)$
+- `not` operation - $sigma = (-a)$
+
+Now it's sort of guessing, but I have two conditions:
+- $alpha = -z_1 + z_3 - 1$ - `or` operation
+- $sigma = z_2 + alpha - 1$ - `and` operation
+
+I multiplied the more important operation by 2 and added everyting, I got $sigma = -z_1 + 2z_2 + z_3 - 1$
+
+Now you have to check with truth table:
+
+#table(
+  columns: (auto, auto, auto, auto, auto),
+  align: center,
+  [$z_1$], [$z_2$], [$z_3$], [Expected], [Actual],
+  [-1], [-1], [-1], [-1], [-1],
+  [-1], [-1], [1], [-1], [-1],
+  [-1], [1], [-1], [1], [1],
+  [-1], [1], [1], [1], [1],
+  [1], [-1], [-1], [-1], [-1],
+  [1], [-1], [1], [-1], [-1],
+  [1], [1], [-1], [-1], [-1],
+  [1], [1], [1], [1], [1],
+)
+
+It works, so that gives us:
+- $"w01" = -1$
+- $"w02" = 2$
+- $"w03" = 1$
+- $"wob" = -1$
 
 == Task 2
 
@@ -59,7 +87,7 @@ The input for the convolutional layer is a 64x64 pixel RGB image. In this layer 
 
 *Solution*
 
-Each filter has $5 times 5 times 3 = 75$ weights. With seven filters, that gives $75 times 7 = 525$ weights.
+Each filter has $5 times 5 times 3 + 1 = 76$ weights (remember the bias). With seven filters, that gives $76 times 7 = 532$ weights.
 
 *Extra*
 
@@ -110,3 +138,7 @@ We are given N classifiers with the task to select only K classifiers to prepare
 
 *Solution*
 
+You can use *overproduce-and-select* approach with genetic algorithm. First we define our fitness function: $ F = "success_rate" - beta "error_rate" $
+- we can decide, which is worse for us - error or rejection.
+
+Then we start using genetic algorithm. The chromosome is a vector of length $K$, containing the identifiers of classifiers used in that ensemble. At first we create large amount of random ensembles. We evaluate each member of population on a validation set, keep some of the best, and then we cross them with the target of creating even better offspring (with some random mutations).
