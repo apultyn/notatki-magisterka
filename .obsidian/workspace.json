@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SEM_1/WSO/wso-projekt-notki.md",
+                "file": "SEM_1/PPMGR/ppmgr-prezentacja.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "wso-projekt-notki"
+              "title": "ppmgr-prezentacja"
             }
           },
           {
@@ -98,7 +98,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": false
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-folder-closed",
               "title": "Przeglądarka plików"
@@ -231,24 +233,24 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "command-palette:Otwórz paletę poleceń": false,
       "switcher:Otwórz okno szybkiego wyboru": false,
       "graph:Otwórz podgląd grafu": false,
       "canvas:Stwórz nową tablicę": false,
       "daily-notes:Otwórz dzisiejszy dziennik": false,
       "templates:Wstaw szablon": false,
-      "command-palette:Otwórz listę poleceń": false,
       "bases:Stwórz nową bazę danych": false
     }
   },
   "active": "2b87c74506f8f421",
   "lastOpenFiles": [
-    "Inne/erasmus-na-miejscu.md",
+    "SEM_1/PPMGR/ppmgr-wstep.md",
+    "SEM_1/PPMGR/ppmgr-prezentacja.md",
+    "SEM_1/PPMGR/ppmgr-prezentacja.pdf",
     "SEM_1/WSO/wso-projekt-notki.md",
+    "Inne/erasmus-na-miejscu.md",
     "Inne/erasmus-mieszkania.md",
     "Inne/erasmus-steps.md",
-    "SEM_1/PPMGR/ppmgr-prezentacja.md",
-    "SEM_1/PPMGR/ppmgr-wstep.md",
-    "SEM_1/PPMGR/ppmgr-prezentacja.pdf",
     "Inne/stupa-kurs.md",
     "Inne/rekruterka.md",
     "Inne/erasmus.md",
