@@ -19,4 +19,3 @@ Ze względu na to, że protokół jest w powszechnym użyciu niecałe 2 lata, ba
 Na podstawie analizy sytuacji MCP na rynku, sformułowałem dwa potencjalne kierunki badawcze. Pierwszym z nich byłoby zbadanie skuteczności sugerowanych mechanizmów obronnych przed atakami na warstwę MCP. Wspomniane wcześniej prace czasami zawierają sugestie obrony przed atakami, ale brakuje systematycznego badania ich skuteczności. Drugim kierunkiem byłoby trochę bardziej niszowe, ale zbadanie wpływu jakości opisów narzędzi MCP na decyzję agenta. Sprawdzone zostałoby, czy agent AI potrafi np. wykryć prompt injection w opisie narzędzia, albo czy opis w stylu "najlepsze na świecie narzędzie" skusiłoby agenta do jego użycia.
 
 - IEEE archive
-- 

@@ -8,73 +8,45 @@
         "type": "tabs",
         "children": [
           {
-            "id": "2658b047804dd9d7",
+            "id": "223b3f8d9cee35ea",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "MAG/ppmgr-wstep.md",
+                "file": "SEM_2/DAT370/lectures/3_legal_aspects.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "ppmgr-wstep"
+              "title": "3_legal_aspects"
             }
           },
           {
-            "id": "1263336dbd443cab",
+            "id": "ea8bac2cef15c01a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Inne/erasmus-steps.md",
+                "file": "SEM_2/DAT370/lectures/3_legal_aspects.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "erasmus-steps"
+              "title": "3_legal_aspects"
             }
           },
           {
-            "id": "2b87c74506f8f421",
+            "id": "278e869ee6c3f2c8",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SEM_1/PPMGR/ppmgr-prezentacja.md",
+                "file": "SEM_2/DAT300/lectures/3_networks.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "ppmgr-prezentacja"
-            }
-          },
-          {
-            "id": "71c6f12fefa3d4c6",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Inne/erasmus.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "erasmus"
-            }
-          },
-          {
-            "id": "3e3281b8f1625c05",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Inne/erasmus-steps.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "erasmus-steps"
+              "title": "3_networks"
             }
           }
         ],
@@ -153,7 +125,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "SEM_1/TBD/1_intro.md",
+                "file": "Chalmers/DAT370/1_intro.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -163,7 +135,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Linki zwrotne do 1_intro"
+              "title": "Linki zwrotne"
             }
           },
           {
@@ -172,12 +144,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "SEM_1/TBD/1_intro.md",
+                "file": "Chalmers/DAT370/1_intro.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Łącza wychodzące od 1_intro"
+              "title": "Łącza wychodzące"
             }
           },
           {
@@ -215,16 +187,17 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SEM_1/TBD/1_intro.md",
+                "file": "Chalmers/DAT370/1_intro.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Konspekt 1_intro"
+              "title": "Konspekt"
             }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -242,43 +215,53 @@
       "bases:Stwórz nową bazę danych": false
     }
   },
-  "active": "2b87c74506f8f421",
+  "active": "278e869ee6c3f2c8",
   "lastOpenFiles": [
-    "SEM_1/PPMGR/ppmgr-wstep.md",
+    "SEM_2/DAT370/guest-lectures/2_sec_t.md",
+    "SEM_2/DAT300/lectures/3_networks.md",
+    "home-insurance.md",
+    "SEM_2/DAT370/lectures/3_legal_aspects.md",
+    "SEM_2/overthewire_tips.md",
+    "SEM_2/DAT370/challenges.md",
+    "SEM_2/DAT300/project/NIDS_preprint.pdf",
+    "SEM_2/DAT300/project/project_analysis.md",
+    "SEM_2/DAT370/lectures/2_briefing_crl.md",
+    "SEM_2/DAT370/lectures/1_intro.md",
+    "SEM_2/DAT300/meeting-notes/9-09-2026.md",
+    "SEM_2/DAT300/meeting-notes/project_group_notes.md",
+    "SEM_2/DAT300/lectures/1_intro.md",
+    "SEM_2/DAT300/guest-lectures/2_working_as_a_team.md",
+    "SEM_2/DAT300/guest-lectures/1_project_presentation.md",
+    "SEM_2/DAT300/lectures/2_few_highlights.md",
+    "SEM_2/DAT300/meeting-notes",
+    "SEM_2/assets",
+    "SEM_2/assets/Pasted image 20260909104707.png",
+    "SEM_2/DAT370/guest-lectures/1_assured.md",
     "SEM_1/PPMGR/ppmgr-prezentacja.md",
-    "SEM_1/PPMGR/ppmgr-prezentacja.pdf",
-    "SEM_1/WSO/wso-projekt-notki.md",
+    "SEM_2/DAT300/guest-lectures",
+    "SEM_2/DAT370/guest-lectures",
+    "SEM_2/DAT370/lectures",
+    "SEM_2/DAT300/lectures",
+    "assets/image-6.png",
+    "assets/image-7.png",
+    "assets/image-8.png",
+    "assets/image-9.png",
+    "assets/image-10.png",
+    "assets/image-11.png",
+    "assets/image-12.png",
+    "assets/image-13.png",
+    "assets/image-15.png",
     "Inne/erasmus-na-miejscu.md",
     "Inne/erasmus-mieszkania.md",
-    "Inne/erasmus-steps.md",
-    "Inne/stupa-kurs.md",
-    "Inne/rekruterka.md",
     "Inne/erasmus.md",
-    "SEM_1/do-zrobienia.md",
-    "SEM_1/PPMGR",
-    "Inne/erasmus-application/erasmus-home-application.md",
-    "Inne/erasmus-application/latex/main.pdf",
-    "Inne/erasmus-application/latex/main.out",
-    "Inne/erasmus-application/latex/main.aux",
-    "Inne/erasmus-application/latex/main.log",
-    "Inne/erasmus-application/latex/build.log",
-    "Inne/erasmus-application/latex/photos",
-    "Inne/erasmus-application/latex/README.md",
-    "Inne/erasmus-application/latex/README.md.tmp.16964.79caf95ddd6b",
-    "Inne/erasmus-application/latex/main.tex.tmp.16964.2de4f8736b88",
+    "Inne/erasmus-steps.md",
+    "Inne/grill.md",
+    "Inne/stupa-kurs.md",
+    "SEM_1/do-zrobienia.pdf",
+    "Inne/rekruterka.md",
     "Inne/kolosy-1.md",
-    "assets/image-4.png",
-    "assets/image-3.png",
-    "assets/image-2.png",
-    "assets/image-1.png",
-    "MAG/Bez nazwy.md",
-    "MAG/temat-wstepny-1.md",
-    "MAG/opis-tematu.md",
-    "SEM_1/STUPA/startup_pomysl.md",
-    "SEM_1/STUPA/sdp-brakujace.md",
-    "SEM_1/STUPA/aula-polska-notatki.md",
-    "SEM_1/TBD/1_intro.md",
-    "SEM_1/EPART/epart_summary.md",
-    "SEM_1/TBD/2_obliczenia_rozproszone.md"
+    "SEM_2/DAT370",
+    "SEM_2/DAT300",
+    "SEM_1/PPMGR/ppmgr-wstep.md"
   ]
 }
