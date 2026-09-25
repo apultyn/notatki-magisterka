@@ -1,0 +1,24 @@
+# Task 1 notes
+- program crossed my boundries, focus on it why
+- it depends on am I with the match promotors or just decent human being 
+- problems:
+	- possibility of hijacking transmission and putting something else - high priority (potential terrorist manifest)
+	- recording of manager abusing a worker - high priority (like cmon)
+	- sources of referees taking bribes with whistleblowers deanonymized - high priority (people that rightfully blew the whistle on some misbehaviour should be protected)
+	- sending wrong match results to the betters - low priority (false data would be quite quickly noticed)
+	- transfering the tickets - no priority as human, low priority for promotors (if they really want to be a dick and not allow ticket transfer)
+	- false volunteer acceptations - no priority as human, medium priority for promotors (people behind the scenes that should not be there)
+	- players pressured to play through injury - medium priority
+	- changing payment details - no priority as human, high priority for promotors
+	- app disclosing personal data of users - high priority
+	- exploitable (and probably already exploited) replay system with false footage - medium priority (just fraud)
+- host is a dick that restricted independent reporting
+- going public with all of this would probably derail the whole event
+	- pluses - massive image damage for the host country and people around it, whole event derailed
+	- minuses - possible retaliation from the host country, whistleblowers deanonymized which could be damaging for them, with abuse situations going full public can be more damaging than helping, big disclosure of users data
+- trying to help fixing the problems with organisers
+	- pluses - less chance of someone abusing these vulnerabilities, people that bought tickets are not dissapointed
+	- minuses - potential showing whistleblowers to the organisers, not enough time to fix everything, potential consequences since technically I also am the attacker
+- being quiet
+	- pluses - less chance of anyone noticing it, again, fans are not dissapointed, zero consequences for you
+	- minuses - some of the problems really can't be left untouched
