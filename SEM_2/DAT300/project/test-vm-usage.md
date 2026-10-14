@@ -34,7 +34,10 @@ Host fabvm
     UserKnownHostsFile /dev/null
     ServerAliveInterval 120
 ```
-- add this to `~/.ssh/config` file: `Include ~/.ssh/fabric_config`
+- add this to `~/.ssh/config` file: 
+```text
+Include ~/.ssh/fabric_config
+```
 - then you need to have the public key on the vm. Either contact me or login with ephermal key and append the `~/.ssh/authorized_keys` file
 - useful commands:
 	- `ssh fabvm`

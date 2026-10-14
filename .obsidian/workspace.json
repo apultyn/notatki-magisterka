@@ -4,19 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "8195eeb45c979b48",
+        "id": "598205508b01531e",
         "type": "tabs",
         "children": [
           {
-            "id": "8f8e6be0a93bd12e",
+            "id": "de550348adc646c5",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "SEM_2/DAT370/screenshots/Pasted image 20260925092244.png"
+                "file": "Inne/norway-trip.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-image",
-              "title": "Pasted image 20260925092244"
+              "icon": "lucide-file",
+              "title": "norway-trip"
             }
           }
         ]
@@ -44,7 +46,7 @@
                 "searchQuery": ""
               },
               "icon": "lucide-folder-closed",
-              "title": "Przeglądarka plików"
+              "title": "Pliki"
             }
           },
           {
@@ -184,53 +186,53 @@
       "bases:Stwórz nową bazę danych": false
     }
   },
-  "active": "9098b61b1b85969f",
+  "active": "de550348adc646c5",
   "lastOpenFiles": [
-    "SEM_2/DAT370/screenshots",
-    "SEM_2/DAT370/ethics-workshop/social_engineering.md",
-    "SEM_2/DAT370/screenshots/Pasted image 20260925092244.png",
-    "SEM_2/DAT300/project/test-vm-usage.md",
-    "SEM_2/DAT300/project/test-vm-usage.pdf",
-    "SEM_2/DAT300/project/fabric-login.pdf",
-    "SEM_2/DAT300/guest-lectures/5_adapting_to_scale.md",
-    "SEM_2/DAT370/guest-lectures/4_outpost24.md",
+    "SEM_2/DAT370/lectures/6_.md",
+    "Inne/norway-trip.md",
+    "SEM_2/DAT370/lectures/5_continued_education.md",
+    "SEM_2/DAT300/project/peer-review.md",
+    "SEM_2/DAT300/project/heavy-keeper-notes.md",
     "SEM_2/DAT300/project/midterm-presentation-script.md",
+    "SEM_2/DAT300/project/project-topic.pdf",
+    "SEM_2/DAT300/project/fabric-login.pdf",
     "SEM_2/DAT300/project/project_analysis.md",
-    "SEM_2/DAT300/lectures/4_midterm.md",
     "SEM_2/DAT300/guest-lectures/4_crypto.md",
+    "Inne/stupa-kurs.md",
+    "Inne/sem-2-pw.md",
+    "Inne/home-insurance.md",
+    "SEM_2/DAT370/guest-lectures/5_freelance_pentester.md",
+    "SEM_2/DAT300/project/test-vm-usage.md",
+    "SEM_2/DAT300/guest-lectures/6_heterogeneity.md",
+    "SEM_2/DAT370/lectures/4_responsible_disclosure.md",
+    "SEM_2/DAT370/challenge-sessions/abcde.md",
+    "SEM_2/DAT370/guest-lectures/4_outpost24.md",
+    "SEM_2/DAT370/ethics-workshop/social_engineering.md",
+    "SEM_2/DAT370/challenges.md",
+    "SEM_2/DAT370/screenshots/Pasted image 20260925105842.png",
+    "SEM_2/DAT370/screenshots/Pasted image 20260925092244.png",
+    "SEM_2/DAT370/screenshots",
+    "SEM_2/DAT300/project/test-vm-usage.pdf",
+    "SEM_2/DAT300/guest-lectures/5_adapting_to_scale.md",
+    "SEM_2/DAT300/lectures/4_midterm.md",
     "SEM_2/DAT300/lectures/3_networks.md",
     "Inne/nordea.md",
     "SEM_2/DAT370/ethics-workshop/task-1.pdf",
     "SEM_2/DAT370/ethics-workshop/task_1_notes.md",
-    "Inne/sem-2-pw.md",
     "Inne/erasmus-mieszkania.md",
     "Inne/erasmus-na-miejscu.md",
-    "Inne/erasmus-steps.md",
-    "SEM_2/overthewire_tips.md",
-    "Bez nazwy.md",
-    "SEM_2/DAT370/ethics-workshop/lecture_1.md",
     "SEM_2/DAT370/ethics-workshop",
-    "SEM_2/DAT300/project/project-topic.pdf",
-    "SEM_2/DAT300/meeting-notes/project_group_notes.md",
-    "SEM_2/DAT300/lectures/2_few_highlights.md",
-    "SEM_2/DAT300/guest-lectures/3_data_streaming.md",
-    "SEM_2/DAT370/guest-lectures/3_cb_sec.md",
-    "SEM_2/DAT370/challenge-sessions/abcde.md",
     "SEM_2/DAT370/challenge-sessions",
-    "SEM_2/DAT370/lectures/3_legal_aspects.md",
-    "SEM_2/DAT370/guest-lectures/2_sec_t.md",
     "SEM_2/DAT300/project/NIDS_preprint.pdf",
     "SEM_2/DAT300/meeting-notes",
     "SEM_2/assets",
     "SEM_2/assets/Pasted image 20260909104707.png",
-    "SEM_2/DAT300/guest-lectures",
     "assets/image-6.png",
     "assets/image-7.png",
     "assets/image-8.png",
     "assets/image-9.png",
     "assets/image-10.png",
     "assets/image-11.png",
-    "assets/image-12.png",
-    "assets/image-13.png"
+    "assets/image-12.png"
   ]
 }
