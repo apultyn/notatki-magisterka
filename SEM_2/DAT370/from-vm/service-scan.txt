@@ -1,0 +1,157 @@
+Starting Nmap 7.99 ( https://nmap.org ) at 2026-09-25 16:47 +0200
+Nmap scan report for 10.128.161.1
+Host is up (0.0018s latency).
+All 1000 scanned ports on 10.128.161.1 are in ignored states.
+Not shown: 1000 closed tcp ports (reset)
+
+Nmap scan report for 10.128.161.2
+Host is up (0.0019s latency).
+Not shown: 993 closed tcp ports (reset)
+PORT      STATE SERVICE    VERSION
+80/tcp    open  tcpwrapped
+10000/tcp open  tcpwrapped
+10001/tcp open  tcpwrapped
+10002/tcp open  tcpwrapped
+10003/tcp open  tcpwrapped
+10004/tcp open  tcpwrapped
+10009/tcp open  tcpwrapped
+
+Nmap scan report for 10.128.161.26
+Host is up (0.0020s latency).
+All 1000 scanned ports on 10.128.161.26 are in ignored states.
+Not shown: 1000 closed tcp ports (reset)
+
+Nmap scan report for 10.128.161.27
+Host is up (0.0020s latency).
+Not shown: 998 closed tcp ports (reset)
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 7.4p1 Debian 10+deb9u7 (protocol 2.0)
+80/tcp open  http    Apache httpd 2.4.25 ((Debian))
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Nmap scan report for 10.128.161.28
+Host is up (0.0020s latency).
+Not shown: 999 closed tcp ports (reset)
+PORT   STATE SERVICE VERSION
+23/tcp open  telnet  BusyBox telnetd
+Service Info: Host: ghosts
+
+Nmap scan report for 10.128.161.29
+Host is up (0.0020s latency).
+Not shown: 999 closed tcp ports (reset)
+PORT   STATE SERVICE VERSION
+80/tcp open  http    nginx 1.26.3
+
+Nmap scan report for 10.128.161.30
+Host is up (0.0020s latency).
+Not shown: 999 closed tcp ports (reset)
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 9.9 (protocol 2.0)
+
+Nmap scan report for 10.128.161.31
+Host is up (0.0020s latency).
+Not shown: 999 closed tcp ports (reset)
+PORT   STATE SERVICE VERSION
+23/tcp open  telnet  BusyBox telnetd
+Service Info: Host: ghosts
+
+Nmap scan report for 10.128.161.32
+Host is up (0.0020s latency).
+Not shown: 999 closed tcp ports (reset)
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 9.9 (protocol 2.0)
+
+Nmap scan report for 10.128.161.33
+Host is up (0.0020s latency).
+Not shown: 999 closed tcp ports (reset)
+PORT   STATE SERVICE VERSION
+23/tcp open  telnet  BusyBox telnetd
+Service Info: Host: ghosts
+
+Nmap scan report for 10.128.161.34
+Host is up (0.0019s latency).
+Not shown: 999 closed tcp ports (reset)
+PORT   STATE SERVICE VERSION
+23/tcp open  telnet  BusyBox telnetd
+Service Info: Host: ghosts
+
+Nmap scan report for 10.128.161.35
+Host is up (0.0020s latency).
+Not shown: 999 closed tcp ports (reset)
+PORT   STATE SERVICE VERSION
+80/tcp open  http    nginx 1.26.3
+
+Nmap scan report for 10.128.161.36
+Host is up (0.0019s latency).
+Not shown: 999 closed tcp ports (reset)
+PORT   STATE SERVICE VERSION
+23/tcp open  telnet  BusyBox telnetd
+Service Info: Host: ghosts
+
+Nmap scan report for 10.128.161.37
+Host is up (0.0020s latency).
+Not shown: 999 closed tcp ports (reset)
+PORT   STATE SERVICE VERSION
+21/tcp open  ftp     vsftpd (broken: both local and anonymous access disabled!)
+Service Info: OS: Unix
+
+Nmap scan report for 10.128.161.38
+Host is up (0.0020s latency).
+Not shown: 999 closed tcp ports (reset)
+PORT   STATE SERVICE VERSION
+80/tcp open  http    nginx 1.26.3
+
+Nmap scan report for 10.128.161.39
+Host is up (0.0020s latency).
+Not shown: 999 closed tcp ports (reset)
+PORT   STATE SERVICE VERSION
+23/tcp open  telnet  BusyBox telnetd
+Service Info: Host: ghosts
+
+Nmap scan report for 10.128.161.40
+Host is up (0.0021s latency).
+Not shown: 997 closed tcp ports (reset)
+PORT     STATE SERVICE VERSION
+21/tcp   open  ftp     vsftpd 2.0.8 or later
+80/tcp   open  http    nginx 1.14.2
+8009/tcp open  ajp13   Apache Jserv (Protocol v1.3)
+Service Info: Host: Lazarus
+
+Nmap scan report for 10.128.161.41
+Host is up (0.0020s latency).
+Not shown: 997 closed tcp ports (reset)
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 10.0 (protocol 2.0)
+23/tcp open  telnet  BusyBox telnetd
+53/tcp open  domain  NLnet Labs NSD 4.12.0
+Service Info: Host: sea-turtle
+
+Nmap scan report for 10.128.161.42
+Host is up (0.0017s latency).
+Not shown: 993 closed tcp ports (reset)
+PORT      STATE SERVICE    VERSION
+80/tcp    open  tcpwrapped
+10000/tcp open  tcpwrapped
+10001/tcp open  tcpwrapped
+10002/tcp open  tcpwrapped
+10003/tcp open  tcpwrapped
+10004/tcp open  tcpwrapped
+10009/tcp open  tcpwrapped
+
+Nmap scan report for 10.128.161.43
+Host is up (0.0020s latency).
+All 1000 scanned ports on 10.128.161.43 are in ignored states.
+Not shown: 1000 closed tcp ports (reset)
+
+Nmap scan report for 10.128.161.44
+Host is up (0.0021s latency).
+All 1000 scanned ports on 10.128.161.44 are in ignored states.
+Not shown: 1000 closed tcp ports (reset)
+
+Nmap scan report for 10.128.161.45
+Host is up (0.0018s latency).
+All 1000 scanned ports on 10.128.161.45 are in ignored states.
+Not shown: 1000 closed tcp ports (reset)
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 256 IP addresses (22 hosts up) scanned in 16.62 seconds

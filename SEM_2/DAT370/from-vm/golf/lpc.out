@@ -1,0 +1,1248 @@
+=================================================================================================
+LINUX PRIVILEGE ESCALATION CHECKER
+=================================================================================================
+
+[*] GETTING BASIC SYSTEM INFO...
+
+[+] Operating System
+    Debian GNU/Linux 9 \n \l
+
+[+] Kernel
+    Linux version 6.8.0-136-generic (buildd@lcy02-amd64-041) (x86_64-linux-gnu-gcc-13 (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0, GNU ld (GNU Binutils for Ubuntu) 2.42) #136-Ubuntu SMP PREEMPT_DYNAMIC Wed Jul  1 21:53:05 UTC 2026
+
+[+] Hostname
+    energetic-bear
+
+[*] GETTING NETWORKING INFO...
+
+[+] Interfaces
+
+[+] Route
+
+[+] Netstat
+
+[*] GETTING FILESYSTEM INFO...
+
+[+] Mount results
+    overlay on / type overlay (rw,relatime,lowerdir=/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/3173/fs:/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/132/fs:/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/130/fs:/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/129/fs:/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/126/fs:/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/125/fs:/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/124/fs:/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/123/fs:/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/121/fs:/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/120/fs:/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/119/fs:/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/118/fs:/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/117/fs:/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/116/fs:/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/115/fs:/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/114/fs:/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/113/fs:/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/112/fs:/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/99/fs,upperdir=/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/3182/fs,workdir=/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/3182/work,nouserxattr)
+    proc on /proc type proc (rw,nosuid,nodev,noexec,relatime)
+    tmpfs on /dev type tmpfs (rw,nosuid,size=65536k,mode=755,inode64)
+    devpts on /dev/pts type devpts (rw,nosuid,noexec,relatime,gid=5,mode=620,ptmxmode=666)
+    sysfs on /sys type sysfs (ro,nosuid,nodev,noexec,relatime)
+    cgroup on /sys/fs/cgroup type cgroup2 (ro,nosuid,nodev,noexec,relatime,nsdelegate,memory_recursiveprot)
+    mqueue on /dev/mqueue type mqueue (rw,nosuid,nodev,noexec,relatime)
+    shm on /dev/shm type tmpfs (rw,nosuid,nodev,noexec,relatime,size=65536k,inode64)
+    /dev/mapper/ubuntu--vg-ubuntu--lv on /etc/resolv.conf type ext4 (rw,relatime,stripe=64)
+    /dev/mapper/ubuntu--vg-ubuntu--lv on /etc/hostname type ext4 (rw,relatime,stripe=64)
+    /dev/mapper/ubuntu--vg-ubuntu--lv on /etc/hosts type ext4 (rw,relatime,stripe=64)
+    proc on /proc/bus type proc (ro,nosuid,nodev,noexec,relatime)
+    proc on /proc/fs type proc (ro,nosuid,nodev,noexec,relatime)
+    proc on /proc/irq type proc (ro,nosuid,nodev,noexec,relatime)
+    proc on /proc/sys type proc (ro,nosuid,nodev,noexec,relatime)
+    proc on /proc/sysrq-trigger type proc (ro,nosuid,nodev,noexec,relatime)
+    tmpfs on /proc/acpi type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /proc/interrupts type tmpfs (rw,nosuid,size=65536k,mode=755,inode64)
+    tmpfs on /proc/kcore type tmpfs (rw,nosuid,size=65536k,mode=755,inode64)
+    tmpfs on /proc/keys type tmpfs (rw,nosuid,size=65536k,mode=755,inode64)
+    tmpfs on /proc/latency_stats type tmpfs (rw,nosuid,size=65536k,mode=755,inode64)
+    tmpfs on /proc/scsi type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /proc/timer_list type tmpfs (rw,nosuid,size=65536k,mode=755,inode64)
+    tmpfs on /sys/devices/virtual/powercap type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/firmware type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu0/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu1/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu2/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu3/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu4/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu5/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu6/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu7/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu8/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu9/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu10/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu11/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu12/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu13/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu14/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu15/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu16/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu17/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu18/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu19/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu20/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu21/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu22/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu23/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu24/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu25/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu26/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu27/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu28/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu29/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu30/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu31/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu32/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu33/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu34/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu35/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu36/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu37/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu38/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu39/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu40/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu41/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu42/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu43/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu44/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu45/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu46/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu47/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu48/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu49/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu50/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu51/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu52/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu53/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu54/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu55/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu56/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu57/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu58/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu59/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu60/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu61/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu62/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu63/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu64/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu65/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu66/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu67/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu68/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu69/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu70/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu71/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu72/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu73/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu74/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu75/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu76/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu77/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu78/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu79/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu80/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu81/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu82/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu83/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu84/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu85/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu86/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu87/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu88/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu89/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu90/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu91/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu92/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu93/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu94/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu95/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu96/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu97/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu98/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu99/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu100/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu101/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu102/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu103/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu104/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu105/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu106/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu107/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu108/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu109/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu110/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu111/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu112/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu113/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu114/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu115/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu116/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu117/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu118/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu119/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu120/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu121/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu122/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu123/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu124/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu125/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu126/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+    tmpfs on /sys/devices/system/cpu/cpu127/thermal_throttle type tmpfs (ro,relatime,size=4k,nr_inodes=1,inode64)
+
+[+] fstab entries
+    # UNCONFIGURED FSTAB FOR BASE SYSTEM
+
+[+] Scheduled cron jobs
+    -rw-r--r-- 1 root root  723 Sep 12 08:33 /etc/crontab
+    /etc/cron.d:
+    total 20
+    drwxr-xr-x 1 root root 4096 Jan 15  2026 .
+    drwxr-xr-x 1 root root 4096 Sep 12 08:33 ..
+    -rw-r--r-- 1 root root  102 Oct  7  2017 .placeholder
+    -rw-r--r-- 1 root root  712 Aug 14  2019 php
+    /etc/cron.daily:
+    total 40
+    drwxr-xr-x 1 root root 4096 Jan 15  2026 .
+    drwxr-xr-x 1 root root 4096 Sep 12 08:33 ..
+    -rw-r--r-- 1 root root  102 Oct  7  2017 .placeholder
+    -rwxr-xr-x 1 root root  539 Jun 16  2019 apache2
+    -rwxr-xr-x 1 root root 1474 Jan 18  2019 apt-compat
+    -rwxr-xr-x 1 root root 1597 Jun 26  2018 dpkg
+    -rwxr-xr-x 1 root root 4125 May 13  2020 exim4-base
+    -rwxr-xr-x 1 root root  249 May 17  2017 passwd
+    /etc/cron.hourly:
+    total 20
+    drwxr-xr-x 1 root root 4096 Sep 12 08:33 .
+    drwxr-xr-x 1 root root 4096 Sep 12 08:33 ..
+    -rw-r--r-- 1 root root  102 Oct  7  2017 .placeholder
+    -rwxrw-rw- 1 root root   67 Sep 12 08:33 cuiteur-cleaning
+    /etc/cron.monthly:
+    total 16
+    drwxr-xr-x 2 root root 4096 Jan 15  2026 .
+    drwxr-xr-x 1 root root 4096 Sep 12 08:33 ..
+    -rw-r--r-- 1 root root  102 Oct  7  2017 .placeholder
+    /etc/cron.weekly:
+    total 16
+    drwxr-xr-x 2 root root 4096 Jan 15  2026 .
+    drwxr-xr-x 1 root root 4096 Sep 12 08:33 ..
+    -rw-r--r-- 1 root root  102 Oct  7  2017 .placeholder
+
+[+] Writable cron dirs
+    -rwxrw-rw- 1 root root   67 Sep 12 08:33 cuiteur-cleaning
+
+
+[*] ENUMERATING USER AND ENVIRONMENTAL INFO...
+
+[+] Current User
+    www-data
+
+[+] Current User ID
+    uid=33(www-data) gid=33(www-data) groups=33(www-data)
+
+[+] All users
+    root:x:0:0:root:/root:/bin/bash
+    daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+    bin:x:2:2:bin:/bin:/usr/sbin/nologin
+    sys:x:3:3:sys:/dev:/usr/sbin/nologin
+    sync:x:4:65534:sync:/bin:/bin/sync
+    games:x:5:60:games:/usr/games:/usr/sbin/nologin
+    man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+    lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+    mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
+    news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
+    uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
+    proxy:x:13:13:proxy:/bin:/usr/sbin/nologin
+    www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
+    backup:x:34:34:backup:/var/backups:/usr/sbin/nologin
+    list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
+    irc:x:39:39:ircd:/var/run/ircd:/usr/sbin/nologin
+    gnats:x:41:41:Gnats Bug-Reporting System (admin):/var/lib/gnats:/usr/sbin/nologin
+    nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
+    _apt:x:100:65534::/nonexistent:/bin/false
+    mysql:x:101:101:MySQL Server,,,:/nonexistent:/bin/false
+    Debian-exim:x:102:102::/var/spool/exim4:/bin/false
+    messagebus:x:103:105::/var/run/dbus:/bin/false
+    sshd:x:104:65534::/run/sshd:/usr/sbin/nologin
+    systemd-timesync:x:105:107:systemd Time Synchronization,,,:/run/systemd:/bin/false
+    systemd-network:x:106:108:systemd Network Management,,,:/run/systemd/netif:/bin/false
+    systemd-resolve:x:107:109:systemd Resolver,,,:/run/systemd/resolve:/bin/false
+    systemd-bus-proxy:x:108:110:systemd Bus Proxy,,,:/run/systemd:/bin/false
+
+[+] Super Users Found:
+    root
+
+[+] Root and current user history (depends on privs)
+
+[+] Environment
+    SUPERVISOR_GROUP_NAME=apache2
+    APACHE_RUN_DIR=/var/run/apache2
+    APACHE_PID_FILE=/var/run/apache2/apache2.pid
+    APACHE_LOCK_DIR=/var/lock/apache2
+    LANG=C
+    SUPERVISOR_ENABLED=1
+    APACHE_RUN_USER=www-data
+    APACHE_RUN_GROUP=www-data
+    APACHE_LOG_DIR=/var/log/apache2
+    SUPERVISOR_SERVER_URL=unix:///var/run/supervisor.sock
+    SUPERVISOR_PROCESS_NAME=apache2
+    PWD=/var/www/html/php
+
+[+] Sudoers (privileged)
+
+[+] Logged in User Activity
+    11:30:49 up 66 days, 23:53,  0 users,  load average: 16.76, 20.20, 20.13
+    USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT
+
+[*] ENUMERATING FILE AND DIRECTORY PERMISSIONS/CONTENTS...
+
+[+] World Writeable Directories for User/Group 'Root'
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /proc/acpi
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /proc/scsi
+    drwxrwxrwt 1 root root 4096 Sep 23 11:30 /tmp
+    drwxrwxrwt 1 root root 4096 Aug 29  2019 /run/lock
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu88/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu21/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu116/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu78/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu11/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu106/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu9/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu68/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu96/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu124/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu58/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu86/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu114/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu48/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu76/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu104/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu7/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu38/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu66/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu94/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu28/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu122/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu56/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu84/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu18/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu112/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu46/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu74/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu102/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu5/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu36/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu64/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu92/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu26/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu120/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu54/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu82/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu16/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu110/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu44/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu72/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu100/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu3/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu34/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu62/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu90/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu24/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu119/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu52/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu80/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu14/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu109/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu42/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu70/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu1/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu99/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu32/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu127/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu60/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu89/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu22/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu117/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu50/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu79/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu12/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu107/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu40/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu69/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu97/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu30/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu125/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu59/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu87/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu20/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu115/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu49/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu77/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu10/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu105/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu8/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu39/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu67/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu95/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu29/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu123/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu57/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu85/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu19/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu113/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu47/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu75/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu103/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu6/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu37/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu65/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu93/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu27/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu121/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu55/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu83/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu17/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu111/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu45/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu73/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu101/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu4/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu35/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu63/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu91/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu25/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu53/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu81/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu15/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu43/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu71/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu2/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu33/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu61/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu23/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu118/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu51/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu13/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu108/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu41/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu0/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu98/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu31/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/system/cpu/cpu126/thermal_throttle
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/devices/virtual/powercap
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /sys/firmware
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /dev/shm
+    drwxrwxrwt 2 root root 40 Sep 12 08:33 /dev/mqueue
+    drwx-wx-wt 1 root root 4096 Sep 23 11:28 /var/lib/php/sessions
+    drwxrwxrwt 2 root root 4096 Mar 28  2019 /var/tmp
+
+[+] World Writeable Directories for Users other than Root
+    drwxrwxrwx 2 www-data www-data 4096 Sep 23 11:30 /var/www/html/php
+
+[+] World Writable Files
+    -rwxrw-rw- 1 root root 67 Sep 12 08:33 /etc/cron.hourly/cuiteur-cleaning
+    -rwxrwxrwx 1 www-data www-data 9444 Jan 16  2026 /var/www/html/php/cuiteur.php
+    -rw-rw-rw- 1 mysql mysql 0 Sep 21 17:50 /var/www/html/php/tmpudpou.php
+    -rwxrwxrwx 1 www-data www-data 3465 Jan 16  2026 /var/www/html/php/utilisateur.php
+    -rwxrwxrwx 1 www-data www-data 2134 Sep 12 08:33 /var/www/html/php/recherche_old.php
+    -rwxrwxrwx 1 www-data www-data 12363 Jan 16  2026 /var/www/html/php/compte.php
+    -rwxrwxrwx 1 www-data www-data 27698 Sep 12 08:33 /var/www/html/php/bibli_generale.php
+    -rw-rw-rw- 1 mysql mysql 1632 Sep 21 18:31 /var/www/html/php/php-reverse.php
+    -rwxrwxrwx 1 www-data www-data 2047 Jan 16  2026 /var/www/html/php/blabla.php
+    -rw-rw-rw- 1 mysql mysql 17243 Sep 21 19:39 /var/www/html/php/1518.so
+    -rw-rw-rw- 1 mysql mysql 0 Sep 21 18:31 /var/www/html/php/tmpubvci.php
+    -rw-rw-rw- 1 mysql mysql 0 Sep 21 18:27 /var/www/html/php/tmpuhtri.php
+    -rw-rw-rw- 1 mysql mysql 0 Sep 23 11:29 /var/www/html/php/tmpuwotk.php
+    -rw-rw-rw- 1 mysql mysql 1653 Sep 14 17:36 /var/www/html/php/php-bind.php
+    -rw-rw-rw- 1 mysql mysql 0 Sep 23 11:29 /var/www/html/php/tmpuqwfk.php
+    -rw-rw-rw- 1 mysql mysql 0 Sep 21 18:26 /var/www/html/php/tmpuumlw.php
+    -rw-rw-rw- 1 mysql mysql 0 Sep 21 18:43 /var/www/html/php/tmpurqbi.php
+    -rw-rw-rw- 1 mysql mysql 0 Sep 23 11:28 /var/www/html/php/tmpuoslw.php
+    -rw-rw-rw- 1 mysql mysql 0 Sep 13 19:41 /var/www/html/php/tmpuncle.php
+    -rwxrwxrwx 1 www-data www-data 1508 Jan 16  2026 /var/www/html/php/abonnements.php
+    -rw-rw-rw- 1 mysql mysql 0 Sep 13 19:41 /var/www/html/php/tmpuflok.php
+    -rwxrwxrwx 1 www-data www-data 3873 Jan 16  2026 /var/www/html/php/tendances.php
+    -rwxrwxrwx 1 www-data www-data 1476 Jan 16  2026 /var/www/html/php/abonnes.php
+    -rw-rw-rw- 1 mysql mysql 3284 Sep 21 19:30 /var/www/html/php/1518.c
+    -rwxrwxrwx 1 www-data www-data 12042 Jan 16  2026 /var/www/html/php/comparaison_requetes.txt
+    -rw-rw-rw- 1 mysql mysql 0 Sep 21 19:24 /var/www/html/php/tmpukrti.php
+    -rw-rw-rw- 1 mysql mysql 712 Sep 13 19:40 /var/www/html/php/tmputpfd.php
+    -rw-rw-rw- 1 mysql mysql 0 Sep 14 17:19 /var/www/html/php/tmputuhu.php
+    -rw-rw-rw- 1 mysql mysql 43 Sep 14 18:17 /var/www/html/php/exec.php
+    -rw-rw-rw- 1 mysql mysql 0 Sep 13 19:40 /var/www/html/php/tmpusxol.php
+    -rwxrwxrwx 1 www-data www-data 1773 Jan 16  2026 /var/www/html/php/recherche.php
+    -rwxrwxrwx 1 www-data www-data 151 Jan 16  2026 /var/www/html/php/deconnexion.php
+    -rwxrwxrwx 1 www-data www-data 1656 Jan 16  2026 /var/www/html/php/mentions.php
+    -rw-rw-rw- 1 mysql mysql 1632 Sep 21 18:32 /var/www/html/php/reverse-php.php
+    -rwxrwxrwx 1 www-data www-data 33851 Jan 16  2026 /var/www/html/php/bibli_cuiteur.php
+    -rw-rw-rw- 1 mysql mysql 712 Sep 14 17:59 /var/www/html/php/tmpuspeh.php
+    -rw-rw-rw- 1 mysql mysql 0 Sep 13 19:27 /var/www/html/php/tmpupjer.php
+    -rw-rw-rw- 1 mysql mysql 0 Sep 13 19:40 /var/www/html/php/tmpuwzaj.php
+    -rw-rw-rw- 1 mysql mysql 0 Sep 21 18:24 /var/www/html/php/tmpusqgx.php
+    -rw-rw-rw- 1 mysql mysql 0 Sep 21 19:21 /var/www/html/php/tmpursaz.php
+    -rw-rw-rw- 1 mysql mysql 712 Sep 13 19:41 /var/www/html/php/tmpunojg.php
+    -rw-rw-rw- 1 mysql mysql 712 Sep 13 19:41 /var/www/html/php/tmpurqro.php
+    -rw-rw-rw- 1 mysql mysql 0 Sep 13 19:36 /var/www/html/php/tmpulfoi.php
+    -rwxrwxrwx 1 www-data www-data 1181 Jan 16  2026 /var/www/html/php/suggestions.php
+    -rw-rw-rw- 1 mysql mysql 0 Sep 14 17:59 /var/www/html/php/tmpuikin.php
+    -rw-rw-rw- 1 mysql mysql 712 Sep 14 17:19 /var/www/html/php/tmpuekuw.php
+    -rw-rw-rw- 1 mysql mysql 0 Sep 21 18:42 /var/www/html/php/tmpuymht.php
+    -rw-rw-rw- 1 mysql mysql 0 Sep 21 18:43 /var/www/html/php/tmputpoc.php
+    -rwxrwxrwx 1 www-data www-data 6126 Jan 16  2026 /var/www/html/php/inscription.php
+    -rw-rw-rw- 1 mysql mysql 0 Sep 21 18:32 /var/www/html/php/tmpuysls.php
+    -rw-rw-rw- 1 mysql mysql 0 Sep 21 18:12 /var/www/html/php/tmpubtyc.php
+    -rw-rw-rw- 1 mysql mysql 712 Sep 13 19:40 /var/www/html/php/tmpuaxov.php
+    -rw-rw-rw- 1 mysql mysql 712 Sep 13 19:27 /var/www/html/php/tmpubojh.php
+    -rw-rw-rw- 1 mysql mysql 0 Sep 21 19:23 /var/www/html/php/tmpubdvb.php
+    -rw-rw-rw- 1 mysql mysql 170 Sep 14 18:20 /var/www/html/php/python.py
+
+[+] SUID/SGID Files and Directories
+    -rwsr-xr-x 1 root root 440728 Jul 15  2019 /usr/lib/openssh/ssh-keysign
+    -rwsr-xr-- 1 root messagebus 42992 Jul  2  2020 /usr/lib/dbus-1.0/dbus-daemon-launch-helper
+    -rwsr-xr-x 1 root root 1019656 May 13  2020 /usr/sbin/exim4
+    -rwxr-sr-x 1 root shadow 22808 May 17  2017 /usr/bin/expiry
+    -rwxr-sr-x 1 root shadow 71856 May 17  2017 /usr/bin/chage
+    -rwsr-xr-x 1 root root 40504 May 17  2017 /usr/bin/chsh
+    -rwsr-xr-x 1 root root 50040 May 17  2017 /usr/bin/chfn
+    -rwsr-xr-x 1 root root 59680 May 17  2017 /usr/bin/passwd
+    -rwsr-xr-x 1 root root 40312 May 17  2017 /usr/bin/newgrp
+    -rwsr-xr-x 1 root root 75792 May 17  2017 /usr/bin/gpasswd
+    -rwxr-sr-x 1 root tty 27448 Mar  7  2018 /usr/bin/wall
+    -rwxr-sr-x 1 root ssh 358624 Jul 15  2019 /usr/bin/ssh-agent
+    -rwxr-sr-x 1 root mail 10952 Dec 25  2016 /usr/bin/dotlock.mailutils
+    -rwxr-sr-x 1 root crontab 40264 Oct  7  2017 /usr/bin/crontab
+    drwxrwsr-x 1 root staff 4096 Aug 12  2019 /usr/local
+    drwxrwsr-x 1 root staff 4096 Jan 16  2026 /usr/local/lib
+    drwxrwsr-x 4 root staff 4096 Jan 16  2026 /usr/local/lib/python2.7
+    drwxrwsr-x 2 root staff 4096 Jan 16  2026 /usr/local/lib/python2.7/dist-packages
+    drwxrwsr-x 2 root staff 4096 Jan 16  2026 /usr/local/lib/python2.7/site-packages
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/pkgconfig
+    drwxr-sr-x 35 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6
+    drwxr-sr-x 3 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/turtledemo
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/turtledemo/__pycache__
+    drwxr-sr-x 4 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/concurrent
+    drwxr-sr-x 3 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/concurrent/futures
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/concurrent/futures/__pycache__
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/concurrent/__pycache__
+    drwxr-sr-x 3 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/curses
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/curses/__pycache__
+    drwxr-sr-x 5 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/ctypes
+    drwxr-sr-x 3 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/ctypes/test
+    drwxr-sr-x 2 root staff 12288 Jan 15  2026 /usr/local/lib/python3.6/ctypes/test/__pycache__
+    drwxr-sr-x 3 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/ctypes/macholib
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/ctypes/macholib/__pycache__
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/ctypes/__pycache__
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/config-3.6m-x86_64-linux-gnu
+    drwxr-sr-x 4 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/tkinter
+    drwxr-sr-x 5 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/tkinter/test
+    drwxr-sr-x 3 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/tkinter/test/test_ttk
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/tkinter/test/test_ttk/__pycache__
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/tkinter/test/__pycache__
+    drwxr-sr-x 3 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/tkinter/test/test_tkinter
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/tkinter/test/test_tkinter/__pycache__
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/tkinter/__pycache__
+    drwxr-sr-x 25 root staff 20480 Jan 15  2026 /usr/local/lib/python3.6/test
+    drwxr-sr-x 3 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/test/test_asyncio
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/test/test_asyncio/__pycache__
+    drwxr-sr-x 4 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/test/test_email
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/test/test_email/data
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/test/test_email/__pycache__
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/test/capath
+    drwxr-sr-x 9 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/test/test_importlib
+    drwxr-sr-x 3 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/test/test_importlib/source
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/test/test_importlib/source/__pycache__
+    drwxr-sr-x 3 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/test/test_importlib/extension
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/test/test_importlib/extension/__pycache__
+    drwxr-sr-x 3 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/test/test_importlib/import_
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/test/test_importlib/import_/__pycache__
+    drwxr-sr-x 10 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/test/test_importlib/namespace_pkgs
+    drwxr-sr-x 4 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/test/test_importlib/namespace_pkgs/module_and_namespace_package
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/test/test_importlib/namespace_pkgs/module_and_namespace_package/a_test
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/test/test_importlib/namespace_pkgs/module_and_namespace_package/__pycache__
+    drwxr-sr-x 3 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/test/test_importlib/namespace_pkgs/portion1
+    drwxr-sr-x 3 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/test/test_importlib/namespace_pkgs/portion1/foo
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/test/test_importlib/namespace_pkgs/portion1/foo/__pycache__
+    drwxr-sr-x 3 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/test/test_importlib/namespace_pkgs/project1
+    drwxr-sr-x 3 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/test/test_importlib/namespace_pkgs/project1/parent
+    drwxr-sr-x 3 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/test/test_importlib/namespace_pkgs/project1/parent/child
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/test/test_importlib/namespace_pkgs/project1/parent/child/__pycache__
+    drwxr-sr-x 3 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/test/test_importlib/namespace_pkgs/not_a_namespace_pkg
+    drwxr-sr-x 3 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/test/test_importlib/namespace_pkgs/not_a_namespace_pkg/foo
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/test/test_importlib/namespace_pkgs/not_a_namespace_pkg/foo/__pycache__
+    drwxr-sr-x 3 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/test/test_importlib/namespace_pkgs/portion2
+    drwxr-sr-x 3 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/test/test_importlib/namespace_pkgs/portion2/foo
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/test/test_importlib/namespace_pkgs/portion2/foo/__pycache__
+    drwxr-sr-x 3 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/test/test_importlib/namespace_pkgs/both_portions
+    drwxr-sr-x 3 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/test/test_importlib/namespace_pkgs/both_portions/foo
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/test/test_importlib/namespace_pkgs/both_portions/foo/__pycache__
+    drwxr-sr-x 3 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/test/test_importlib/namespace_pkgs/project3
+    drwxr-sr-x 3 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/test/test_importlib/namespace_pkgs/project3/parent
+    drwxr-sr-x 3 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/test/test_importlib/namespace_pkgs/project3/parent/child
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/test/test_importlib/namespace_pkgs/project3/parent/child/__pycache__
+    drwxr-sr-x 3 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/test/test_importlib/namespace_pkgs/project2
+    drwxr-sr-x 3 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/test/test_importlib/namespace_pkgs/project2/parent
+    drwxr-sr-x 3 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/test/test_importlib/namespace_pkgs/project2/parent/child
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/test/test_importlib/namespace_pkgs/project2/parent/child/__pycache__
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/test/test_importlib/__pycache__
+    drwxr-sr-x 3 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/test/test_importlib/frozen
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/test/test_importlib/frozen/__pycache__
+    drwxr-sr-x 3 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/test/test_importlib/builtin
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/test/test_importlib/builtin/__pycache__
+    drwxr-sr-x 3 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/test/dtracedata
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/test/dtracedata/__pycache__
+    drwxr-sr-x 3 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/test/tracedmodules
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/test/tracedmodules/__pycache__
+    drwxr-sr-x 3 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/test/test_tools
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/test/test_tools/__pycache__
+    drwxr-sr-x 4 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/test/test_warnings
+    drwxr-sr-x 3 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/test/test_warnings/data
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/test/test_warnings/data/__pycache__
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/test/test_warnings/__pycache__
+    drwxr-sr-x 3 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/test/eintrdata
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/test/eintrdata/__pycache__
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/test/sndhdrdata
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/test/data
+    drwxr-sr-x 3 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/test/libregrtest
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/test/libregrtest/__pycache__
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/test/imghdrdata
+    drwxr-sr-x 2 root staff 77824 Jan 15  2026 /usr/local/lib/python3.6/test/__pycache__
+    drwxr-sr-x 3 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/test/test_json
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/test/test_json/__pycache__
+    drwxr-sr-x 3 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/test/encoded_modules
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/test/encoded_modules/__pycache__
+    drwxr-sr-x 3 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/test/subprocessdata
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/test/subprocessdata/__pycache__
+    drwxr-sr-x 4 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/test/test_import
+    drwxr-sr-x 5 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/test/test_import/data
+    drwxr-sr-x 3 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/test/test_import/data/package2
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/test/test_import/data/package2/__pycache__
+    drwxr-sr-x 4 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/test/test_import/data/circular_imports
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/test/test_import/data/circular_imports/__pycache__
+    drwxr-sr-x 3 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/test/test_import/data/circular_imports/subpkg
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/test/test_import/data/circular_imports/subpkg/__pycache__
+    drwxr-sr-x 3 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/test/test_import/data/package
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/test/test_import/data/package/__pycache__
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/test/test_import/__pycache__
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/test/cjkencodings
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/test/audiodata
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/test/decimaltestdata
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/test/xmltestdata
+    drwxr-sr-x 3 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/test/support
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/test/support/__pycache__
+    drwxr-sr-x 3 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/urllib
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/urllib/__pycache__
+    drwxr-sr-x 4 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/sqlite3
+    drwxr-sr-x 3 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/sqlite3/test
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/sqlite3/test/__pycache__
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/sqlite3/__pycache__
+    drwxr-sr-x 7 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/xml
+    drwxr-sr-x 3 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/xml/parsers
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/xml/parsers/__pycache__
+    drwxr-sr-x 3 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/xml/dom
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/xml/dom/__pycache__
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/xml/__pycache__
+    drwxr-sr-x 3 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/xml/sax
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/xml/sax/__pycache__
+    drwxr-sr-x 3 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/xml/etree
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/xml/etree/__pycache__
+    drwxr-sr-x 3 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/xmlrpc
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/xmlrpc/__pycache__
+    drwxr-sr-x 4 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/ensurepip
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/ensurepip/_bundled
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/ensurepip/__pycache__
+    drwxr-sr-x 3 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/http
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/http/__pycache__
+    drwxr-sr-x 5 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/idlelib
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/idlelib/Icons
+    drwxr-sr-x 2 root staff 12288 Jan 15  2026 /usr/local/lib/python3.6/idlelib/__pycache__
+    drwxr-sr-x 3 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/idlelib/idle_test
+    drwxr-sr-x 2 root staff 12288 Jan 15  2026 /usr/local/lib/python3.6/idlelib/idle_test/__pycache__
+    drwxr-sr-x 3 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/wsgiref
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/wsgiref/__pycache__
+    drwxr-sr-x 3 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/logging
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/logging/__pycache__
+    drwxr-sr-x 3 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/collections
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/collections/__pycache__
+    drwxr-sr-x 3 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/encodings
+    drwxr-sr-x 2 root staff 20480 Jan 15  2026 /usr/local/lib/python3.6/encodings/__pycache__
+    drwxr-sr-x 2 root staff 36864 Jan 15  2026 /usr/local/lib/python3.6/__pycache__
+    drwxr-sr-x 4 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/multiprocessing
+    drwxr-sr-x 3 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/multiprocessing/dummy
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/multiprocessing/dummy/__pycache__
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/multiprocessing/__pycache__
+    drwxr-sr-x 3 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/json
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/json/__pycache__
+    drwxr-sr-x 8 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/site-packages
+    drwxr-sr-x 5 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/site-packages/pkg_resources
+    drwxr-sr-x 3 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/site-packages/pkg_resources/extern
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/site-packages/pkg_resources/extern/__pycache__
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/site-packages/pkg_resources/__pycache__
+    drwxr-sr-x 4 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/site-packages/pkg_resources/_vendor
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/site-packages/pkg_resources/_vendor/__pycache__
+    drwxr-sr-x 3 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/site-packages/pkg_resources/_vendor/packaging
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/site-packages/pkg_resources/_vendor/packaging/__pycache__
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/site-packages/setuptools-40.6.2.dist-info
+    drwxr-sr-x 5 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/site-packages/pip
+    drwxr-sr-x 10 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/site-packages/pip/_internal
+    drwxr-sr-x 3 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/site-packages/pip/_internal/vcs
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/site-packages/pip/_internal/vcs/__pycache__
+    drwxr-sr-x 3 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/site-packages/pip/_internal/operations
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/site-packages/pip/_internal/operations/__pycache__
+    drwxr-sr-x 3 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/site-packages/pip/_internal/commands
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/site-packages/pip/_internal/commands/__pycache__
+    drwxr-sr-x 3 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/site-packages/pip/_internal/cli
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/site-packages/pip/_internal/cli/__pycache__
+    drwxr-sr-x 3 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/site-packages/pip/_internal/utils
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/site-packages/pip/_internal/utils/__pycache__
+    drwxr-sr-x 3 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/site-packages/pip/_internal/models
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/site-packages/pip/_internal/models/__pycache__
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/site-packages/pip/_internal/__pycache__
+    drwxr-sr-x 3 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/site-packages/pip/_internal/req
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/site-packages/pip/_internal/req/__pycache__
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/site-packages/pip/__pycache__
+    drwxr-sr-x 20 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/site-packages/pip/_vendor
+    drwxr-sr-x 3 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/site-packages/pip/_vendor/pkg_resources
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/site-packages/pip/_vendor/pkg_resources/__pycache__
+    drwxr-sr-x 3 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/site-packages/pip/_vendor/idna
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/site-packages/pip/_vendor/idna/__pycache__
+    drwxr-sr-x 3 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/site-packages/pip/_vendor/pytoml
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/site-packages/pip/_vendor/pytoml/__pycache__
+    drwxr-sr-x 3 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/site-packages/pip/_vendor/colorama
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/site-packages/pip/_vendor/colorama/__pycache__
+    drwxr-sr-x 6 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/site-packages/pip/_vendor/urllib3
+    drwxr-sr-x 5 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/site-packages/pip/_vendor/urllib3/packages
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/site-packages/pip/_vendor/urllib3/packages/__pycache__
+    drwxr-sr-x 3 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/site-packages/pip/_vendor/urllib3/packages/backports
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/site-packages/pip/_vendor/urllib3/packages/backports/__pycache__
+    drwxr-sr-x 3 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/site-packages/pip/_vendor/urllib3/packages/ssl_match_hostname
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/site-packages/pip/_vendor/urllib3/packages/ssl_match_hostname/__pycache__
+    drwxr-sr-x 4 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/site-packages/pip/_vendor/urllib3/contrib
+    drwxr-sr-x 3 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/site-packages/pip/_vendor/urllib3/contrib/_securetransport
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/site-packages/pip/_vendor/urllib3/contrib/_securetransport/__pycache__
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/site-packages/pip/_vendor/urllib3/contrib/__pycache__
+    drwxr-sr-x 3 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/site-packages/pip/_vendor/urllib3/util
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/site-packages/pip/_vendor/urllib3/util/__pycache__
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/site-packages/pip/_vendor/urllib3/__pycache__
+    drwxr-sr-x 4 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/site-packages/pip/_vendor/cachecontrol
+    drwxr-sr-x 3 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/site-packages/pip/_vendor/cachecontrol/caches
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/site-packages/pip/_vendor/cachecontrol/caches/__pycache__
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/site-packages/pip/_vendor/cachecontrol/__pycache__
+    drwxr-sr-x 3 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/site-packages/pip/_vendor/pep517
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/site-packages/pip/_vendor/pep517/__pycache__
+    drwxr-sr-x 8 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/site-packages/pip/_vendor/html5lib
+    drwxr-sr-x 3 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/site-packages/pip/_vendor/html5lib/treeadapters
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/site-packages/pip/_vendor/html5lib/treeadapters/__pycache__
+    drwxr-sr-x 3 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/site-packages/pip/_vendor/html5lib/filters
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/site-packages/pip/_vendor/html5lib/filters/__pycache__
+    drwxr-sr-x 3 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/site-packages/pip/_vendor/html5lib/treewalkers
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/site-packages/pip/_vendor/html5lib/treewalkers/__pycache__
+    drwxr-sr-x 3 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/site-packages/pip/_vendor/html5lib/treebuilders
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/site-packages/pip/_vendor/html5lib/treebuilders/__pycache__
+    drwxr-sr-x 3 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/site-packages/pip/_vendor/html5lib/_trie
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/site-packages/pip/_vendor/html5lib/_trie/__pycache__
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/site-packages/pip/_vendor/html5lib/__pycache__
+    drwxr-sr-x 3 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/site-packages/pip/_vendor/lockfile
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/site-packages/pip/_vendor/lockfile/__pycache__
+    drwxr-sr-x 3 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/site-packages/pip/_vendor/progress
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/site-packages/pip/_vendor/progress/__pycache__
+    drwxr-sr-x 4 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/site-packages/pip/_vendor/chardet
+    drwxr-sr-x 3 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/site-packages/pip/_vendor/chardet/cli
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/site-packages/pip/_vendor/chardet/cli/__pycache__
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/site-packages/pip/_vendor/chardet/__pycache__
+    drwxr-sr-x 3 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/site-packages/pip/_vendor/certifi
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/site-packages/pip/_vendor/certifi/__pycache__
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/site-packages/pip/_vendor/__pycache__
+    drwxr-sr-x 3 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/site-packages/pip/_vendor/packaging
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/site-packages/pip/_vendor/packaging/__pycache__
+    drwxr-sr-x 3 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/site-packages/pip/_vendor/webencodings
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/site-packages/pip/_vendor/webencodings/__pycache__
+    drwxr-sr-x 4 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/site-packages/pip/_vendor/distlib
+    drwxr-sr-x 3 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/site-packages/pip/_vendor/distlib/_backport
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/site-packages/pip/_vendor/distlib/_backport/__pycache__
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/site-packages/pip/_vendor/distlib/__pycache__
+    drwxr-sr-x 3 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/site-packages/pip/_vendor/requests
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/site-packages/pip/_vendor/requests/__pycache__
+    drwxr-sr-x 3 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/site-packages/pip/_vendor/msgpack
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/site-packages/pip/_vendor/msgpack/__pycache__
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/site-packages/__pycache__
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/site-packages/pip-18.1.dist-info
+    drwxr-sr-x 6 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/site-packages/setuptools
+    drwxr-sr-x 3 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/site-packages/setuptools/extern
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/site-packages/setuptools/extern/__pycache__
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/site-packages/setuptools/__pycache__
+    drwxr-sr-x 4 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/site-packages/setuptools/_vendor
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/site-packages/setuptools/_vendor/__pycache__
+    drwxr-sr-x 3 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/site-packages/setuptools/_vendor/packaging
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/site-packages/setuptools/_vendor/packaging/__pycache__
+    drwxr-sr-x 3 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/site-packages/setuptools/command
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/site-packages/setuptools/command/__pycache__
+    drwxr-sr-x 3 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/asyncio
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/asyncio/__pycache__
+    drwxr-sr-x 6 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/lib2to3
+    drwxr-sr-x 3 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/lib2to3/fixes
+    drwxr-sr-x 2 root staff 12288 Jan 15  2026 /usr/local/lib/python3.6/lib2to3/fixes/__pycache__
+    drwxr-sr-x 3 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/lib2to3/pgen2
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/lib2to3/pgen2/__pycache__
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/lib2to3/__pycache__
+    drwxr-sr-x 4 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/lib2to3/tests
+    drwxr-sr-x 3 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/lib2to3/tests/data
+    drwxr-sr-x 3 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/lib2to3/tests/data/fixers
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/lib2to3/tests/data/fixers/myfixes
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/lib2to3/tests/__pycache__
+    drwxr-sr-x 3 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/html
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/html/__pycache__
+    drwxr-sr-x 4 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/venv
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/venv/__pycache__
+    drwxr-sr-x 4 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/venv/scripts
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/venv/scripts/common
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/venv/scripts/posix
+    drwxr-sr-x 4 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/email
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/email/__pycache__
+    drwxr-sr-x 3 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/email/mime
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/email/mime/__pycache__
+    drwxr-sr-x 5 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/distutils
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/distutils/__pycache__
+    drwxr-sr-x 3 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/distutils/command
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/distutils/command/__pycache__
+    drwxr-sr-x 3 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/distutils/tests
+    drwxr-sr-x 2 root staff 12288 Jan 15  2026 /usr/local/lib/python3.6/distutils/tests/__pycache__
+    drwxr-sr-x 4 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/unittest
+    drwxr-sr-x 4 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/unittest/test
+    drwxr-sr-x 3 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/unittest/test/testmock
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/unittest/test/testmock/__pycache__
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/unittest/test/__pycache__
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/unittest/__pycache__
+    drwxr-sr-x 3 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/importlib
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/importlib/__pycache__
+    drwxr-sr-x 3 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/pydoc_data
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/pydoc_data/__pycache__
+    drwxr-sr-x 3 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/dbm
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/lib/python3.6/dbm/__pycache__
+    drwxrwsr-x 3 root staff 4096 Aug 29  2019 /usr/local/lib/python3.5
+    drwxrwsr-x 2 root staff 4096 Aug 29  2019 /usr/local/lib/python3.5/dist-packages
+    drwxrwsr-x 2 root staff 4096 Aug 12  2019 /usr/local/games
+    drwxrwsr-x 2 root staff 4096 Aug 12  2019 /usr/local/sbin
+    drwxrwsr-x 1 root staff 4096 Jan 15  2026 /usr/local/bin
+    drwxrwsr-x 1 root staff 4096 Jan 15  2026 /usr/local/include
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/include/python3.6m
+    drwxrwsr-x 1 root staff 4096 Aug 29  2019 /usr/local/share
+    drwxrwsr-x 1 root staff 4096 Jan 15  2026 /usr/local/share/man
+    drwxr-sr-x 2 root staff 4096 Jan 15  2026 /usr/local/share/man/man1
+    drwxrwsr-x 2 root staff 4096 Aug 29  2019 /usr/local/share/fonts
+    drwxrwsr-x 2 root staff 4096 Aug 29  2019 /usr/local/share/ca-certificates
+    drwxrwsr-x 2 root staff 4096 Aug 12  2019 /usr/local/src
+    drwxrwsr-x 2 root staff 4096 Aug 12  2019 /usr/local/etc
+    -rwxr-sr-x 1 root shadow 35592 May 27  2017 /sbin/unix_chkpwd
+    -rwsr-xr-x 1 root root 44304 Mar  7  2018 /bin/mount
+    -rwsr-xr-x 1 root root 31720 Mar  7  2018 /bin/umount
+    -rwsr-xr-x 1 root root 61240 Nov 10  2016 /bin/ping
+    -rwsr-xr-x 1 root root 40536 May 17  2017 /bin/su
+    drwxr-s--- 1 mysql adm 4096 Jan 15  2026 /var/log/mysql
+    drwxr-s--- 1 Debian-exim adm 4096 Sep 12 09:17 /var/log/exim4
+    drwxrwsr-x 2 root staff 4096 Mar 28  2019 /var/local
+    drwxrwsr-x 1 root mail 4096 Sep 23 11:17 /var/mail
+
+[+] Checking if root's home folder is accessible
+
+[+] Logs containing keyword 'password'
+
+[+] Config files containing keyword 'password'
+    /etc/debconf.conf:# World-readable, and accepts everything but passwords.
+    /etc/debconf.conf:Reject-Type: password
+    /etc/debconf.conf:# Not world readable (the default), and accepts only passwords.
+    /etc/debconf.conf:Name: passwords
+    /etc/debconf.conf:Accept-Type: password
+    /etc/debconf.conf:Filename: /var/cache/debconf/passwords.dat
+    /etc/debconf.conf:# databases, one to hold passwords and one for everything else.
+    /etc/debconf.conf:Stack: config, passwords
+    /etc/debconf.conf:# A remote LDAP database. It is also read-only. The password is really
+    /etc/mysql/mariadb.conf.d/50-mysqld_safe.cnf:# It has been reported that passwords should be enclosed with ticks/quotes
+    /etc/mysql/mariadb.conf.d/50-server.cnf:# Needed so the root database user can authenticate without a password but
+    /etc/mysql/my.cnf.fallback:# It has been reported that passwords should be enclosed with ticks/quotes
+    /etc/exim4/exim4.conf.template:# Authenticators which rely on unencrypted clear text passwords don't
+    /etc/exim4/exim4.conf.template:# advertise unencrypted clear text password based authenticators on all
+    /etc/exim4/exim4.conf.template:# preferred over allowing clear text password based authenticators on
+    /etc/exim4/exim4.conf.template:# use), an authentication ID, and a password. The latter two appear as
+    /etc/exim4/exim4.conf.template:# valid username and password. In a real configuration you would typically
+    /etc/exim4/exim4.conf.template:# password are $auth1 and $auth2. Apart from that you can use the same
+    /etc/exim4/exim4.conf.template:# Authenticate against local passwords using sasl2-bin
+    /etc/exim4/exim4.conf.template:#   # don't send system passwords over unencrypted connections
+    /etc/exim4/exim4.conf.template:# They get the passwords from CONFDIR/passwd.client, whose format is
+    /etc/exim4/exim4.conf.template:# Because AUTH PLAIN and AUTH LOGIN send the password in clear, we
+    /etc/exim4/exim4.conf.template:# clear text password authentication on all connections.
+    /etc/apache2/sites-available/default-ssl.conf:		#	 Note that no password is obtained from the user. Every entry in the user
+    /etc/apache2/sites-available/default-ssl.conf:		#	 file needs this password: `xxj31ZMTZzkVA'.
+    /etc/ssl/openssl.cnf:# input_password = secret
+    /etc/ssl/openssl.cnf:# output_password = secret
+    /etc/ssl/openssl.cnf:challengePassword		= A challenge password
+
+[+] Shadow File (Privileged)
+
+[*] ENUMERATING PROCESSES AND APPLICATIONS...
+
+[+] Current processes
+    USER PID START TIME COMMAND
+    root 1 Sep12 0:00 /bin/sh
+    root 12 Sep12 3:52 /usr/bin/python
+    mysql 19 Sep12 9:51 /usr/sbin/mysqld
+    root 69 Sep12 0:00 /bin/sh
+    root 71 Sep12 0:46 /usr/sbin/apache2
+    root 103 Sep12 0:03 /usr/sbin/cron
+    root 104 Sep12 0:00 /usr/sbin/sshd
+    root 106 Sep12 0:00 sleep
+    www-data 6632 Sep13 0:00 /usr/sbin/apache2
+    www-data 6838 Sep13 0:00 sh
+    www-data 6839 Sep13 0:00 php
+    www-data 11138 Sep14 0:00 /usr/sbin/apache2
+    www-data 11190 Sep14 0:00 /usr/sbin/apache2
+    www-data 11194 Sep14 0:00 sh
+    www-data 11195 Sep14 0:00 php
+    www-data 11196 Sep14 0:00 sh
+    www-data 11198 Sep14 0:00 /bin/sh
+    www-data 11298 Sep14 6282:09 grep
+    www-data 11299 Sep14 0:00 sh
+    www-data 11300 Sep14 0:00 php
+    www-data 11301 Sep14 0:00 sh
+    www-data 11303 Sep14 0:00 /bin/sh
+    www-data 11339 Sep14 6281:35 grep
+    www-data 46222 Sep21 0:00 /usr/sbin/apache2
+    www-data 46257 Sep21 0:00 /usr/sbin/apache2
+    www-data 46324 Sep21 0:00 /usr/sbin/apache2
+    www-data 46333 Sep21 0:00 /usr/sbin/apache2
+    www-data 46362 Sep21 0:00 /usr/sbin/apache2
+    www-data 46512 Sep21 0:00 /usr/sbin/apache2
+    www-data 46514 Sep21 0:00 sh
+    www-data 46515 Sep21 0:00 php
+    www-data 46516 Sep21 0:00 sh
+    www-data 46518 Sep21 0:00 /bin/sh
+    www-data 46524 Sep21 0:00 /usr/sbin/apache2
+    www-data 46525 Sep21 0:00 sh
+    www-data 46526 Sep21 0:00 php
+    www-data 46527 Sep21 0:00 sh
+    www-data 46529 Sep21 0:00 /bin/sh
+    www-data 46542 Sep21 0:00 sh
+    www-data 46543 Sep21 0:00 php
+    www-data 46544 Sep21 0:00 sh
+    www-data 46546 Sep21 0:00 /bin/sh
+    www-data 46557 Sep21 0:00 sh
+    www-data 46558 Sep21 0:00 php
+    www-data 46559 Sep21 0:00 sh
+    www-data 46561 Sep21 0:00 /bin/sh
+    www-data 46565 Sep21 0:00 /usr/sbin/apache2
+    www-data 46573 Sep21 0:00 sh
+    www-data 46574 Sep21 0:00 php
+    www-data 46575 Sep21 0:00 sh
+    www-data 46577 Sep21 0:00 /bin/sh
+    www-data 46585 Sep21 0:00 sh
+    www-data 46586 Sep21 0:00 php
+    www-data 46587 Sep21 0:00 sh
+    www-data 46589 Sep21 0:00 /bin/sh
+    www-data 46598 Sep21 0:00 sh
+    www-data 46599 Sep21 0:00 php
+    www-data 46600 Sep21 0:00 sh
+    www-data 46602 Sep21 0:00 /bin/sh
+    www-data 46603 Sep21 0:00 sh
+    www-data 46604 Sep21 0:00 nc
+    www-data 46606 Sep21 0:00 sh
+    www-data 46607 Sep21 0:00 php
+    www-data 46608 Sep21 0:00 sh
+    www-data 46610 Sep21 0:00 /bin/sh
+    www-data 46611 Sep21 0:00 sh
+    www-data 46612 Sep21 0:00 nc
+    www-data 54315 05:35 0:00 /usr/sbin/apache2
+    www-data 55199 08:58 0:00 /usr/sbin/apache2
+    www-data 55200 08:59 0:00 /usr/sbin/apache2
+    www-data 55305 09:36 0:00 /usr/sbin/apache2
+    www-data 55394 10:05 0:00 /usr/sbin/apache2
+    www-data 55481 10:34 0:00 /usr/sbin/apache2
+    www-data 55650 11:20 0:00 /usr/sbin/apache2
+    www-data 55651 11:22 0:00 /usr/sbin/apache2
+    www-data 55657 11:25 0:00 /usr/sbin/apache2
+    www-data 55658 11:28 0:00 /usr/sbin/apache2
+    www-data 55684 11:29 0:00 sh
+    www-data 55685 11:29 0:00 php
+    www-data 55686 11:29 0:00 sh
+    www-data 55688 11:29 0:00 nc
+    www-data 55689 11:29 0:00 /bin/sh
+    www-data 55691 11:29 0:00 /usr/sbin/apache2
+    www-data 56490 11:30 0:00 python3
+    www-data 57210 11:30 0:00 /usr/sbin/apache2
+    www-data 57250 11:31 0:00 /bin/sh
+    www-data 57251 11:31 0:00 ps
+    www-data 57252 11:31 0:00 awk
+
+[+] Installed Packages
+
+[+] Sudo Version (Check out http://www.exploit-db.com/search/?action=search&filter_page=1&filter_description=sudo)
+
+[+] Apache Version and Modules
+    Server version: Apache/2.4.25 (Debian)
+    Server built:   2019-08-19T19:25:31
+    Loaded Modules:
+    core_module (static)
+    so_module (static)
+    watchdog_module (static)
+    http_module (static)
+    log_config_module (static)
+    logio_module (static)
+    version_module (static)
+    unixd_module (static)
+    access_compat_module (shared)
+    alias_module (shared)
+    auth_basic_module (shared)
+    authn_core_module (shared)
+    authn_file_module (shared)
+    authz_core_module (shared)
+    authz_host_module (shared)
+    authz_user_module (shared)
+    autoindex_module (shared)
+    deflate_module (shared)
+    dir_module (shared)
+    env_module (shared)
+    filter_module (shared)
+    mime_module (shared)
+    mpm_prefork_module (shared)
+    negotiation_module (shared)
+    php5_module (shared)
+    reqtimeout_module (shared)
+    rewrite_module (shared)
+    setenvif_module (shared)
+    status_module (shared)
+    Compiled in modules:
+    core.c
+    mod_so.c
+    mod_watchdog.c
+    http_core.c
+    mod_log_config.c
+    mod_logio.c
+    mod_version.c
+    mod_unixd.c
+
+[+] Apache Config File
+    # This is the main Apache server configuration file.  It contains the
+    # configuration directives that give the server its instructions.
+    # See http://httpd.apache.org/docs/2.4/ for detailed information about
+    # the directives and /usr/share/doc/apache2/README.Debian about Debian specific
+    # hints.
+    #
+    #
+    # Summary of how the Apache 2 configuration works in Debian:
+    # The Apache 2 web server configuration in Debian is quite different to
+    # upstream's suggested way to configure the web server. This is because Debian's
+    # default Apache2 installation attempts to make adding and removing modules,
+    # virtual hosts, and extra configuration directives as flexible as possible, in
+    # order to make automating the changes and administering the server as easy as
+    # possible.
+    # It is split into several files forming the configuration hierarchy outlined
+    # below, all located in the /etc/apache2/ directory:
+    #
+    #	/etc/apache2/
+    #	|-- apache2.conf
+    #	|	`--  ports.conf
+    #	|-- mods-enabled
+    #	|	|-- *.load
+    #	|	`-- *.conf
+    #	|-- conf-enabled
+    #	|	`-- *.conf
+    # 	`-- sites-enabled
+    #	 	`-- *.conf
+    #
+    #
+    # * apache2.conf is the main configuration file (this file). It puts the pieces
+    #   together by including all remaining configuration files when starting up the
+    #   web server.
+    #
+    # * ports.conf is always included from the main configuration file. It is
+    #   supposed to determine listening ports for incoming connections which can be
+    #   customized anytime.
+    #
+    # * Configuration files in the mods-enabled/, conf-enabled/ and sites-enabled/
+    #   directories contain particular configuration snippets which manage modules,
+    #   global configuration fragments, or virtual host configurations,
+    #   respectively.
+    #
+    #   They are activated by symlinking available configuration files from their
+    #   respective *-available/ counterparts. These should be managed by using our
+    #   helpers a2enmod/a2dismod, a2ensite/a2dissite and a2enconf/a2disconf. See
+    #   their respective man pages for detailed information.
+    #
+    # * The binary is called apache2. Due to the use of environment variables, in
+    #   the default configuration, apache2 needs to be started/stopped with
+    #   /etc/init.d/apache2 or apache2ctl. Calling /usr/bin/apache2 directly will not
+    #   work with the default configuration.
+    # Global configuration
+    #
+    #
+    # ServerRoot: The top of the directory tree under which the server's
+    # configuration, error, and log files are kept.
+    #
+    # NOTE!  If you intend to place this on an NFS (or otherwise network)
+    # mounted filesystem then please read the Mutex documentation (available
+    # at <URL:http://httpd.apache.org/docs/2.4/mod/core.html#mutex>);
+    # you will save yourself a lot of trouble.
+    #
+    # Do NOT add a slash at the end of the directory path.
+    #
+    #ServerRoot "/etc/apache2"
+    #
+    # The accept serialization lock file MUST BE STORED ON A LOCAL DISK.
+    #
+    #Mutex file:${APACHE_LOCK_DIR} default
+    #
+    # The directory where shm and other runtime files will be stored.
+    #
+    DefaultRuntimeDir ${APACHE_RUN_DIR}
+    #
+    # PidFile: The file in which the server should record its process
+    # identification number when it starts.
+    # This needs to be set in /etc/apache2/envvars
+    #
+    PidFile ${APACHE_PID_FILE}
+    #
+    # Timeout: The number of seconds before receives and sends time out.
+    #
+    Timeout 300
+    #
+    # KeepAlive: Whether or not to allow persistent connections (more than
+    # one request per connection). Set to "Off" to deactivate.
+    #
+    KeepAlive On
+    #
+    # MaxKeepAliveRequests: The maximum number of requests to allow
+    # during a persistent connection. Set to 0 to allow an unlimited amount.
+    # We recommend you leave this number high, for maximum performance.
+    #
+    MaxKeepAliveRequests 100
+    #
+    # KeepAliveTimeout: Number of seconds to wait for the next request from the
+    # same client on the same connection.
+    #
+    KeepAliveTimeout 5
+    # These need to be set in /etc/apache2/envvars
+    User ${APACHE_RUN_USER}
+    Group ${APACHE_RUN_GROUP}
+    #
+    # HostnameLookups: Log the names of clients or just their IP addresses
+    # e.g., www.apache.org (on) or 204.62.129.132 (off).
+    # The default is off because it'd be overall better for the net if people
+    # had to knowingly turn this feature on, since enabling it means that
+    # each client request will result in AT LEAST one lookup request to the
+    # nameserver.
+    #
+    HostnameLookups Off
+    # ErrorLog: The location of the error log file.
+    # If you do not specify an ErrorLog directive within a <VirtualHost>
+    # container, error messages relating to that virtual host will be
+    # logged here.  If you *do* define an error logfile for a <VirtualHost>
+    # container, that host's errors will be logged there and not here.
+    #
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    #
+    # LogLevel: Control the severity of messages logged to the error_log.
+    # Available values: trace8, ..., trace1, debug, info, notice, warn,
+    # error, crit, alert, emerg.
+    # It is also possible to configure the log level for particular modules, e.g.
+    # "LogLevel info ssl:warn"
+    #
+    LogLevel warn
+    # Include module configuration:
+    IncludeOptional mods-enabled/*.load
+    IncludeOptional mods-enabled/*.conf
+    # Include list of ports to listen on
+    Include ports.conf
+    # Sets the default security model of the Apache2 HTTPD server. It does
+    # not allow access to the root filesystem outside of /usr/share and /var/www.
+    # The former is used by web applications packaged in Debian,
+    # the latter may be used for local directories served by the web server. If
+    # your system is serving content from a sub-directory in /srv you must allow
+    # access here, or in any related virtual host.
+    <Directory />
+    Options FollowSymLinks
+    AllowOverride None
+    Require all denied
+    </Directory>
+    <Directory /usr/share>
+    AllowOverride None
+    Require all granted
+    </Directory>
+    <Directory /var/www/>
+    Options Indexes FollowSymLinks
+    AllowOverride None
+    Require all granted
+    </Directory>
+    #<Directory /srv/>
+    #	Options Indexes FollowSymLinks
+    #	AllowOverride None
+    #	Require all granted
+    #</Directory>
+    # AccessFileName: The name of the file to look for in each directory
+    # for additional configuration directives.  See also the AllowOverride
+    # directive.
+    #
+    AccessFileName .htaccess
+    #
+    # The following lines prevent .htaccess and .htpasswd files from being
+    # viewed by Web clients.
+    #
+    <FilesMatch "^\.ht">
+    Require all denied
+    </FilesMatch>
+    #
+    # The following directives define some format nicknames for use with
+    # a CustomLog directive.
+    #
+    # These deviate from the Common Log Format definitions in that they use %O
+    # (the actual bytes sent including headers) instead of %b (the size of the
+    # requested file), because the latter makes it impossible to detect partial
+    # requests.
+    #
+    # Note that the use of %{X-Forwarded-For}i instead of %h is not recommended.
+    # Use mod_remoteip instead.
+    #
+    LogFormat "%v:%p %h %l %u %t \"%r\" %>s %O \"%{Referer}i\" \"%{User-Agent}i\"" vhost_combined
+    LogFormat "%h %l %u %t \"%r\" %>s %O \"%{Referer}i\" \"%{User-Agent}i\"" combined
+    LogFormat "%h %l %u %t \"%r\" %>s %O" common
+    LogFormat "%{Referer}i -> %U" referer
+    LogFormat "%{User-agent}i" agent
+    # Include of directories ignores editors' and dpkg's backup files,
+    # see README.Debian for details.
+    # Include generic snippets of statements
+    IncludeOptional conf-enabled/*.conf
+    # Include the virtual host configurations:
+    IncludeOptional sites-enabled/*.conf
+    # vim: syntax=apache ts=4 sw=4 sts=4 sr noet
+
+[*] IDENTIFYING PROCESSES AND PACKAGES RUNNING AS ROOT OR OTHER SUPERUSER...
+
+    root 1 Sep12 0:00 /bin/sh
+    root 12 Sep12 3:52 /usr/bin/python
+    root 69 Sep12 0:00 /bin/sh
+    root 71 Sep12 0:46 /usr/sbin/apache2
+    root 103 Sep12 0:03 /usr/sbin/cron
+    root 104 Sep12 0:00 /usr/sbin/sshd
+
+[*] ENUMERATING INSTALLED LANGUAGES/TOOLS FOR SPLOIT BUILDING...
+
+[+] Installed Tools
+    /usr/bin/awk
+    /usr/bin/perl
+    /usr/bin/python
+    /usr/bin/gcc
+    /usr/bin/cc
+    /usr/bin/find
+    /bin/netcat
+    /bin/nc
+    /usr/bin/wget
+
+[+] Related Shell Escape Sequences...
+
+    awk-->	awk 'BEGIN {system("/bin/bash")}'
+    perl-->	perl -e 'exec "/bin/bash";'
+    find-->	find / -exec /usr/bin/awk 'BEGIN {system("/bin/bash")}' \;
+
+[*] FINDING RELEVENT PRIVILEGE ESCALATION EXPLOITS...
+
+    Note: Exploits relying on a compile/scripting language not detected on this system are marked with a '**' but should still be tested!
+
+    The following exploits are ranked higher in probability of success because this script detected a related running process, OS, or mounted file system
+    - MySQL 4.x/5.0 User-Defined Function Local Privilege Escalation Exploit || http://www.exploit-db.com/exploits/1518 || Language=c
+
+    The following exploits are applicable to this kernel version and should be investigated as well
+    - MySQL 4.x/5.0 User-Defined Function Local Privilege Escalation Exploit || http://www.exploit-db.com/exploits/1518 || Language=c
+    - Kernel ia32syscall Emulation Privilege Escalation || http://www.exploit-db.com/exploits/15023 || Language=c
+    - CAP_SYS_ADMIN to root Exploit || http://www.exploit-db.com/exploits/15916 || Language=c
+    - CAP_SYS_ADMIN to Root Exploit 2 (32 and 64-bit) || http://www.exploit-db.com/exploits/15944 || Language=c
+    - Sendpage Local Privilege Escalation || http://www.exploit-db.com/exploits/19933 || Language=ruby**
+    - open-time Capability file_ns_capable() - Privilege Escalation Vulnerability || http://www.exploit-db.com/exploits/25307 || Language=c
+    - open-time Capability file_ns_capable() Privilege Escalation || http://www.exploit-db.com/exploits/25450 || Language=c
+
+Finished
+=================================================================================================

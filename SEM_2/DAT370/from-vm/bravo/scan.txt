@@ -1,0 +1,18 @@
+# Nmap 7.99 scan initiated Thu Sep 10 21:06:21 2026 as: /usr/lib/nmap/nmap --privileged -p 0-65532 -sV -sC -oN scan.txt 10.128.161.57
+Nmap scan report for 10.128.161.57
+Host is up (0.0068s latency).
+Not shown: 65529 closed tcp ports (reset)
+PORT     STATE SERVICE VERSION
+21/tcp   open  ftp     vsftpd 2.0.8 or later
+80/tcp   open  http    nginx 1.14.2
+|_http-server-header: nginx/1.14.2
+|_http-title:       The Hacker Manifesto    
+8009/tcp open  ajp13   Apache Jserv (Protocol v1.3)
+|_ajp-methods: Failed to get a valid response for the OPTION request
+8282/tcp open  http    Apache Tomcat 8.5.41
+|_http-favicon: Apache Tomcat
+|_http-title: Apache Tomcat/8.5.41
+Service Info: Host: Lazarus
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Sep 10 21:06:43 2026 -- 1 IP address (1 host up) scanned in 22.10 seconds

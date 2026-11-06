@@ -1,0 +1,140 @@
+HTTP request [#1]:
+GET /php/recherche_old.php HTTP/1.1
+Cache-Control: no-cache
+Cookie: PHPSESSID=0aqg8mhvl0mp6k61vhj0a74qm0
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36 Edg/121.0.0.0
+Host: 10.128.161.44
+Accept: */*
+Accept-Encoding: gzip,deflate,br,zstd
+Connection: keep-alive
+
+HTTP response [#1] (200 OK):
+Date: Thu, 10 Sep 2026 17:18:33 GMT
+Server: Apache/2.4.25 (Debian)
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+Pragma: no-cache
+Vary: Accept-Encoding
+Content-Encoding: gzip
+Content-Length: 1830
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+Content-Type: text/html; charset=UTF-8
+URI: http://10.128.161.44/php/recherche_old.php
+
+<!-- 
+        Much like an iceberg, most web content resides beneath the surface.
+        Who knows what might lurk in the depths?
+        It could be a:
+
+        flag{pultyn-Delta-K2BHtD720zdXN0rMXfi5xS1elAEkjFsMIXv3hvLEL4Vd9}
+-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"><html><head><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"><title>Cuiteur | Recherche</title><link rel="stylesheet" href="../styles/cuiteur.css" type="text/css"><link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon"></head><body><div id="bcPage"><div id="bcEntete"><a id="btnDeconnexion" href="deconnexion.php" title="Logout of cuiteur"></a><a id="btnHome" href="cuiteur.php" title="My Home Page"></a><a id="btnCherche" href="recherche.php" title="Search for Users to Follow"></a><a style="display:none" href="recherche_old.php"><!-- old page --></a><a id="btnConfig" href="compte.php" title="Modify my Account"></a><h1>Rechercher des utilisateurs</h1>
+      <form id="bcDescription" action="recherche_old.php" method="post" style="text-align: center"><tr><td class='tdGauche'><input type='text' name='recherche' size='40' value="" ></td><td class='tdDroite'><input type='submit' name='btnRechercher'  value="Rechercher" class="bouton"></td></tr></form><p style="margin-left:230px; font-weight:bold;">Deprecated, contains more than meets the eye!</p></div><div id="bcInfos"><h3>User</h3><ul><li><img src='../images/anonyme.jpg' class='avatar'>
+			<a href='utilisateur.php?x=MjRiYzY4NWExYzc1MWQ5Zjc0ZWMwZDEyNDI1NWRkYmSfj2E2YjBkZjBhNDg=' title='Show the user's info'>
+			<strong>syrenka102</strong></a>
+			<span class='nomUser'>-6974) OR 3330=6953</span></li><li><a href="blabla.php?x=MDY2ZTgxYzk0ODVjNDJmY2I5MjE0YzVhNDIxMjEyNGIBwKKTNzI4ZWU3NDI0NA==" title="Show My Cuits">1093 blablas</a></li><li><a href="abonnements.php?x=OTYyN2UzZDQ4NjE4ZTAyMjQ5ZmRiZTUwM2QzNmUyMGLMlmQ3OTc0YmRkNzA=" title="Show the Users I Follow">0 abonnement</a></li><li><a href="abonnes.php?x=OTYyN2UzZDQ4NjE4ZTAyMjQ5ZmRiZTUwM2QzNmUyMGLMlmQ3OTc0YmRkNzA=" title="Show My Followers">0 abonn\xe9</a></li></ul><h3>Trends</h3><ul><li><a href="tendances.php?x=ODhhNDQ4ZTc4MDg5NmNiZmUwMGRhYjc4MTUwYzAwZjZpfCwKX0llYmIyYjY0YmEz" title="See cuits (193) containing this tag">info</a></li><li><a href="tendances.php?x=Mjg5NTE5NDBmMjg2ZmQxMDhlMDk0NjVkNzhhMDFmZmEC5fPaEC/ETDZjMDQ1OWIyNWE=" title="See cuits (132) containing this tag">murphy</a></li><li><a href="tendances.php?x=NjdiMWExMTBjY2UwNmU3OTkzNjk3MjM3NDUyYzNkNTc6taXMOTg3Y2RlNDA2Mw==" title="See cuits (77) containing this tag">ai</a></li><li><a href="tendances.php?x=NjMzZTU5ODQ1NTJhNzU2ODNjZDg2NDNhODdlMWVlODiB9SAkHcee0bj8X98jYmE3NmVlZGRlNGI=" title="See cuits (75) containing this tag">intelligence</a></li><li><a href="tendances.php?x=NzBlYjE1YzM5ZGM5MTE5Mjk0Zjk3YzU3YzcyMzE5MDDHjDUwYTlkZGRmYzY=">All trends</a></li></ul><h3>Suggestions</h3><ul><li><img src='../upload/23.jpg' class='avatar'>
+			<a href='utilisateur.php?x=YWVkMWEyNGQ1MGFjNmQ5ZmNlMzUxYTJmMWUxMWQ5NGP6PTVmNTJiOTRiY2Y=' title='Show the user's info'>
+			<strong>nono</strong></a>
+			<span class='nomUser'>Chuck Norris</span></li><li><img src='../upload/2.jpg' class='avatar'>
+			<a href='utilisateur.php?x=Y2VlYWY3ZWEzMDc5MGNmZDZiYTdhMTIyYjkwYjk3MjBQOGRkZjk1ZTNjZQ==' title='Show the user's info'>
+			<strong>pdac</strong></a>
+			<span class='nomUser'>Pierre Dac</span></li><li><a href="suggestions.php">More suggestions</a></li></ul></div><ul id="bcPied"><li><a href="#">About</a></li><li><a href="#">Advertising</a></li><li><a href="#">Patati</a></li><li><a href="#">Help</a></li><li><a href="#">Patata</a></li><li><a href="#">Internships</a></li><li><a href="#">Recruitment</a></li><li><a href="#">Confidentiality</a></li></ul></div></body></html>
+
+############################################################################
+
+HTTP request [#2]:
+GET /php/recherche_old.php HTTP/1.1
+Cache-Control: no-cache
+Cookie: PHPSESSID=0aqg8mhvl0mp6k61vhj0a74qm0
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36 Edg/121.0.0.0
+Host: 10.128.161.44
+Accept: */*
+Accept-Encoding: gzip,deflate,br,zstd
+Connection: keep-alive
+
+HTTP response [#2] (200 OK):
+Date: Thu, 10 Sep 2026 17:18:33 GMT
+Server: Apache/2.4.25 (Debian)
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+Pragma: no-cache
+Vary: Accept-Encoding
+Content-Encoding: gzip
+Content-Length: 1831
+Keep-Alive: timeout=5, max=99
+Connection: Keep-Alive
+Content-Type: text/html; charset=UTF-8
+URI: http://10.128.161.44/php/recherche_old.php
+
+<!-- 
+        Much like an iceberg, most web content resides beneath the surface.
+        Who knows what might lurk in the depths?
+        It could be a:
+
+        flag{pultyn-Delta-K2BHtD720zdXN0rMXfi5xS1elAEkjFsMIXv3hvLEL4Vd9}
+-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"><html><head><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"><title>Cuiteur | Recherche</title><link rel="stylesheet" href="../styles/cuiteur.css" type="text/css"><link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon"></head><body><div id="bcPage"><div id="bcEntete"><a id="btnDeconnexion" href="deconnexion.php" title="Logout of cuiteur"></a><a id="btnHome" href="cuiteur.php" title="My Home Page"></a><a id="btnCherche" href="recherche.php" title="Search for Users to Follow"></a><a style="display:none" href="recherche_old.php"><!-- old page --></a><a id="btnConfig" href="compte.php" title="Modify my Account"></a><h1>Rechercher des utilisateurs</h1>
+      <form id="bcDescription" action="recherche_old.php" method="post" style="text-align: center"><tr><td class='tdGauche'><input type='text' name='recherche' size='40' value="" ></td><td class='tdDroite'><input type='submit' name='btnRechercher'  value="Rechercher" class="bouton"></td></tr></form><p style="margin-left:230px; font-weight:bold;">Deprecated, contains more than meets the eye!</p></div><div id="bcInfos"><h3>User</h3><ul><li><img src='../images/anonyme.jpg' class='avatar'>
+			<a href='utilisateur.php?x=NzFhYTc0Mzc4NWJmNTA2YWRlNzBlZjJiZjBkYzkxNWKKMmNiZjFlNWI4NWQ=' title='Show the user's info'>
+			<strong>syrenka102</strong></a>
+			<span class='nomUser'>-6974) OR 3330=6953</span></li><li><a href="blabla.php?x=NTlmOTdmYzI5NDIxZjc4NzI0ZTk1YjAyYjlmYjg3ZTe9uujCMjMzNDVhZGM5YQ==" title="Show My Cuits">1093 blablas</a></li><li><a href="abonnements.php?x=MTAyNDM4Y2UzOGY2MzVhMjJlNzAxMTgyZGJiNDkzYWYsZzE4OTg3NjRlMmQ=" title="Show the Users I Follow">0 abonnement</a></li><li><a href="abonnes.php?x=MTAyNDM4Y2UzOGY2MzVhMjJlNzAxMTgyZGJiNDkzYWYsZzE4OTg3NjRlMmQ=" title="Show My Followers">0 abonn\xe9</a></li></ul><h3>Trends</h3><ul><li><a href="tendances.php?x=MTZhNDA1OGM4MTQ4ZWQyNjYwZTQ0NDRlNDJhYTYyMTnoSnk4DVxmMGYyNTIzZTJh" title="See cuits (193) containing this tag">info</a></li><li><a href="tendances.php?x=OGJiYWE3ZWE1YmVhZThjZTJlMzc3YmY1NDZjMzU2NmT+RGLt/dk1CTY3OWI4ZTViYmQ=" title="See cuits (132) containing this tag">murphy</a></li><li><a href="tendances.php?x=NTEwM2MzOWUzNjNkNGNiZmRiZmI4OGRlMzZlYmRjNjCDnZulNDM2ZDk3OTEzYw==" title="See cuits (77) containing this tag">ai</a></li><li><a href="tendances.php?x=N2RhNDAxNzRiM2QwNDEwMTk1MDU4OGRhNjk3NmQ3MDhfJGkv/wOGoIEGrzpQijU1YzM3MDMyYzY=" title="See cuits (75) containing this tag">intelligence</a></li><li><a href="tendances.php?x=MzZmZTBkZDE1MzJmOTg5NGU0NGIwM2U0OTVkMjFhM2NvHGNiNmU4NDNmZDI=">All trends</a></li></ul><h3>Suggestions</h3><ul><li><img src='../upload/2.jpg' class='avatar'>
+			<a href='utilisateur.php?x=MTNmOTczZWJiM2E4NjkwMWFkYmMyNDc0OWMyNWJhODEsYWM1ZGY2Mzc2MA==' title='Show the user's info'>
+			<strong>pdac</strong></a>
+			<span class='nomUser'>Pierre Dac</span></li><li><img src='../upload/3.jpg' class='avatar'>
+			<a href='utilisateur.php?x=Yjk5ZWJjMjIwNmQ5YjFhY2MyZTY5M2FkNWNmNDIyOWOfYjYxYjMyZDgwMg==' title='Show the user's info'>
+			<strong>albert</strong></a>
+			<span class='nomUser'>Albert Einstein</span></li><li><a href="suggestions.php">More suggestions</a></li></ul></div><ul id="bcPied"><li><a href="#">About</a></li><li><a href="#">Advertising</a></li><li><a href="#">Patati</a></li><li><a href="#">Help</a></li><li><a href="#">Patata</a></li><li><a href="#">Internships</a></li><li><a href="#">Recruitment</a></li><li><a href="#">Confidentiality</a></li></ul></div></body></html>
+
+############################################################################
+
+HTTP request [#1]:
+POST /php/recherche_old.php HTTP/1.1
+Cache-Control: no-cache
+Cookie: PHPSESSID=0aqg8mhvl0mp6k61vhj0a74qm0
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36 Edg/121.0.0.0
+Referer: http://10.128.161.44/php/recherche_old.php
+Host: 10.128.161.44
+Accept: */*
+Accept-Encoding: gzip,deflate,br,zstd
+Content-Type: application/x-www-form-urlencoded; charset=utf-8
+Connection: keep-alive
+Content-length: 39
+
+recherche=czPY&btnRechercher=Rechercher
+
+HTTP response [#1] (200 OK):
+Date: Thu, 10 Sep 2026 17:18:36 GMT
+Server: Apache/2.4.25 (Debian)
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+Pragma: no-cache
+Vary: Accept-Encoding
+Content-Encoding: gzip
+Content-Length: 1943
+Keep-Alive: timeout=5, max=98
+Connection: Keep-Alive
+Content-Type: text/html; charset=UTF-8
+URI: http://10.128.161.44/php/recherche_old.php
+
+<!-- 
+        Much like an iceberg, most web content resides beneath the surface.
+        Who knows what might lurk in the depths?
+        It could be a:
+
+        flag{pultyn-Delta-K2BHtD720zdXN0rMXfi5xS1elAEkjFsMIXv3hvLEL4Vd9}
+-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"><html><head><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"><title>Cuiteur | Recherche</title><link rel="stylesheet" href="../styles/cuiteur.css" type="text/css"><link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon"></head><body><div id="bcPage"><div id="bcEntete"><a id="btnDeconnexion" href="deconnexion.php" title="Logout of cuiteur"></a><a id="btnHome" href="cuiteur.php" title="My Home Page"></a><a id="btnCherche" href="recherche.php" title="Search for Users to Follow"></a><a style="display:none" href="recherche_old.php"><!-- old page --></a><a id="btnConfig" href="compte.php" title="Modify my Account"></a><h1>Rechercher des utilisateurs</h1>
+      <form id="bcDescription" action="recherche_old.php" method="post" style="text-align: center"><tr><td class='tdGauche'><input type='text' name='recherche' size='40' value="czPY" ></td><td class='tdDroite'><input type='submit' name='btnRechercher'  value="Rechercher" class="bouton"></td></tr></form><p style="margin-left:230px; font-weight:bold;">Deprecated, contains more than meets the eye!</p></div><div id="bcInfos"><h3>User</h3><ul><li><img src='../images/anonyme.jpg' class='avatar'>
+			<a href='utilisateur.php?x=NjA0NTQxZDAyZGY2M2Q4OGU0YWZjZDU3NzNlNmNhZTe3gmQ1MWZlYTY0MDY=' title='Show the user's info'>
+			<strong>syrenka102</strong></a>
+			<span class='nomUser'>-6974) OR 3330=6953</span></li><li><a href="blabla.php?x=MmI0YzRlZWU1NzFmZjJkOWY5NWI4NjIxN2MyYjQ3NTbe70h1ZjY0MGRlMjVhZA==" title="Show My Cuits">1093 blablas</a></li><li><a href="abonnements.php?x=ZGNjYWRmOGJkNGMxYTk0NmExYmEzMTBjMGFhMzY0MWbgOjYzMTE0YmE4MzE=" title="Show the Users I Follow">0 abonnement</a></li><li><a href="abonnes.php?x=ZGNjYWRmOGJkNGMxYTk0NmExYmEzMTBjMGFhMzY0MWbgOjYzMTE0YmE4MzE=" title="Show My Followers">0 abonn\xe9</a></li></ul><h3>Trends</h3><ul><li><a href="tendances.php?x=OTBiNDczMjdhZjNmODg3YTIzNTExYzc0MjM3ODljZjnhr7F5Z3oyZjljOTFhYTZj" title="See cuits (193) containing this tag">info</a></li><li><a href="tendances.php?x=MGUxYjc0MDMyYjg1MTRkMjYyZDRkZTEyN2NlMGFkMGRZ8GLlR9j0azc2Y2FhYzI4MjY=" title="See cuits (132) containing this tag">murphy</a></li><li><a href="tendances.php?x=OTc1MWZkYWNmNGJjYTI4NTZjZWY1ZmYwZGE1MGY0YTjh1AclNDlkMDM3MDI4ZA==" title="See cuits (77) containing this tag">ai</a></li><li><a href="tendances.php?x=YjIzOTdjZDc2MGUyNTMzODY4OGIyMTI2MWY1Yzk2MjWH82gP7/goRsgfsbZSwTkzMzE5Yjc5ZmQ=" title="See cuits (75) containing this tag">intelligence</a></li><li><a href="tendances.php?x=OTYzN2EyZDVmNTgyYWRiZDNmZTg4YjlhNmI0YjQyM2U+AjY1YjRlYWFlMGI=">All trends</a></li></ul><h3>Suggestions</h3><ul><li><img src='../upload/2.jpg' class='avatar'>
+			<a href='utilisateur.php?x=ZWY1OGY0ZTVhZDYxYzY4MGVmNTY3MDZkNzkzOWVmMWROZjAyNzA3MmU1Mg==' title='Show the user's info'>
+			<strong>pdac</strong></a>
+			<span class='nomUser'>Pierre Dac</span></li><li><img src='../upload/26.jpg' class='avatar'>
+			<a href='utilisateur.php?x=ZjdjMmFjM2EyNGYwZjBmMzM0YjBjNzc0Y2ExMTk5NDGw1jNhZjJmOTljNTU=' title='Show the user's info'>
+			<strong>slemb</strong></a>
+			<span class='nomUser'>Simone de Beauvoir</span></li><li><a href="suggestions.php">More suggestions</a></li></ul></div><div id="bcContenu"><form action="cuiteur.php" method="post"><input type='hidden' name='x'  value="N2NhNzU5NjQ2NmZlNGZkODg3NjlmNWI1MTcwNjg1OWImHzV8OTVlNTUwNDI3Mg==" ><ul></ul><p>No users found.</p></form></div><ul id="bcPied"><li><a href="#">About</a></li><li><a href="#">Advertising</a></li><li><a href="#">Patati</a></li><li><a href="#">Help</a></li><li><a href="#">Patata</a></li><li><a href="#">Internships</a></li><li><a href="#">Recruitment</a></li><li><a href="#">Confidentiality</a></li></ul></div></body></html>
+
+############################################################################
+

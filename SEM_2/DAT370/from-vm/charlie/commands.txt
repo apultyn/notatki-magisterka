@@ -1,0 +1,4 @@
+grep -IlE 'flag\{[^}]*\}' ./*
+grep -RIlE 'flag\{[^}]*\}' .
+grep -RhoE 'flag\{[^}]*\}' .
+grep -r 'flag{' /etc/ > /tmp/flag5.txt &

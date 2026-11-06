@@ -1,0 +1,11 @@
+$TTL 300      ; Default TTL (5 minutes)
+@   IN  SOA     ns1.ethhak. admin.ethhak. (
+                2023102501 ; Serial (YYYYMMDDnn)
+                3600       ; Refresh (1 hour)
+                900        ; Retry (15 minutes)
+                1209600    ; Expire (2 weeks)
+                86400 )    ; Minimum TTL (1 day)
+        IN  NS  ns1.ethhak.
+
+ns1     IN  A   10.128.161.41          
+cuiteur IN  A   10.128.161.2
