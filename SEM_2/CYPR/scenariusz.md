@@ -1,0 +1,3 @@
+# Scenariusz
+
+Poszkodowana jest firma E-Corp Industries. Pośród jej rozbudowanej infrastruktury informatycznej znajduje się serwis *Cuiteur*, działający jako forum społecznościowe dotyczące gitar (możliwość ich kupna i sprzedaży, akcesoria, lekcje itp.) Wykorzystując podatność SQL Injection na stronie, atakujący uzyskali pełny dostęp do bazy danych aplikacji oraz możliwość wykonywania poleceń systemowych na serwerze. Następnie, wykorzystując inną podatność, znajdującą się na serwerze, eskalowali swoje uprawnienia do poziomu administratora. Atakujący wykradli dane o użytkownikach z bazy w celu ich sprzedaży, oraz uruchomili na serwerze ukrytą koparkę kryptowalut. Serwis nadal funkcjonuje, natomiast jej spowolnienie spowodowane koparką jest zauważalne.

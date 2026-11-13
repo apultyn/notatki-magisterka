@@ -13,11 +13,11 @@
 
 === PRG and not PRG examples
 
-- $"PRG": {0, 1}^n arrow.r.long {0, 1}^(2n)$ defined as $ "PRG"(s)=s||s $
+- $"PRG": {0, 1}^n arrow.r.long {0, 1}^(2n)$ defined as $ "PRG"(s)=s parallel s $
   - is efficiently computable
   - expands it's input
   - fails to satisfy the third rule, because input is easiliy distinguishable from trurly random (both halfs of the output are always equal)
-- $"PRG": {0, 1}^n arrow.r.long {0, 1}^{n+1}$ defined as $ "PRG"(s) = s||a dot s_n + c mod M $
+- $"PRG": {0, 1}^n arrow.r.long {0, 1}^{n+1}$ defined as $ "PRG"(s) = s parallel a dot s_n + c mod M $
   - $a, c limits(arrow.l.long)^(\$) [1, ..., M-1]$ (two random numbers that could be output of mod)
   - $s_n$ - $n$-th bit of $s$
   - two first conditions again pass
@@ -83,10 +83,10 @@
     - the key is either PRG output $b=0$ or true random number $b=1$
   - $cal(A')$ chooses one of the message with $b'$, encrypt it and send it to $cal(A)$
   - $cal(A)$ has to guess which message was encrypted
-  - if $b=0$ (PRG output), then $cal(A)$ can break it with advantage ($Pr(b^* = b'|b=0) = 1/2 + epsilon$)
-  - if $b=1$ (true random number), then $cal(A)$ has no advantage and his probabilty is $Pr(b^* = b'|b=1) = 1/2$
+  - if $b=0$ (PRG output), then $cal(A)$ can break it with advantage ($Pr(b^* = b' | b=0) = 1/2 + epsilon$)
+  - if $b=1$ (true random number), then $cal(A)$ has no advantage and his probabilty is $Pr(b^* = b' | b=1) = 1/2$
   - if $cal(A)$ is right, $tilde(b) = 0$ is sent to challenger, $tilde(b) = 1$ otherwise
-  - the probability that $cal(A')$ guess is right is $Pr(tilde(b) = b) = Pr(tilde(b) |b=0) Pr(b=0) + Pr(tilde(b) = 1 | b=1) Pr(b=1) = 1/2 (1/2 + epsilon + 1/2) = 1/2 + epsilon / 2 $
+  - the probability that $cal(A')$ guess is right is $Pr(tilde(b) = b) = Pr(tilde(b) = 0 | b=0) Pr(b=0) + Pr(tilde(b) = 1 | b=1) Pr(b=1) = 1/2 (1/2 + epsilon + 1/2) = 1/2 + epsilon / 2$
   - the $cal(A')$ can crack the PRG game with non neglegible advantage, so PRG is in fact not secure, which is contradicting with assumption
 
 = Block ciphers
@@ -100,10 +100,10 @@
   - we strive to construct ciphers that can't be distinguished from random permutations
 - *pseudorandom permutation (PRP)* - efficiently computable permutation that can't be efficiently distinguished from trurly random one
 - *Theorem* - if $pi_k$ is a PRP then the scheme:
-  - $"KeyGen"(1^K): k limits(arrow.l.long)^\$ {0, 1}^K $
+  - $"KeyGen"(1^K): k limits(arrow.l.long)^\$ {0, 1}^K$
   - $E(k, m)$:
-    - choose a nonce $s$ of the same length ($n$) as the message: $s limits(arrow.l.long)^\$ {0, 1}^n $
-    - output $c = (s || f_k(s) xor m)$
+    - choose a nonce $s$ of the same length ($n$) as the message: $s limits(arrow.l.long)^\$ {0, 1}^n$
+    - output $c = (s parallel f_k(s) xor m)$
       - evaluate the permutation $f_k$ on message $s$
       - XOR it with message
       - concatenate that value with nonce $s$
@@ -155,6 +155,7 @@
 - xoring the message with the previous block before encrypting
 - if $"IV"$ is reused for different messages, algorithm becomes equaly insecure as ECB
 - ok to use but there is even better
+- $"IV"$ always travels with ciphertext $C = ("IV", c_0, c_1 ...)$, because otherwise it wouldn't be possible to decrypt it
 
 === CTR
 
@@ -167,7 +168,7 @@
 - nonce value is needed to decrypt every ciphertext block
 - if nonce used correctly (only once), CTR mode is IND-CPA secure
 - algorithm:
-  - $c_i = E(k, "ctr" || "nonce") xor m_i$
+  - $c_i = E(k, "ctr" parallel "nonce") xor m_i$
 
 == Padding
 
