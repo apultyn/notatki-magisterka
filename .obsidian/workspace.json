@@ -8,31 +8,31 @@
         "type": "tabs",
         "children": [
           {
-            "id": "0f5a555645964bed",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "SEM_2/CYPR/call-6-11-2026.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "call-6-11-2026"
-            }
-          },
-          {
             "id": "cfc0022a8a6c6366",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SEM_2/CYPR/scenariusz.md",
+                "file": "SEM_2/TDA596/quiz-notes/quit_3.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "scenariusz"
+              "title": "quit_3"
+            }
+          },
+          {
+            "id": "de0141c54dfaf80a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "SEM_2/TDA596/lectures/3_names.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "3_names"
             }
           }
         ],
@@ -204,9 +204,16 @@
       "bases:Stwórz nową bazę danych": false
     }
   },
-  "active": "cfc0022a8a6c6366",
+  "active": "de0141c54dfaf80a",
   "lastOpenFiles": [
     "SEM_2/CYPR/call-6-11-2026.md",
+    "SEM_2/TDA596/quiz-notes/quit_3.md",
+    "SEM_2/TDA596/lectures/3_names.md",
+    "Pasted image 20261122185226.png",
+    "Pasted image 20261122183129.png",
+    "Pasted image 20261122182744.png",
+    "Pasted image 20261122170617.png",
+    "SEM_2/TDA596/lab-notes/lab-1.md",
     "SEM_2/CYPR/scenariusz.md",
     "SEM_2/TDA596/organisation.md",
     "SEM_2/TDA596/chat-notes/1_architectures_processes.pdf",
@@ -215,7 +222,6 @@
     "SEM_2/TDA352/materials/lecture-notes/events-ecs4-pe-0.ics",
     "SEM_2/TDA352/materials/lecture-notes/Niepotwierdzony 204358.crdownload",
     "SEM_2/TDA596/lectures/2_lab_1_intro.md",
-    "SEM_2/TDA596/lab-notes/lab-1.md",
     "SEM_2/TDA596/lab-notes",
     "SEM_2/TDA596/lectures/1_intro.md",
     "SEM_2/TDA596/quiz-notes",
@@ -245,12 +251,6 @@
     "SEM_2/DAT370/from-vm/kilo/ping-app/README.md",
     "SEM_2/DAT370/from-vm/kilo/counter-app/README.md",
     "SEM_2/DAT370/from-vm/juliett/wireshark.png",
-    "SEM_2/DAT370/from-vm/juliett/Screenshot_2026-10-02_10-05-57.png",
-    "SEM_2/DAT370/from-vm/foxtrot/tomcat.png",
-    "SEM_2/DAT370/from-vm/foxtrot/bg-middle.png",
-    "SEM_2/DAT370/from-vm/foxtrot/bg-nav.png",
-    "SEM_2/DAT370/from-vm/foxtrot/bg-upper.png",
-    "SEM_2/DAT370/from-vm/bravo/nginx-1.30.4/SUPPORT.md",
-    "SEM_2/DAT370/from-vm/bravo/nginx-1.30.4/SECURITY.md"
+    "SEM_2/DAT370/from-vm/juliett/Screenshot_2026-10-02_10-05-57.png"
   ]
 }
